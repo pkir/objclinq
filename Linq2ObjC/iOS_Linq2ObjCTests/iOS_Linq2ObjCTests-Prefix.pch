@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'iOS_Linq2ObjCTests' target in the 'iOS_Linq2ObjCTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
