@@ -143,8 +143,8 @@
     
     STAssertEqualObjects(@6, result, nil);
     
-    result = @[@"A", @"B", @"C"].aggregate(^(id seed, id item) { return [seed stringByAppendingString:item]; });
-    STAssertEqualObjects(@"C B A", result, nil);
+    result = @[@"A", @"B", @"C"].aggregate(^(id seed, id item) { return [item stringByAppendingString:seed == nil ? @"" : seed]; });
+    STAssertEqualObjects(@"CBA", result, nil);
 }
 
 - (void)testSelectMany

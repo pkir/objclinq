@@ -106,7 +106,7 @@
         __block NSUInteger i = 0;
         
         return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
-            while ((++i) > count) {
+            while (i++ < count) {
                 id item = [src nextObject];
                 if (!item) {
                     return nil;
@@ -248,7 +248,6 @@
     
     return [Block_copy(block) autorelease];
 }
-
 
 @dynamic toArray;
 - (NSArray*) toArray {
