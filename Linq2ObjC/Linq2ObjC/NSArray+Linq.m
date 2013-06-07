@@ -23,6 +23,53 @@
     return self;
 }
 
+@dynamic disctinct;
+- (LQDistinctBlock) disctinct {
+    return [self objectEnumerator].disctinct;
+}
+
+@dynamic skip;
+- (LQSkipBlock) skip {
+    return [self objectEnumerator].skip;
+}
+
+@dynamic skipWhile;
+- (LQSkipWithPredicateBlock) skipWhile {
+    return [self objectEnumerator].skipWhile;
+}
+
+@dynamic take;
+- (LQSTakeBlock) take {
+    return [self objectEnumerator].take;
+}
+
+@dynamic takeWhile;
+- (LQSTakeWithPredicateBlock) takeWhile {
+    return [self objectEnumerator].takeWhile;
+    
+}
+
+@dynamic all;
+- (LQAllBlock) all {
+    return [self objectEnumerator].all;
+}
+
+@dynamic any;
+- (LQAnyBlock) any {
+    return [self objectEnumerator].any;
+    
+}
+
+@dynamic aggregateWithSeed;
+- (LQAggregateWithSeed) aggregateWithSeed {
+    return [self objectEnumerator].aggregateWithSeed;
+}
+
+@dynamic aggregate;
+- (LQAggregate) aggregate {
+    return [self objectEnumerator].aggregate;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSArray_Linq)
