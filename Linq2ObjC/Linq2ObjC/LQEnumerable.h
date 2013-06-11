@@ -36,6 +36,9 @@ typedef id (^LQAggregate)(LQAggregator aggregator);
 typedef id (^ResultBlock)(void);
 typedef id (^ResultWithPredicateBlock)(LQPredicate predicate);
 
+typedef NSUInteger (^LQCountBlock)();
+typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
+
 @protocol LQEnumerable <NSFastEnumeration>
 
 @property (readonly, nonatomic) LQSelectBlock select;
@@ -71,6 +74,10 @@ typedef id (^ResultWithPredicateBlock)(LQPredicate predicate);
 @property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate;
 @property (readonly, nonatomic) ResultBlock lastOrNil;
 @property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate;
+
+@property (readonly, nonatomic) LQCountBlock length;
+@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate;
+
 
 @property (readonly, nonatomic) NSArray* toArray;
 

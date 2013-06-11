@@ -440,6 +440,26 @@
     return LQ_AUTORELEASE(Block_copy(block));
 }
 
+@dynamic length;
+- (LQCountBlock) length {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQCountBlock block = ^{
+        return self.toArray.count;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic lengthWithPredicate;
+- (LQCountWithPredicateBlock) lengthWithPredicate {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQCountWithPredicateBlock block = ^NSUInteger(LQPredicate predicate){
+        return weakSelf.where(predicate).length();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @dynamic toArray;
 - (NSArray*) toArray {
     return [self allObjects];

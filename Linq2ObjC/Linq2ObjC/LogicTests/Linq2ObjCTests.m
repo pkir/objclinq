@@ -180,4 +180,16 @@
     STAssertThrows(test.lastWithPredicate(^BOOL(id item){return [item intValue] < 1;}), nil);
 }
 
+- (void)testCount
+{
+    NSArray* test = @[ @1, @2, @3];
+    
+    STAssertEquals((NSUInteger)3, test.length(), nil);
+    STAssertEquals((NSUInteger)1, test.lengthWithPredicate(^BOOL(id item) { return [item intValue] > 2;}), nil);
+    
+    STAssertEquals((NSUInteger)0, test.lengthWithPredicate(^BOOL(id item) { return [item intValue] > 3;}), nil);
+    STAssertEquals((NSUInteger)0, @[].length(), nil);
+    STAssertEquals((NSUInteger)0, @[].lengthWithPredicate(^BOOL(id item) { return YES; }), nil);
+}
+
 @end

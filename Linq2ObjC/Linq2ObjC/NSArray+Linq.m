@@ -110,6 +110,16 @@
     return [self objectEnumerator].lastOrNilWithPredicate;
 }
 
+@dynamic length;
+- (LQCountBlock) length {
+    return [self objectEnumerator].length;
+}
+
+@dynamic lengthWithPredicate;
+- (LQCountWithPredicateBlock) lengthWithPredicate {
+    return [self objectEnumerator].lengthWithPredicate;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSArray_Linq)

@@ -47,6 +47,9 @@
 @property (readonly, nonatomic) ResultBlock lastOrNil;
 @property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate;
 
+@property (readonly, nonatomic) LQCountBlock length;
+@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate;
+
 @property (readonly, nonatomic) NSArray* toArray;
 
 @end
