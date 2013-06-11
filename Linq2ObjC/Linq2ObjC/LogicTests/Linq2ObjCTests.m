@@ -150,10 +150,10 @@
 - (void)testSelectMany
 {
     NSArray* actual = @[@"1", @"2", @"3"].selectMany(^(id item) {
-        return @[item, item];
+        return @[item, [(NSString*)item stringByAppendingString:@"_ADD"]];
     }).toArray;
     
-    NSArray* expected = @[@"1", @"1", @"2", @"2", @"3", @"3"];
+    NSArray* expected = @[@"1", @"1_ADD", @"2", @"2_ADD", @"3", @"3_ADD"];
     STAssertEqualObjects(expected, actual, nil);
 }
 

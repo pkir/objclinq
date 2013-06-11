@@ -21,6 +21,74 @@
 }
 @end
 
+@interface LQEnumerableEnumerator : NSEnumerator {
+    id(^nextObject_)();
+}
+
+- (id) initWithEnumerable:(id<LQEnumerable>)collection;
++ (LQEnumerableEnumerator*) enumeratorWithEnumerable:(id<LQEnumerable>)collection;
+
+@property (nonatomic, retain) id<LQEnumerable> collection;
+@end
+
+@implementation LQEnumerableEnumerator
+
+- (id) initWithEnumerable:(id<LQEnumerable>)collection {
+    self = [super init];
+    if (self) {
+        // declare all the local state needed
+        __block NSFastEnumerationState state = { 0 };
+        __block id stackbuf[16];
+        __block BOOL firstLoop = YES;
+        __block long mutationsPtrValue;
+        __block id* stackbufPtr = stackbuf;
+        __block NSUInteger index = -1;
+        __block NSUInteger lastCount = -1;
+        
+        id(^block)() = ^{
+            if (index != -1 && lastCount != -1 && index < lastCount) {
+                id obj = state.itemsPtr[index];
+                index++;
+                
+                return obj;
+            }
+            
+            NSUInteger count = [collection countByEnumeratingWithState:&state objects:stackbufPtr count: 16];
+            if (!count) {
+                return (id)nil;
+            }
+            
+            lastCount = count;
+            index = 0;
+            
+            id obj = state.itemsPtr[index];
+            index++;
+            
+            return obj;
+        };
+        
+        nextObject_ = Block_copy(block);
+    }
+    
+    return self;
+}
+
++ (LQEnumerableEnumerator*) enumeratorWithEnumerable:(id<LQEnumerable>)collection {
+    return [[self alloc] initWithEnumerable:collection];
+}
+
+- (id) nextObject {
+    return nextObject_();
+}
+
+
+- (void) dealloc {
+    Block_release(nextObject_);
+    [super dealloc];
+}
+
+@end
+
 
 @implementation NSEnumerator(Linq)
 
@@ -63,14 +131,41 @@
 }
 
 @dynamic selectMany;
+// Functional "bind", let's assume there is "yield" operator in ObjC, the
+// result of calling a.SelectMany(LQSelectMany collectionSelector);
+// where a is LQEnumerable would be:
+// for(id item in a) {
+//      for (id subitem in collectionSelector(item)) {
+//          yield return subitem;
+//      }
+// }
 - (LQSelectManyBlock) selectMany {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectManyBlock block = ^id<LQEnumerable>(LQSelectMany fn) {
-        LQSelectMany selector = LQ_AUTORELEASE(Block_copy(fn));
+        LQSelectMany collectionSelector = LQ_AUTORELEASE(Block_copy(fn));
+        __block NSEnumerator* it = nil;
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
-            id item = nil;
-            while((item = [src nextObject])) {
-                return selector(item);
+            while (true) {
+                if (!it) {
+                    id item = [src nextObject];
+                    if (!item) {
+                        return nil;
+                    }
+                    
+                    id<LQEnumerable> collection = collectionSelector(item);
+                    if (![collection respondsToSelector:@selector(objectEnumerator)]) {
+                        it = [LQEnumerableEnumerator enumeratorWithEnumerable:collection];
+                    } else {
+                        it = [collection objectEnumerator];
+                    }
+                }
+                
+                id next = [it nextObject];
+                if (next) {
+                    return next;
+                }
+                
+                it = nil;
             }
             
             return nil;
