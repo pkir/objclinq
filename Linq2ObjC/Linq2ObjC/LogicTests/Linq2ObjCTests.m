@@ -157,4 +157,27 @@
     STAssertEqualObjects(expected, actual, nil);
 }
 
+- (void)testFirstLast
+{
+    NSArray* test = @[ @1, @2, @3];
+    
+    STAssertEqualObjects(@1, test.first(), nil);
+    STAssertEqualObjects(@1, test.firstOrNil(), nil);
+    STAssertEqualObjects(@2, test.firstWithPredicate(^BOOL(id item) { return [item intValue] > 1; }), nil);
+    STAssertEqualObjects(@2, test.firstOrNilWithPredicate(^BOOL(id item) { return [item intValue] > 1; }), nil);
+    
+    STAssertEqualObjects(@3, test.last(), nil);
+    STAssertEqualObjects(@3, test.lastOrNil(), nil);
+    STAssertEqualObjects(@2, test.lastWithPredicate(^BOOL(id item) { return [item intValue] < 3; }), nil);
+    STAssertEqualObjects(@2, test.lastOrNilWithPredicate(^BOOL(id item) { return [item intValue] < 3; }), nil);
+    
+    STAssertThrows(@[].first(), nil);
+    STAssertThrows(@[].last(), nil);
+    STAssertThrows(@[].firstWithPredicate(^(id item){return YES;}), nil);
+    STAssertThrows(@[].lastWithPredicate(^(id item){return YES;}), nil);
+    
+    STAssertThrows(test.firstWithPredicate(^BOOL(id item){return [item intValue] > 3;}), nil);
+    STAssertThrows(test.lastWithPredicate(^BOOL(id item){return [item intValue] < 1;}), nil);
+}
+
 @end

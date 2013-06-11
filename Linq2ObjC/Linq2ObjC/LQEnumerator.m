@@ -347,6 +347,99 @@
     return [Block_copy(block) autorelease];
 }
 
+@dynamic first;
+- (ResultBlock) first {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultBlock block = ^{
+        id obj = weakSelf.firstOrNil();
+        if (obj) {
+            return obj;
+        }
+        
+        @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic firstWithPredicate;
+- (ResultWithPredicateBlock) firstWithPredicate {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultWithPredicateBlock block = ^(LQPredicate predicate) {
+        return weakSelf.where(predicate).first();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic firstOrNil;
+- (ResultBlock) firstOrNil {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultBlock block = ^{
+        NSArray* arr = weakSelf.toArray;
+        return [arr count] > 0 ? arr[0] : nil;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic firstOrNilWithPredicate;
+- (ResultWithPredicateBlock) firstOrNilWithPredicate {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultWithPredicateBlock block = ^(LQPredicate predicate) {
+        return weakSelf.where(predicate).firstOrNil();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic last;
+- (ResultBlock) last {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultBlock block = ^{
+        id obj = weakSelf.lastOrNil();
+        if (obj) {
+            return obj;
+        }
+        
+        @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+
+}
+
+@dynamic lastWithPredicate;
+- (ResultWithPredicateBlock) lastWithPredicate {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultWithPredicateBlock block = ^(LQPredicate predicate) {
+        return weakSelf.where(predicate).last();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic lastOrNil;
+- (ResultBlock) lastOrNil {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultBlock block = ^{
+        NSArray* arr = weakSelf.toArray;
+        return [arr count] > 0 ? [arr lastObject] : nil;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic lastOrNilWithPredicate;
+- (ResultWithPredicateBlock) lastOrNilWithPredicate {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    ResultWithPredicateBlock block = ^(LQPredicate predicate) {
+        return weakSelf.where(predicate).lastOrNil();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @dynamic toArray;
 - (NSArray*) toArray {
     return [self allObjects];

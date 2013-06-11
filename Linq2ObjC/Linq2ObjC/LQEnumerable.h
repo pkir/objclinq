@@ -33,6 +33,8 @@ typedef BOOL (^LQAnyBlock)(LQPredicate predicate);
 typedef id (^LQAggregateWithSeed)(id seed, LQAggregator aggregator);
 typedef id (^LQAggregate)(LQAggregator aggregator);
 
+typedef id (^ResultBlock)(void);
+typedef id (^ResultWithPredicateBlock)(LQPredicate predicate);
 
 @protocol LQEnumerable <NSFastEnumeration>
 
@@ -59,6 +61,16 @@ typedef id (^LQAggregate)(LQAggregator aggregator);
 @property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed;
 
 @property (readonly, nonatomic) LQAggregate aggregate;
+
+@property (readonly, nonatomic) ResultBlock first;
+@property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate;
+@property (readonly, nonatomic) ResultBlock firstOrNil;
+@property (readonly, nonatomic) ResultWithPredicateBlock firstOrNilWithPredicate;
+
+@property (readonly, nonatomic) ResultBlock last;
+@property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate;
+@property (readonly, nonatomic) ResultBlock lastOrNil;
+@property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate;
 
 @property (readonly, nonatomic) NSArray* toArray;
 

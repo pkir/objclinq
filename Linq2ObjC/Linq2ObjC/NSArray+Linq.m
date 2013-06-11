@@ -70,6 +70,46 @@
     return [self objectEnumerator].aggregate;
 }
 
+@dynamic first;
+- (ResultBlock) first {
+    return [self objectEnumerator].first;
+}
+
+@dynamic firstWithPredicate;
+- (ResultWithPredicateBlock) firstWithPredicate {
+    return [self objectEnumerator].firstWithPredicate;
+}
+
+@dynamic firstOrNil;
+- (ResultBlock) firstOrNil {
+    return [self objectEnumerator].firstOrNil;
+}
+
+@dynamic firstOrNilWithPredicate;
+- (ResultWithPredicateBlock) firstOrNilWithPredicate {
+    return [self objectEnumerator].firstOrNilWithPredicate;
+}
+
+@dynamic last;
+- (ResultBlock) last {
+    return [self objectEnumerator].last;
+}
+
+@dynamic lastWithPredicate;
+- (ResultWithPredicateBlock) lastWithPredicate {
+    return [self objectEnumerator].lastWithPredicate;
+}
+
+@dynamic lastOrNil;
+- (ResultBlock) lastOrNil {
+    return [self objectEnumerator].lastOrNil;
+}
+
+@dynamic lastOrNilWithPredicate;
+- (ResultWithPredicateBlock) lastOrNilWithPredicate {
+    return [self objectEnumerator].lastOrNilWithPredicate;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSArray_Linq)
