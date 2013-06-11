@@ -16,6 +16,9 @@
     return _nextObject(_src);
 }
 
++ (LQEnumerator*)enumeratorWithFunction:(NSEnumerator*)src nextObjectBlock:(id(^)(NSEnumerator*))nextObject {
+    return [[self alloc] initWithFunction:src nextObjectBlock:nextObject];
+}
 @end
 
 
@@ -26,7 +29,7 @@
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectBlock block = ^id<LQEnumerable>(LQProjection fn) {
         LQProjection sel = LQ_AUTORELEASE(Block_copy(fn));
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
                 return sel(item);
@@ -44,7 +47,7 @@
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQWhereBlock block = ^id<LQEnumerable>(LQPredicate fn) {
         LQPredicate filter = LQ_AUTORELEASE(Block_copy(fn));
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
                 if (filter(item)) {
@@ -64,7 +67,7 @@
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectManyBlock block = ^id<LQEnumerable>(LQSelectMany fn) {
         LQSelectMany selector = LQ_AUTORELEASE(Block_copy(fn));
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
                 return selector(item);
@@ -83,7 +86,7 @@
     LQDistinctBlock block = ^{
         __block NSMutableSet* returnedItems = [NSMutableSet set];
         
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
                 if (![returnedItems containsObject:item]) {
@@ -105,7 +108,7 @@
     LQSkipBlock block = ^(NSUInteger count){
         __block NSUInteger i = 0;
         
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             while (i++ < count) {
                 id item = [src nextObject];
                 if (!item) {
@@ -127,7 +130,7 @@
         LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
         __block BOOL skip = YES;
         
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while ((item = [src nextObject])) {
                 if (skip && !predicate(item)) {
@@ -152,7 +155,7 @@
     LQSTakeBlock block = ^(NSUInteger count){
         __block NSUInteger i = 0;
         
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             while (i++ < count) {
                 return [src nextObject];
             }
@@ -170,7 +173,7 @@
     LQSTakeWithPredicateBlock block = ^(LQPredicate fn){
         LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
         
-        return [[LQEnumerator alloc] initWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while ((item = [src nextObject])) {
                 if (!predicate(item)) {

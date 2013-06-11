@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D14AC1ED1761933400CB955C /* libLinq2ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libLinq2ObjC.a */; };
-		D14AC1F21761937900CB955C /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D14AC1F11761937900CB955C /* Linq2ObjCTests.m */; };
+		D14AC1F91766C4C100CB955C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
+		D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB4144176044CB00152C10 /* Cocoa.framework */; };
+		D14AC2001766C4C100CB955C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D14AC1FE1766C4C100CB955C /* InfoPlist.strings */; };
+		D14AC20A1766C4D700CB955C /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */; };
+		D14AC20D1766C4FB00CB955C /* libLinq2ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libLinq2ObjC.a */; };
 		D1EB41111760415900152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41291760438100152C10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D1EB412B1760438100152C10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB412A1760438100152C10 /* UIKit.framework */; };
@@ -18,13 +21,10 @@
 		D1EB415B1760481B00152C10 /* libLinq2ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libLinq2ObjC.a */; };
 		D1EB415E1760488300152C10 /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB415D1760488300152C10 /* NSArray+Linq.m */; };
 		D1EB416917616C9D00152C10 /* LQEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB416817616C9D00152C10 /* LQEnumerator.m */; };
-		D1EF3BC51761919500C5C9F9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
-		D1EF3BC61761919500C5C9F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB4144176044CB00152C10 /* Cocoa.framework */; };
-		D1EF3BCC1761919500C5C9F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1EF3BCA1761919500C5C9F9 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D14AC1EE1761933900CB955C /* PBXContainerItemProxy */ = {
+		D14AC20B1766C4E100CB955C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1EB41051760415900152C10 /* Project object */;
 			proxyType = 1;
@@ -46,8 +46,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D14AC1F01761937900CB955C /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
-		D14AC1F11761937900CB955C /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
+		D14AC1F81766C4C100CB955C /* Mac_Linq2ObjcTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mac_Linq2ObjcTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14AC1FD1766C4C100CB955C /* Mac_Linq2ObjcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac_Linq2ObjcTests-Info.plist"; sourceTree = "<group>"; };
+		D14AC1FF1766C4C100CB955C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D14AC2041766C4C100CB955C /* Mac_Linq2ObjcTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac_Linq2ObjcTests-Prefix.pch"; sourceTree = "<group>"; };
+		D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
+		D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
 		D1EB410D1760415900152C10 /* libLinq2ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLinq2ObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41101760415900152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1EB41141760415900152C10 /* Linq2ObjC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Linq2ObjC-Prefix.pch"; sourceTree = "<group>"; };
@@ -68,16 +72,21 @@
 		D1EB415D1760488300152C10 /* NSArray+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Linq.m"; sourceTree = "<group>"; };
 		D1EB416017604E3200152C10 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		D1EB41611761611C00152C10 /* LQEnumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEnumerable.h; sourceTree = "<group>"; };
-		D1EB4162176161BF00152C10 /* LinqTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinqTypes.h; sourceTree = "<group>"; };
 		D1EB416717616C9D00152C10 /* LQEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEnumerator.h; sourceTree = "<group>"; };
 		D1EB416817616C9D00152C10 /* LQEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQEnumerator.m; sourceTree = "<group>"; };
-		D1EF3BC41761919500C5C9F9 /* Mac_Linq2ObjcTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mac_Linq2ObjcTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1EF3BC91761919500C5C9F9 /* Mac_Linq2ObjcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac_Linq2ObjcTests-Info.plist"; sourceTree = "<group>"; };
-		D1EF3BCB1761919500C5C9F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1EF3BD01761919600C5C9F9 /* Mac_Linq2ObjcTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac_Linq2ObjcTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D14AC1F41766C4C100CB955C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14AC20D1766C4FB00CB955C /* libLinq2ObjC.a in Frameworks */,
+				D14AC1F91766C4C100CB955C /* SenTestingKit.framework in Frameworks */,
+				D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1EB410A1760415900152C10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,25 +106,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1EF3BC01761919500C5C9F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D14AC1ED1761933400CB955C /* libLinq2ObjC.a in Frameworks */,
-				D1EF3BC51761919500C5C9F9 /* SenTestingKit.framework in Frameworks */,
-				D1EF3BC61761919500C5C9F9 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D14AC1FB1766C4C100CB955C /* Mac_Linq2ObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */,
+				D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */,
+				D14AC1FC1766C4C100CB955C /* Supporting Files */,
+			);
+			path = Mac_Linq2ObjcTests;
+			sourceTree = "<group>";
+		};
+		D14AC1FC1766C4C100CB955C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D14AC1FD1766C4C100CB955C /* Mac_Linq2ObjcTests-Info.plist */,
+				D14AC1FE1766C4C100CB955C /* InfoPlist.strings */,
+				D14AC2041766C4C100CB955C /* Mac_Linq2ObjcTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D1EB41041760415900152C10 = {
 			isa = PBXGroup;
 			children = (
 				D1EB41121760415900152C10 /* Linq2ObjC */,
 				D1EB412D1760438100152C10 /* iOS_Linq2ObjCTests */,
-				D1EF3BC71761919500C5C9F9 /* Mac_Linq2ObjcTests */,
+				D14AC1FB1766C4C100CB955C /* Mac_Linq2ObjcTests */,
 				D1EB410F1760415900152C10 /* Frameworks */,
 				D1EB410E1760415900152C10 /* Products */,
 			);
@@ -126,7 +145,7 @@
 			children = (
 				D1EB410D1760415900152C10 /* libLinq2ObjC.a */,
 				D1EB41271760438100152C10 /* iOS_Linq2ObjCTests.octest */,
-				D1EF3BC41761919500C5C9F9 /* Mac_Linq2ObjcTests.octest */,
+				D14AC1F81766C4C100CB955C /* Mac_Linq2ObjcTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +171,6 @@
 				D1EB415D1760488300152C10 /* NSArray+Linq.m */,
 				D1EB416017604E3200152C10 /* Macros.h */,
 				D1EB41611761611C00152C10 /* LQEnumerable.h */,
-				D1EB4162176161BF00152C10 /* LinqTypes.h */,
 				D1EB416717616C9D00152C10 /* LQEnumerator.h */,
 				D1EB416817616C9D00152C10 /* LQEnumerator.m */,
 			);
@@ -197,29 +215,28 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		D1EF3BC71761919500C5C9F9 /* Mac_Linq2ObjcTests */ = {
-			isa = PBXGroup;
-			children = (
-				D14AC1F01761937900CB955C /* Linq2ObjCTests.h */,
-				D14AC1F11761937900CB955C /* Linq2ObjCTests.m */,
-				D1EF3BC81761919500C5C9F9 /* Supporting Files */,
-			);
-			path = Mac_Linq2ObjcTests;
-			sourceTree = "<group>";
-		};
-		D1EF3BC81761919500C5C9F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1EF3BC91761919500C5C9F9 /* Mac_Linq2ObjcTests-Info.plist */,
-				D1EF3BCA1761919500C5C9F9 /* InfoPlist.strings */,
-				D1EF3BD01761919600C5C9F9 /* Mac_Linq2ObjcTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D14AC1F71766C4C100CB955C /* Mac_Linq2ObjcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14AC2051766C4C100CB955C /* Build configuration list for PBXNativeTarget "Mac_Linq2ObjcTests" */;
+			buildPhases = (
+				D14AC1F31766C4C100CB955C /* Sources */,
+				D14AC1F41766C4C100CB955C /* Frameworks */,
+				D14AC1F51766C4C100CB955C /* Resources */,
+				D14AC1F61766C4C100CB955C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D14AC20C1766C4E100CB955C /* PBXTargetDependency */,
+			);
+			name = Mac_Linq2ObjcTests;
+			productName = Mac_Linq2ObjcTests;
+			productReference = D14AC1F81766C4C100CB955C /* Mac_Linq2ObjcTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D1EB410C1760415900152C10 /* Linq2ObjC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1EB411B1760415900152C10 /* Build configuration list for PBXNativeTarget "Linq2ObjC" */;
@@ -255,25 +272,6 @@
 			productReference = D1EB41271760438100152C10 /* iOS_Linq2ObjCTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		D1EF3BC31761919500C5C9F9 /* Mac_Linq2ObjcTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1EF3BD11761919600C5C9F9 /* Build configuration list for PBXNativeTarget "Mac_Linq2ObjcTests" */;
-			buildPhases = (
-				D1EF3BBF1761919500C5C9F9 /* Sources */,
-				D1EF3BC01761919500C5C9F9 /* Frameworks */,
-				D1EF3BC11761919500C5C9F9 /* Resources */,
-				D1EF3BC21761919500C5C9F9 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D14AC1EF1761933900CB955C /* PBXTargetDependency */,
-			);
-			name = Mac_Linq2ObjcTests;
-			productName = Mac_Linq2ObjcTests;
-			productReference = D1EF3BC41761919500C5C9F9 /* Mac_Linq2ObjcTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,12 +295,20 @@
 			targets = (
 				D1EB410C1760415900152C10 /* Linq2ObjC */,
 				D1EB41261760438100152C10 /* iOS_Linq2ObjCTests */,
-				D1EF3BC31761919500C5C9F9 /* Mac_Linq2ObjcTests */,
+				D14AC1F71766C4C100CB955C /* Mac_Linq2ObjcTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D14AC1F51766C4C100CB955C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14AC2001766C4C100CB955C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1EB41241760438100152C10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,18 +317,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1EF3BC11761919500C5C9F9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1EF3BCC1761919500C5C9F9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D1EB41251760438100152C10 /* ShellScript */ = {
+		D14AC1F61766C4C100CB955C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,7 +333,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		D1EF3BC21761919500C5C9F9 /* ShellScript */ = {
+		D1EB41251760438100152C10 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,6 +349,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D14AC1F31766C4C100CB955C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14AC20A1766C4D700CB955C /* Linq2ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1EB41091760415900152C10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,25 +374,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1EF3BBF1761919500C5C9F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D14AC1F21761937900CB955C /* Linq2ObjCTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D14AC1EF1761933900CB955C /* PBXTargetDependency */ = {
+		D14AC20C1766C4E100CB955C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1EB410C1760415900152C10 /* Linq2ObjC */;
-			targetProxy = D14AC1EE1761933900CB955C /* PBXContainerItemProxy */;
+			targetProxy = D14AC20B1766C4E100CB955C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D14AC1FE1766C4C100CB955C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D14AC1FF1766C4C100CB955C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D1EB41301760438100152C10 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -395,17 +401,48 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D1EF3BCA1761919500C5C9F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1EF3BCB1761919500C5C9F9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D14AC2061766C4C100CB955C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D14AC2071766C4C100CB955C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		D1EB41191760415900152C10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,48 +600,17 @@
 			};
 			name = Release;
 		};
-		D1EF3BD21761919600C5C9F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		D1EF3BD31761919600C5C9F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "Mac_Linq2ObjcTests/Mac_Linq2ObjcTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D14AC2051766C4C100CB955C /* Build configuration list for PBXNativeTarget "Mac_Linq2ObjcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14AC2061766C4C100CB955C /* Debug */,
+				D14AC2071766C4C100CB955C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D1EB41081760415900152C10 /* Build configuration list for PBXProject "Linq2ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -628,15 +634,6 @@
 			buildConfigurations = (
 				D1EB41381760438100152C10 /* Debug */,
 				D1EB41391760438100152C10 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1EF3BD11761919600C5C9F9 /* Build configuration list for PBXNativeTarget "Mac_Linq2ObjcTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1EF3BD21761919600C5C9F9 /* Debug */,
-				D1EF3BD31761919600C5C9F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
