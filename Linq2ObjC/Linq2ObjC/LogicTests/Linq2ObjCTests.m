@@ -298,4 +298,37 @@
     STAssertEqualObjects((@[@1, @3]), (@[@1, @2, @3]).intersect(@[@1, @3]).toArray(), nil);
 }
 
+- (void)testOrderBy
+{
+    
+    STAssertEqualObjects((@[]), (@[]).orderBy(kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[@1, @2]), (@[@2, @1]).orderBy(kLQDefaultComparator).toArray(), nil);
+}
+
+- (void)testMin
+{
+    STAssertEqualObjects(@1, (@[@1]).min(kLQDefaultComparator), nil);
+    STAssertEqualObjects(@0, (@[@10, @2, @123, @1, @0]).min(kLQDefaultComparator), nil);
+    
+    STAssertEqualObjects((@[@1]), (@[@1]).minBy(kLQIdentity, kLQDefaultComparator), nil);
+    STAssertEqualObjects((@[@0, @0]), (@[@10, @2, @123, @1, @0, @0]).minBy(kLQIdentity, kLQDefaultComparator), nil);
+    STAssertEqualObjects((@[@123]), (@[@10, @2, @123, @1, @1, @1]).minBy(^id(NSNumber* item) { return @(1.0 /[item doubleValue]); }, kLQDefaultComparator), nil);
+    
+    STAssertThrowsSpecificNamed((@[]).min(kLQDefaultComparator), NSException, @"InvalidOperationException", nil);
+    STAssertThrowsSpecificNamed((@[]).minBy(kLQIdentity, kLQDefaultComparator), NSException, @"InvalidOperationException", nil);
+}
+
+- (void)testMax
+{
+    STAssertEqualObjects(@1, (@[@1]).max(kLQDefaultComparator), nil);
+    STAssertEqualObjects(@123, (@[@10, @2, @123, @1, @0]).max(kLQDefaultComparator), nil);
+    
+    STAssertEqualObjects((@[@1]), (@[@1]).maxBy(kLQIdentity, kLQDefaultComparator), nil);
+    STAssertEqualObjects((@[@123, @123]), (@[@10, @2, @123, @123, @1, @0, @0]).maxBy(kLQIdentity, kLQDefaultComparator), nil);
+    STAssertEqualObjects((@[@1, @1, @1]), (@[@10, @2, @123, @1, @1, @1]).maxBy(^id(NSNumber* item) { return @(1.0 /[item doubleValue]); }, kLQDefaultComparator), nil);
+    
+    STAssertThrowsSpecificNamed((@[]).max(kLQDefaultComparator), NSException, @"InvalidOperationException", nil);
+    STAssertThrowsSpecificNamed((@[]).maxBy(kLQIdentity, kLQDefaultComparator), NSException, @"InvalidOperationException", nil);
+}
+
 @end

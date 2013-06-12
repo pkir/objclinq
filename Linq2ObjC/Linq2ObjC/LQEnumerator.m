@@ -1,8 +1,13 @@
 #import "LQEnumerator.h"
+#import "NSArray+Linq.h"
 #import "Macros.h"
 
 LQProjection kLQIdentity = ^id(id item) {
     return item;
+};
+
+NSComparator kLQDefaultComparator = ^(id a, id b) {
+    return [a compare:b];
 };
 
 @implementation LQEnumerator
@@ -612,6 +617,86 @@ LQProjection kLQIdentity = ^id(id item) {
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic orderBy;
+- (LQOrderByBlock) orderBy {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQOrderByBlock block = ^(NSComparator comparator) {
+        return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:comparator];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic min;
+- (LQMinMaxBlock) min {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQMinMaxBlock block = ^(NSComparator comparator) {
+        return weakSelf.minBy(kLQIdentity, comparator).first();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic max;
+- (LQMinMaxBlock) max {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQMinMaxBlock block = ^(NSComparator comparator) {
+        return weakSelf.maxBy(kLQIdentity, comparator).first();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic minBy;
+- (LQMinMaxByBlock) minBy {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQMinMaxByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
+        return [weakSelf extremeBy:keySelector comparator:^NSComparisonResult(id obj1, id obj2) {
+            return -comparator(obj1, obj2);
+        }];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic maxBy;
+- (LQMinMaxByBlock) maxBy {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQMinMaxByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
+        return [weakSelf extremeBy:keySelector comparator:comparator];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+- (NSArray*) extremeBy:(LQProjection)keySelector comparator:(NSComparator)comparator {
+    NSMutableArray* result = [NSMutableArray array];
+    
+    id current = [self nextObject];
+    if (!current) {
+        @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
+    }
+    
+    id resKey = keySelector(current);
+    [result addObject:current];
+    
+    id cur = nil;
+    while ((cur = [self nextObject])) {
+        id key = keySelector(cur);
+        
+        NSComparisonResult cmp = comparator(key, resKey);
+        if (cmp == 0) {
+            [result addObject:cur];
+        } else if (cmp > 0) {
+            [result removeAllObjects];
+            [result addObject:cur];
+            resKey = key;
+        }
+    }
+    
+    return result;
 }
 
 @dynamic toArray;

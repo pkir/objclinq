@@ -39,6 +39,16 @@
     return LQ_AUTORELEASE(Block_copy(block));
 }
 
+@dynamic orderBy;
+- (LQOrderByBlock) orderBy {
+    WeakRefAttribute NSArray* weakSelf = self;
+    LQOrderByBlock block = ^(NSComparator comparator) {
+        return [weakSelf sortedArrayUsingComparator:comparator];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @dynamic toDictionary;
 - (LQDictionaryBlock) toDictionary {
     return [self objectEnumerator].toDictionary;
@@ -200,6 +210,26 @@
 @dynamic intersect;
 - (LQConcatBlock) intersect {
     return [self objectEnumerator].intersect;
+}
+
+@dynamic min;
+- (LQMinMaxBlock) min {
+    return [self objectEnumerator].min;
+}
+
+@dynamic max;
+- (LQMinMaxBlock) max {
+    return [self objectEnumerator].max;
+}
+
+@dynamic minBy;
+- (LQMinMaxByBlock) minBy {
+    return [self objectEnumerator].minBy;
+}
+
+@dynamic maxBy;
+- (LQMinMaxByBlock) maxBy {
+    return [self objectEnumerator].maxBy;
 }
 
 @end

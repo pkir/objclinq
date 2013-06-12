@@ -2,6 +2,7 @@
 #import "LQEnumerable.h"
 
 extern LQProjection kLQIdentity;
+extern NSComparator kLQDefaultComparator;
 
 @interface LQEnumerator : NSEnumerator {
     NSEnumerator* _src;
@@ -70,6 +71,14 @@ extern LQProjection kLQIdentity;
 @property (readonly, nonatomic) LQConcatBlock except;
 
 @property (readonly, nonatomic) LQConcatBlock intersect;
+
+@property (readonly, nonatomic) LQOrderByBlock orderBy;
+
+@property (readonly, nonatomic) LQMinMaxBlock min;
+@property (readonly, nonatomic) LQMinMaxBlock max;
+
+@property (readonly, nonatomic) LQMinMaxByBlock minBy;
+@property (readonly, nonatomic) LQMinMaxByBlock maxBy;
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQSetBlock toSet;

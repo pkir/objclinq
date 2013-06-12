@@ -45,7 +45,12 @@ typedef id<LQEnumerable> (^LQConcatBlock)(id<LQEnumerable> collection);
 typedef NSUInteger (^LQCountBlock)();
 typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
 
+typedef id<LQEnumerable> (^LQOrderByBlock)(NSComparator comparator);
+
 typedef void (^LQForEachBlock)(LQAction action);
+
+typedef id (^LQMinMaxBlock)(NSComparator comparer);
+typedef NSArray* (^LQMinMaxByBlock)(LQProjection keySelector, NSComparator comparer);
 
 typedef NSArray* (^LQArrayBlock)(void);
 typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjection valueSelector);
@@ -108,6 +113,14 @@ typedef NSSet* (^LQSetBlock)(void);
 @property (readonly, nonatomic) LQConcatBlock except;
 
 @property (readonly, nonatomic) LQConcatBlock intersect;
+
+@property (readonly, nonatomic) LQOrderByBlock orderBy;
+
+@property (readonly, nonatomic) LQMinMaxBlock min;
+@property (readonly, nonatomic) LQMinMaxBlock max;
+
+@property (readonly, nonatomic) LQMinMaxByBlock minBy;
+@property (readonly, nonatomic) LQMinMaxByBlock maxBy;
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;

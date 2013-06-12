@@ -60,6 +60,14 @@
 
 @property (readonly, nonatomic) LQConcatBlock intersect;
 
+@property (readonly, nonatomic) LQOrderByBlock orderBy;
+
+@property (readonly, nonatomic) LQMinMaxBlock min;
+@property (readonly, nonatomic) LQMinMaxBlock max;
+
+@property (readonly, nonatomic) LQMinMaxByBlock minBy;
+@property (readonly, nonatomic) LQMinMaxByBlock maxBy;
+
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQSetBlock toSet;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;
