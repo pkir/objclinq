@@ -10,6 +10,8 @@ typedef BOOL (^LQPredicate)(id item);
 
 typedef id (^LQAggregator)(id seed, id item);
 
+typedef id (^LQZipper)(id first, id second);
+
 typedef id<LQEnumerable> (^LQSelectMany)(id item);
 
 typedef id<LQEnumerable> (^LQSelectBlock)(LQProjection selector);
@@ -51,6 +53,8 @@ typedef void (^LQForEachBlock)(LQAction action);
 
 typedef id (^LQMinMaxBlock)(NSComparator comparer);
 typedef NSArray* (^LQMinMaxByBlock)(LQProjection keySelector, NSComparator comparer);
+
+typedef id<LQEnumerable> (^LQZipBlock)(id<LQEnumerable> second, LQZipper returnSelector);
 
 typedef NSArray* (^LQArrayBlock)(void);
 typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjection valueSelector);
@@ -121,6 +125,8 @@ typedef NSSet* (^LQSetBlock)(void);
 
 @property (readonly, nonatomic) LQMinMaxByBlock minBy;
 @property (readonly, nonatomic) LQMinMaxByBlock maxBy;
+
+@property (readonly, nonatomic) LQZipBlock zip;
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;

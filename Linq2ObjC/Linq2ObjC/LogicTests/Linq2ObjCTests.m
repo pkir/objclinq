@@ -331,4 +331,13 @@
     STAssertThrowsSpecificNamed((@[]).maxBy(kLQIdentity, kLQDefaultComparator), NSException, @"InvalidOperationException", nil);
 }
 
+- (void)testZip
+{
+    STAssertEqualObjects((@[@3, @5]), (@[@1, @2]).zip(@[@2, @3], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
+    STAssertEqualObjects((@[@3, @5]), (@[@1, @2]).zip(@[@2, @3, @4], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
+    STAssertEqualObjects((@[@3, @5]), (@[@1, @2, @3]).zip(@[@2, @3], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[]).zip(@[@2, @3], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[@1, @2]).zip(@[], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
+}
+
 @end

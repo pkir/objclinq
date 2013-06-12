@@ -80,6 +80,8 @@ extern NSComparator kLQDefaultComparator;
 @property (readonly, nonatomic) LQMinMaxByBlock minBy;
 @property (readonly, nonatomic) LQMinMaxByBlock maxBy;
 
+@property (readonly, nonatomic) LQZipBlock zip;
+
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQSetBlock toSet;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;

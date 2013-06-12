@@ -699,6 +699,28 @@ NSComparator kLQDefaultComparator = ^(id a, id b) {
     return result;
 }
 
+@dynamic zip;
+- (LQZipBlock) zip {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQZipBlock block = ^(id<LQEnumerable> second, LQZipper returnSelector) {
+        return [LQEnumerator enumeratorWithFunction:[LQEnumerableEnumerator enumeratorWithEnumerable:second]
+                                    nextObjectBlock:^id(NSEnumerator* src)
+        {
+            id itemFirst = nil;
+            id itemSecond = nil;
+            while ((itemFirst = [weakSelf nextObject]) != nil && (itemSecond = [src nextObject]) != nil) {
+                id res = returnSelector(itemFirst, itemSecond);
+                return res;
+            }
+            
+            return nil;
+        }];
+
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @dynamic toArray;
 - (LQArrayBlock) toArray {
     WeakRefAttribute NSEnumerator* weakSelf = self;

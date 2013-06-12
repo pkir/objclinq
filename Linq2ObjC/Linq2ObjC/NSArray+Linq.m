@@ -232,6 +232,11 @@
     return [self objectEnumerator].maxBy;
 }
 
+@dynamic zip;
+- (LQZipBlock) zip {
+    return self.objectEnumerator.zip;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSArray_Linq)
