@@ -426,8 +426,8 @@
 - (ResultBlock) firstOrNil {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
-        NSArray* arr = weakSelf.toArray();
-        return [arr count] > 0 ? arr[0] : nil;
+        id obj = [weakSelf nextObject];
+        return obj;
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
@@ -447,7 +447,7 @@
 - (ResultBlock) last {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
-        id obj = weakSelf.lastOrNil();
+        id obj = [weakSelf.toArray() lastObject];
         if (obj) {
             return obj;
         }
@@ -474,7 +474,7 @@
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
         NSArray* arr = weakSelf.toArray();
-        return [arr count] > 0 ? [arr lastObject] : nil;
+        return [arr lastObject];
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
