@@ -1,6 +1,10 @@
 #import "LQEnumerator.h"
 #import "Macros.h"
 
+LQProjection kLQIdentity = ^id(id item) {
+    return item;
+};
+
 @implementation LQEnumerator
 
 - (id)initWithFunction:(NSEnumerator*)src nextObjectBlock:(id(^)(NSEnumerator*))nextObject {
@@ -513,7 +517,7 @@
 @dynamic ofClass;
 - (LQOfClassBlock) ofClass {
     WeakRefAttribute NSEnumerator* weakSelf = self;
-    LQOfClassBlock block = ^(Class classType){
+    LQOfClassBlock block = ^(Class classType) {
         return weakSelf.where(^(id item) { return [item isKindOfClass:classType]; });
     };
     
@@ -525,6 +529,24 @@
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQArrayBlock block = ^{
         return weakSelf.allObjects;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic toDictionary;
+- (LQDictionaryBlock) toDictionary {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQDictionaryBlock block = ^(LQProjection keySelector, LQProjection valueSelector) {
+        NSMutableDictionary* result = [NSMutableDictionary dictionary];
+        for (id item in weakSelf) {
+            id key = keySelector(item);
+            id value = valueSelector(item);
+            
+            [result setObject:value forKey:key];
+        }
+        
+        return (NSDictionary*)result;
     };
     
     return LQ_AUTORELEASE(Block_copy(block));

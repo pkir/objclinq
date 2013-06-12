@@ -20,9 +20,17 @@
 
 @dynamic toArray;
 - (LQArrayBlock) toArray {
-    WeakRefAttribute weakSelf = self;
+    WeakRefAttribute NSArray* weakSelf = self;
+    LQArrayBlock block = ^NSArray*(void) {
+        return [[weakSelf retain] autorelease];
+    };
     
-    return LQ_AUTORELEASE(Block_copy(^NSArray*{ return weakSelf; }));
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic toDictionary;
+- (LQDictionaryBlock) toDictionary {
+    return [self objectEnumerator].toDictionary;
 }
 
 @dynamic disctinct;

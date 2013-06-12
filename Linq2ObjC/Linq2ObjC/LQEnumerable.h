@@ -42,6 +42,7 @@ typedef NSUInteger (^LQCountBlock)();
 typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
 
 typedef NSArray* (^LQArrayBlock)(void);
+typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjection valueSelector);
 
 @protocol LQEnumerable <NSFastEnumeration>
 
@@ -91,6 +92,7 @@ typedef NSArray* (^LQArrayBlock)(void);
 
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
+@property (readonly, nonatomic) LQDictionaryBlock toDictionary;
 
 @end
 

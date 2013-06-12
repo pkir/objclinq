@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "LQEnumerable.h"
 
+extern LQProjection kLQIdentity;
+
 @interface LQEnumerator : NSEnumerator {
     NSEnumerator* _src;
     id (^_nextObject)(NSEnumerator*);
@@ -58,5 +60,6 @@
 @property (readonly, nonatomic) LQOfClassBlock ofClass;
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
+@property (readonly, nonatomic) LQDictionaryBlock toDictionary;
 
 @end

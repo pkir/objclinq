@@ -4,6 +4,22 @@
 
 @implementation Linq2ObjCTests
 
+- (void)testToArray
+{
+    NSArray* test = @[ @"1", @"2", @"3"];
+    
+    STAssertEqualObjects(test, test.toArray(), nil);
+    STAssertEqualObjects(@[], @[].toArray(), nil);
+}
+
+- (void)testToDictionary
+{
+    NSArray* test = @[ @"1", @"2", @"3"];
+    
+    STAssertEqualObjects((@{@1: @"1", @2: @"2", @3: @"3"}), test.toDictionary(^(id item){return @([item intValue]);}, kLQIdentity), nil);
+    STAssertEqualObjects(@{}, @[].toDictionary(kLQIdentity, kLQIdentity), nil);
+}
+
 - (void)testSelect
 {
     NSArray* test = @[ @"1", @"2", @"3"];
