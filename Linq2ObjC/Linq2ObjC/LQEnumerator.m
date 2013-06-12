@@ -179,8 +179,8 @@ LQProjection kLQIdentity = ^id(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic disctinct;
-- (LQDistinctBlock) disctinct {
+@dynamic distinct;
+- (LQDistinctBlock) distinct {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQDistinctBlock block = ^{
         __block NSMutableSet* returnedItems = [NSMutableSet set];
@@ -540,12 +540,95 @@ LQProjection kLQIdentity = ^id(id item) {
     return LQ_AUTORELEASE(Block_copy(block));
 }
 
+@dynamic forEach;
+- (LQForEachBlock) forEach {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQForEachBlock block = ^(LQAction action){
+        for (id item in weakSelf) {
+            action(item);
+        }
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic concat;
+- (LQConcatBlock) concat {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    __block LQEnumerableEnumerator* enumerator = nil;
+    __block BOOL selfDone = NO;
+    LQConcatBlock block = ^(id<LQEnumerable> collection) {
+        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+            id item = nil;
+            if (!selfDone) {
+                while ((item = [src nextObject])) {
+                    return item;
+                }
+                selfDone = YES;
+            }
+            
+            if (selfDone && enumerator == nil) {
+                enumerator = [LQEnumerableEnumerator enumeratorWithEnumerable:collection];
+            }
+            
+            while ((item = [enumerator nextObject])) {
+                return item;
+            }
+            
+            return nil;
+        }];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic unions;
+- (LQConcatBlock) unions {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQConcatBlock block = ^(id<LQEnumerable> collection) {
+        return weakSelf.concat(collection).distinct();
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic except;
+- (LQConcatBlock) except {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQConcatBlock block = ^(id<LQEnumerable> collection) {
+        NSSet* dst = collection.toSet();
+        return weakSelf.where(^BOOL(id item) { return ![dst containsObject:item]; });
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic intersect;
+- (LQConcatBlock) intersect {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQConcatBlock block = ^(id<LQEnumerable> collection) {
+        NSSet* dst = collection.toSet();
+        return weakSelf.where(^BOOL(id item) { return [dst containsObject:item]; });
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
 
 @dynamic toArray;
 - (LQArrayBlock) toArray {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQArrayBlock block = ^{
         return weakSelf.allObjects;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic toSet;
+- (LQSetBlock) toSet {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQSetBlock block = ^(void) {
+        return [NSSet setWithArray:weakSelf.allObjects];
     };
     
     return LQ_AUTORELEASE(Block_copy(block));

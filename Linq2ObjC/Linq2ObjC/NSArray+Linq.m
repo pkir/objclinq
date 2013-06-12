@@ -28,14 +28,25 @@
     return LQ_AUTORELEASE(Block_copy(block));
 }
 
+
+@dynamic toSet;
+- (LQSetBlock) toSet {
+    WeakRefAttribute NSArray* weakSelf = self;
+    LQSetBlock block = ^(void) {
+        return [NSSet setWithArray:weakSelf];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @dynamic toDictionary;
 - (LQDictionaryBlock) toDictionary {
     return [self objectEnumerator].toDictionary;
 }
 
-@dynamic disctinct;
-- (LQDistinctBlock) disctinct {
-    return [self objectEnumerator].disctinct;
+@dynamic distinct;
+- (LQDistinctBlock) distinct {
+    return [self objectEnumerator].distinct;
 }
 
 @dynamic skip;
@@ -164,6 +175,31 @@
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic forEach;
+- (LQForEachBlock) forEach {
+    return [self objectEnumerator].forEach;
+}
+
+@dynamic concat;
+- (LQConcatBlock) concat {
+    return [self objectEnumerator].concat;
+}
+
+@dynamic unions;
+- (LQConcatBlock) unions {
+    return [self objectEnumerator].unions;
+}
+
+@dynamic except;
+- (LQConcatBlock) except {
+    return [self objectEnumerator].except;
+}
+
+@dynamic intersect;
+- (LQConcatBlock) intersect {
+    return [self objectEnumerator].intersect;
 }
 
 @end

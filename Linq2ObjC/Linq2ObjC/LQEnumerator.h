@@ -21,7 +21,7 @@ extern LQProjection kLQIdentity;
 
 @property (readonly, nonatomic) LQSelectManyBlock selectMany;
 
-@property (readonly, nonatomic) LQDistinctBlock disctinct;
+@property (readonly, nonatomic) LQDistinctBlock distinct;
 
 @property (readonly, nonatomic) LQSkipBlock skip;
 
@@ -61,7 +61,18 @@ extern LQProjection kLQIdentity;
 
 @property (readonly, nonatomic) LQPredicate contains;
 
+@property (readonly, nonatomic) LQForEachBlock forEach;
+
+@property (readonly, nonatomic) LQConcatBlock concat;
+
+@property (readonly, nonatomic) LQConcatBlock unions;
+
+@property (readonly, nonatomic) LQConcatBlock except;
+
+@property (readonly, nonatomic) LQConcatBlock intersect;
+
 @property (readonly, nonatomic) LQArrayBlock toArray;
+@property (readonly, nonatomic) LQSetBlock toSet;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;
 
 @end

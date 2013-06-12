@@ -4,6 +4,8 @@
 
 typedef id (^LQProjection)(id item);
 
+typedef void (^LQAction)(id item);
+
 typedef BOOL (^LQPredicate)(id item);
 
 typedef id (^LQAggregator)(id seed, id item);
@@ -38,11 +40,16 @@ typedef id (^ResultWithPredicateBlock)(LQPredicate predicate);
 
 typedef id<LQEnumerable> (^LQOfClassBlock)(Class classType);
 
+typedef id<LQEnumerable> (^LQConcatBlock)(id<LQEnumerable> collection);
+
 typedef NSUInteger (^LQCountBlock)();
 typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
 
+typedef void (^LQForEachBlock)(LQAction action);
+
 typedef NSArray* (^LQArrayBlock)(void);
 typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjection valueSelector);
+typedef NSSet* (^LQSetBlock)(void);
 
 @protocol LQEnumerable <NSFastEnumeration>
 
@@ -52,7 +59,7 @@ typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjectio
 
 @property (readonly, nonatomic) LQSelectManyBlock selectMany;
 
-@property (readonly, nonatomic) LQDistinctBlock disctinct;
+@property (readonly, nonatomic) LQDistinctBlock distinct;
 
 @property (readonly, nonatomic) LQSkipBlock skip;
 
@@ -92,9 +99,19 @@ typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjectio
 
 @property (readonly, nonatomic) LQPredicate contains;
 
+@property (readonly, nonatomic) LQForEachBlock forEach;
+
+@property (readonly, nonatomic) LQConcatBlock concat;
+
+@property (readonly, nonatomic) LQConcatBlock unions;
+
+@property (readonly, nonatomic) LQConcatBlock except;
+
+@property (readonly, nonatomic) LQConcatBlock intersect;
 
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;
+@property (readonly, nonatomic) LQSetBlock toSet;
 
 @end
 

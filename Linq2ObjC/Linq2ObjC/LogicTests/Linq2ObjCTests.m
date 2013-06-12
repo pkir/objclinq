@@ -20,6 +20,16 @@
     STAssertEqualObjects(@{}, @[].toDictionary(kLQIdentity, kLQIdentity), nil);
 }
 
+- (void)testToSet
+{
+    NSArray* test = @[ @"1", @"2", @"3"];
+    
+    STAssertEqualObjects([NSSet setWithArray:test], test.toSet(), nil);
+    STAssertEquals((NSUInteger)3, (@[@1, @2, @3, @1, @3]).toSet().count, nil);
+    STAssertEqualObjects([NSSet setWithArray:(@[@1, @2, @3])], (@[@1, @2, @3, @1, @3]).toSet(), nil);
+    STAssertEqualObjects([NSSet set], (@[]).toSet(), nil);
+}
+
 - (void)testSelect
 {
     NSArray* test = @[ @"1", @"2", @"3"];
@@ -58,13 +68,13 @@
 {
     NSArray* test = @[ @"1", @"2", @"3"];
     NSArray* actual = test
-        .disctinct()
+        .distinct()
         .toArray();
     
     STAssertEqualObjects(test, actual, @"original array was distinct already");
     
     actual = @[@"2", @"2"]
-        .disctinct()
+        .distinct()
         .toArray();
     
     NSArray* expected = @[ @"2"];
@@ -256,6 +266,36 @@
     STAssertFalse(@[].objectEnumerator.contains(@1), nil);
     STAssertFalse(test.objectEnumerator.contains(nil), nil);
     STAssertFalse(test.objectEnumerator.contains(@"11"), nil);
+}
+
+- (void)testConcat
+{
+    STAssertEqualObjects((@[@1, @2]), (@[@1, @2]).concat(@[]).toArray(), nil);
+    STAssertEqualObjects((@[@1, @2]), (@[]).concat(@[@1, @2]).toArray(), nil);
+    STAssertEqualObjects((@[@1, @1]), (@[@1]).concat(@[@1]).toArray(), nil);
+}
+
+- (void)testUnions
+{
+    STAssertEqualObjects((@[@1, @2]), (@[@1, @2]).unions(@[]).toArray(), nil);
+    STAssertEqualObjects((@[@1, @2]), (@[]).unions(@[@1, @2]).toArray(), nil);
+    STAssertEqualObjects((@[@1]), (@[@1]).unions(@[@1]).toArray(), nil);
+}
+
+- (void)testExcept
+{
+    STAssertEqualObjects((@[@1, @2]), (@[@1, @2]).except(@[]).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[]).except(@[@1, @2]).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[@1]).except(@[@1]).toArray(), nil);
+    STAssertEqualObjects((@[@2]), (@[@1, @2, @3]).except(@[@1, @3]).toArray(), nil);
+}
+
+- (void)testIntersect
+{
+    STAssertEqualObjects((@[]), (@[@1, @2]).intersect(@[]).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[]).intersect(@[@1, @2]).toArray(), nil);
+    STAssertEqualObjects((@[@1]), (@[@1]).intersect(@[@1]).toArray(), nil);
+    STAssertEqualObjects((@[@1, @3]), (@[@1, @2, @3]).intersect(@[@1, @3]).toArray(), nil);
 }
 
 @end
