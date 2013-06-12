@@ -243,4 +243,19 @@
     STAssertEqualObjects((@[]), test.ofClass([NSSet class]).toArray(), nil);
 }
 
+- (void)testContains
+{
+    NSArray* test = @[ @"1", @"2", @"3"];
+    
+    STAssertTrue(test.contains(@"1"), nil);
+    STAssertFalse(test.contains(nil), nil);
+    STAssertFalse(test.contains(@"11"), nil);
+    
+    
+    STAssertTrue(test.objectEnumerator.contains(@"1"), nil);
+    STAssertFalse(@[].objectEnumerator.contains(@1), nil);
+    STAssertFalse(test.objectEnumerator.contains(nil), nil);
+    STAssertFalse(test.objectEnumerator.contains(@"11"), nil);
+}
+
 @end

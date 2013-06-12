@@ -524,6 +524,23 @@ LQProjection kLQIdentity = ^id(id item) {
     return LQ_AUTORELEASE(Block_copy(block));
 }
 
+@dynamic contains;
+- (LQPredicate) contains {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQPredicate block = ^BOOL(id item){
+        for (id itItem in weakSelf) {
+            if ([item isEqual:itItem]) {
+                return YES;
+            }
+        }
+        
+        return NO;
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+
 @dynamic toArray;
 - (LQArrayBlock) toArray {
     WeakRefAttribute NSEnumerator* weakSelf = self;

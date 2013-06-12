@@ -156,6 +156,16 @@
     return [self objectEnumerator].ofClass;
 }
 
+@dynamic contains;
+- (LQPredicate) contains {
+    WeakRefAttribute NSArray* weakSelf = self;
+    LQPredicate block = ^BOOL(id item){
+        return [weakSelf containsObject:item];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSArray_Linq)

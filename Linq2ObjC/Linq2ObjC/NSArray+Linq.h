@@ -48,6 +48,8 @@
 
 @property (readonly, nonatomic) LQOfClassBlock ofClass;
 
+@property (readonly, nonatomic) LQPredicate contains;
+
 @property (readonly, nonatomic) LQArrayBlock toArray;
 @property (readonly, nonatomic) LQDictionaryBlock toDictionary;
 @end
