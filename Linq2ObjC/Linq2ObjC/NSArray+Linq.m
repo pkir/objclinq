@@ -19,8 +19,10 @@
 }
 
 @dynamic toArray;
-- (NSArray*) toArray {
-    return self;
+- (LQArrayBlock) toArray {
+    WeakRefAttribute weakSelf = self;
+    
+    return LQ_AUTORELEASE(Block_copy(^NSArray*{ return weakSelf; }));
 }
 
 @dynamic disctinct;
@@ -70,6 +72,27 @@
     return [self objectEnumerator].aggregate;
 }
 
+@dynamic single;
+- (ResultBlock) single {
+    return [self objectEnumerator].single;
+}
+
+@dynamic singleWithPredicate;
+- (ResultWithPredicateBlock) singleWithPredicate {
+    return [self objectEnumerator].singleWithPredicate;
+}
+
+@dynamic singleOrNil;
+- (ResultBlock) singleOrNil {
+    return [self objectEnumerator].singleOrNil;
+}
+
+@dynamic singleOrNilWithPredicate;
+- (ResultWithPredicateBlock) singleOrNilWithPredicate {
+    return [self objectEnumerator].singleOrNilWithPredicate;
+}
+
+
 @dynamic first;
 - (ResultBlock) first {
     return [self objectEnumerator].first;
@@ -118,6 +141,11 @@
 @dynamic lengthWithPredicate;
 - (LQCountWithPredicateBlock) lengthWithPredicate {
     return [self objectEnumerator].lengthWithPredicate;
+}
+
+@dynamic ofClass;
+- (LQOfClassBlock) ofClass {
+    return [self objectEnumerator].ofClass;
 }
 
 @end

@@ -9,13 +9,13 @@
     NSArray* test = @[ @"1", @"2", @"3"];
     NSArray* actual = test.select(^id(id item) {
         return item;
-    }).toArray;
+    }).toArray();
     
     STAssertEqualObjects(test, actual, nil);
     
     actual = test.select(^(id item) {
         return [(NSString*)item stringByAppendingString:@"_TEST"];
-    }).toArray;
+    }).toArray();
     
     NSArray* expected = @[ @"1_TEST", @"2_TEST", @"3_TEST"];
     STAssertEqualObjects(expected, actual, nil);
@@ -26,13 +26,13 @@
     NSArray* test = @[ @"1", @"2", @"3"];
     NSArray* actual = test.where(^(id item) {
         return YES;
-    }).toArray;
+    }).toArray();
     
     STAssertEqualObjects(test, actual, nil);
     
     actual = test.where(^(id item) {
         return [item isEqual:@"2"];
-    }).toArray;
+    }).toArray();
     
     NSArray* expected = @[ @"2"];
     STAssertEqualObjects(expected, actual, nil);
@@ -43,13 +43,13 @@
     NSArray* test = @[ @"1", @"2", @"3"];
     NSArray* actual = test
         .disctinct()
-        .toArray;
+        .toArray();
     
     STAssertEqualObjects(test, actual, @"original array was distinct already");
     
     actual = @[@"2", @"2"]
         .disctinct()
-        .toArray;   
+        .toArray();
     
     NSArray* expected = @[ @"2"];
     STAssertEqualObjects(expected, actual, nil);
@@ -78,61 +78,61 @@
 - (void)testSkip
 {
     NSArray* test = @[ @"1", @"22", @"3"];
-    NSArray* result = test.skip(2).toArray;
+    NSArray* result = test.skip(2).toArray();
     STAssertEqualObjects(@[@"3"], result, nil);
     
-    result = test.skip(0).toArray;
+    result = test.skip(0).toArray();
     STAssertEqualObjects(test, result, nil);
     
-    result = test.skip(3).toArray;
+    result = test.skip(3).toArray();
     STAssertEqualObjects(@[], result, nil);
 }
 
 - (void)testSkipWhile
 {
     NSArray* test = @[ @"1", @"22", @"3"];
-    NSArray* result = test.skipWhile(^BOOL(id item) { return [item length] == 1; }).toArray;
+    NSArray* result = test.skipWhile(^BOOL(id item) { return [item length] == 1; }).toArray();
     
     NSArray* expected = @[@"22", @"3"];
     STAssertEqualObjects(expected, result, nil);
     
-    result = test.skipWhile(^(id item) { return NO; }).toArray;
+    result = test.skipWhile(^(id item) { return NO; }).toArray();
     STAssertEqualObjects(test, result, nil);
     
-    result = test.skipWhile(^(id item) { return YES; }).toArray;
+    result = test.skipWhile(^(id item) { return YES; }).toArray();
     STAssertEqualObjects(@[], result, nil);
 }
 
 - (void)testTake
 {
     NSArray* test = @[ @"1", @"22", @"3"];
-    NSArray* result = test.take(2).toArray;
+    NSArray* result = test.take(2).toArray();
     STAssertEqualObjects((@[@"1", @"22"]), result, nil);
     
-    result = test.take(3).toArray;
+    result = test.take(3).toArray();
     STAssertEqualObjects(test, result, nil);
     
-    result = test.take(5).toArray;
+    result = test.take(5).toArray();
     STAssertEqualObjects(test, result, nil);
     
-    result = test.take(0).toArray;
+    result = test.take(0).toArray();
     STAssertEqualObjects(@[], result, nil);
 }
 
 - (void)testTakeWhile
 {
     NSArray* test = @[ @"1", @"22", @"3"];
-    NSArray* result = test.takeWhile(^BOOL(id item) { return [item length] == 1; }).toArray;
+    NSArray* result = test.takeWhile(^BOOL(id item) { return [item length] == 1; }).toArray();
     
     STAssertEqualObjects(@[@"1"], result, nil);
     
-    result = test.takeWhile(^(id item) { return YES; }).toArray;
+    result = test.takeWhile(^(id item) { return YES; }).toArray();
     STAssertEqualObjects(test, result, nil);
     
-    result = test.takeWhile(^(id item) { return NO; }).toArray;
+    result = test.takeWhile(^(id item) { return NO; }).toArray();
     STAssertEqualObjects(@[], result, nil);
     
-    result = test.takeWhile(^BOOL(id item) { return [item length] == 2; }).toArray;
+    result = test.takeWhile(^BOOL(id item) { return [item length] == 2; }).toArray();
     STAssertEqualObjects(@[], result, nil);
 }
 
@@ -151,33 +151,59 @@
 {
     NSArray* actual = @[@"1", @"2", @"3"].selectMany(^(id item) {
         return @[item, [(NSString*)item stringByAppendingString:@"_ADD"]];
-    }).toArray;
+    }).toArray();
     
     NSArray* expected = @[@"1", @"1_ADD", @"2", @"2_ADD", @"3", @"3_ADD"];
     STAssertEqualObjects(expected, actual, nil);
 }
 
-- (void)testFirstLast
+- (void)testFirst
 {
     NSArray* test = @[ @1, @2, @3];
     
     STAssertEqualObjects(@1, test.first(), nil);
     STAssertEqualObjects(@1, test.firstOrNil(), nil);
+    STAssertEqualObjects((id)nil, @[].firstOrNil(), nil);
     STAssertEqualObjects(@2, test.firstWithPredicate(^BOOL(id item) { return [item intValue] > 1; }), nil);
     STAssertEqualObjects(@2, test.firstOrNilWithPredicate(^BOOL(id item) { return [item intValue] > 1; }), nil);
     
+    STAssertThrows(@[].first(), nil);
+    STAssertThrows(@[].firstWithPredicate(^(id item){return YES;}), nil);
+    STAssertThrows(test.firstWithPredicate(^BOOL(id item){return [item intValue] > 3;}), nil);
+}
+
+- (void)testLast
+{
+    NSArray* test = @[ @1, @2, @3];
+    
     STAssertEqualObjects(@3, test.last(), nil);
     STAssertEqualObjects(@3, test.lastOrNil(), nil);
+    STAssertEqualObjects((id)nil, @[].lastOrNil(), nil);
     STAssertEqualObjects(@2, test.lastWithPredicate(^BOOL(id item) { return [item intValue] < 3; }), nil);
     STAssertEqualObjects(@2, test.lastOrNilWithPredicate(^BOOL(id item) { return [item intValue] < 3; }), nil);
     
-    STAssertThrows(@[].first(), nil);
     STAssertThrows(@[].last(), nil);
-    STAssertThrows(@[].firstWithPredicate(^(id item){return YES;}), nil);
     STAssertThrows(@[].lastWithPredicate(^(id item){return YES;}), nil);
-    
-    STAssertThrows(test.firstWithPredicate(^BOOL(id item){return [item intValue] > 3;}), nil);
     STAssertThrows(test.lastWithPredicate(^BOOL(id item){return [item intValue] < 1;}), nil);
+}
+
+- (void)testSingle
+{
+    NSArray* test = @[ @1, @2, @3];
+    
+    STAssertEqualObjects(@3, @[@3].single(), nil);
+    STAssertEqualObjects(@3, @[@3].singleOrNil(), nil);
+    STAssertEqualObjects((id)nil, @[].singleOrNil(), nil);
+    STAssertEqualObjects(@2, test.singleWithPredicate(^BOOL(id item) { return [item intValue] == 2; }), nil);
+    STAssertEqualObjects(@2, test.singleOrNilWithPredicate(^BOOL(id item) { return [item intValue] == 2; }), nil);
+    STAssertEqualObjects((id)nil, test.singleOrNilWithPredicate(^BOOL(id item) { return [item intValue] > 3; }), nil);
+    
+    STAssertThrows(@[].single(), nil);
+    STAssertThrows((@[ @1, @2 ]).single(), nil);
+    STAssertThrows(@[].singleWithPredicate(^(id item){return YES;}), nil);
+    STAssertThrows((@[ @1, @2 ]).singleWithPredicate(^(id item){return YES;}), nil);
+    STAssertThrows(test.singleWithPredicate(^BOOL(id item){return [item intValue] < 1;}), nil);
+    STAssertThrows(test.singleOrNilWithPredicate(^BOOL(id item){return [item intValue] < 3;}), nil);
 }
 
 - (void)testCount
@@ -190,6 +216,15 @@
     STAssertEquals((NSUInteger)0, test.lengthWithPredicate(^BOOL(id item) { return [item intValue] > 3;}), nil);
     STAssertEquals((NSUInteger)0, @[].length(), nil);
     STAssertEquals((NSUInteger)0, @[].lengthWithPredicate(^BOOL(id item) { return YES; }), nil);
+}
+
+- (void)testOfClass
+{
+    NSArray* test = @[ @1, @2, @"2", @[@1]];
+    
+    STAssertEqualObjects((@[ @1, @2]), test.ofClass([NSNumber class]).toArray(), nil);
+    STAssertEqualObjects((@[@[@1]]), test.ofClass([NSArray class]).toArray(), nil);
+    STAssertEqualObjects((@[]), test.ofClass([NSSet class]).toArray(), nil);
 }
 
 @end

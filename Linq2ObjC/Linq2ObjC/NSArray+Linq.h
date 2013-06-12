@@ -28,6 +28,11 @@
 
 @property (readonly, nonatomic) LQAggregate aggregate;
 
+@property (readonly, nonatomic) ResultBlock single;
+@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate;
+@property (readonly, nonatomic) ResultBlock singleOrNil;
+@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate;
+
 @property (readonly, nonatomic) ResultBlock first;
 @property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate;
 @property (readonly, nonatomic) ResultBlock firstOrNil;
@@ -41,7 +46,9 @@
 @property (readonly, nonatomic) LQCountBlock length;
 @property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate;
 
-@property (readonly, nonatomic) NSArray* toArray;
+@property (readonly, nonatomic) LQOfClassBlock ofClass;
+
+@property (readonly, nonatomic) LQArrayBlock toArray;
 @end
 
 

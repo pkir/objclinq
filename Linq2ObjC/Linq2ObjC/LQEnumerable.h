@@ -36,8 +36,12 @@ typedef id (^LQAggregate)(LQAggregator aggregator);
 typedef id (^ResultBlock)(void);
 typedef id (^ResultWithPredicateBlock)(LQPredicate predicate);
 
+typedef id<LQEnumerable> (^LQOfClassBlock)(Class classType);
+
 typedef NSUInteger (^LQCountBlock)();
 typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
+
+typedef NSArray* (^LQArrayBlock)(void);
 
 @protocol LQEnumerable <NSFastEnumeration>
 
@@ -65,6 +69,11 @@ typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
 
 @property (readonly, nonatomic) LQAggregate aggregate;
 
+@property (readonly, nonatomic) ResultBlock single;
+@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate;
+@property (readonly, nonatomic) ResultBlock singleOrNil;
+@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate;
+
 @property (readonly, nonatomic) ResultBlock first;
 @property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate;
 @property (readonly, nonatomic) ResultBlock firstOrNil;
@@ -78,8 +87,10 @@ typedef NSUInteger (^LQCountWithPredicateBlock)(LQPredicate predicate);
 @property (readonly, nonatomic) LQCountBlock length;
 @property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate;
 
+@property (readonly, nonatomic) LQOfClassBlock ofClass;
 
-@property (readonly, nonatomic) NSArray* toArray;
+
+@property (readonly, nonatomic) LQArrayBlock toArray;
 
 @end
 
