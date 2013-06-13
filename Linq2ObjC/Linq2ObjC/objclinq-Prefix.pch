@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'Linq2ObjC' target in the 'Linq2ObjC' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
