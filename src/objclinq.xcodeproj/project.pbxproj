@@ -24,17 +24,17 @@
 		D14AC1F91766C4C100CB955C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB4144176044CB00152C10 /* Cocoa.framework */; };
 		D14AC2001766C4C100CB955C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D14AC1FE1766C4C100CB955C /* InfoPlist.strings */; };
-		D14AC20A1766C4D700CB955C /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */; };
 		D14AC20D1766C4FB00CB955C /* libobjclinq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libobjclinq.a */; };
+		D162CC8B17697A5400FD75B5 /* LQEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8617697A5400FD75B5 /* LQEnumerator.m */; };
+		D162CC8C17697A5400FD75B5 /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8917697A5400FD75B5 /* NSArray+Linq.m */; };
+		D162CC9017697A7500FD75B5 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */; };
+		D162CC9117697A7500FD75B5 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */; };
 		D1EB41111760415900152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41291760438100152C10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D1EB412B1760438100152C10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB412A1760438100152C10 /* UIKit.framework */; };
 		D1EB412C1760438100152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41321760438100152C10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1EB41301760438100152C10 /* InfoPlist.strings */; };
-		D1EB413C1760448800152C10 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB413B1760448800152C10 /* Linq2ObjCTests.m */; };
 		D1EB415B1760481B00152C10 /* libobjclinq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libobjclinq.a */; };
-		D1EB415E1760488300152C10 /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB415D1760488300152C10 /* NSArray+Linq.m */; };
-		D1EB416917616C9D00152C10 /* LQEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB416817616C9D00152C10 /* LQEnumerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,31 +64,29 @@
 		D14AC1FD1766C4C100CB955C /* Mac_Linq2ObjcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac_Linq2ObjcTests-Info.plist"; sourceTree = "<group>"; };
 		D14AC1FF1766C4C100CB955C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D14AC2041766C4C100CB955C /* Mac_Linq2ObjcTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac_Linq2ObjcTests-Prefix.pch"; sourceTree = "<group>"; };
-		D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
-		D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
-		D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
+		D162CC8317697A5400FD75B5 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppledocSettings.plist; path = Core/AppledocSettings.plist; sourceTree = SOURCE_ROOT; };
+		D162CC8417697A5400FD75B5 /* LQEnumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQEnumerable.h; path = Core/LQEnumerable.h; sourceTree = SOURCE_ROOT; };
+		D162CC8517697A5400FD75B5 /* LQEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQEnumerator.h; path = Core/LQEnumerator.h; sourceTree = SOURCE_ROOT; };
+		D162CC8617697A5400FD75B5 /* LQEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQEnumerator.m; path = Core/LQEnumerator.m; sourceTree = SOURCE_ROOT; };
+		D162CC8717697A5400FD75B5 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = Core/Macros.h; sourceTree = SOURCE_ROOT; };
+		D162CC8817697A5400FD75B5 /* NSArray+Linq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Linq.h"; path = "Core/NSArray+Linq.h"; sourceTree = SOURCE_ROOT; };
+		D162CC8917697A5400FD75B5 /* NSArray+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Linq.m"; path = "Core/NSArray+Linq.m"; sourceTree = SOURCE_ROOT; };
+		D162CC8A17697A5400FD75B5 /* objclinq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objclinq.h; path = Core/objclinq.h; sourceTree = SOURCE_ROOT; };
+		D162CC8D17697A5E00FD75B5 /* objclinq-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objclinq-Prefix.pch"; path = "Core/objclinq-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		D162CC8E17697A7500FD75B5 /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Core/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
+		D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Core/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
 		D1EB410D1760415900152C10 /* libobjclinq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libobjclinq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41101760415900152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1EB41141760415900152C10 /* objclinq-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objclinq-Prefix.pch"; sourceTree = "<group>"; };
 		D1EB41271760438100152C10 /* iOS_objclinqTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_objclinqTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41281760438100152C10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1EB412A1760438100152C10 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1EB412F1760438100152C10 /* iOS_objclinqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS_objclinqTests-Info.plist"; sourceTree = "<group>"; };
 		D1EB41311760438100152C10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D1EB41361760438100152C10 /* iOS_objclinqTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_objclinqTests-Prefix.pch"; sourceTree = "<group>"; };
-		D1EB413A1760448800152C10 /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
-		D1EB413B1760448800152C10 /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
 		D1EB4144176044CB00152C10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D1EB4147176044CB00152C10 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D1EB4148176044CB00152C10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D1EB4149176044CB00152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1EB415A1760460D00152C10 /* objclinq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objclinq.h; sourceTree = "<group>"; };
-		D1EB415C1760488300152C10 /* NSArray+Linq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Linq.h"; sourceTree = "<group>"; };
-		D1EB415D1760488300152C10 /* NSArray+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Linq.m"; sourceTree = "<group>"; };
-		D1EB416017604E3200152C10 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
-		D1EB41611761611C00152C10 /* LQEnumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEnumerable.h; sourceTree = "<group>"; };
-		D1EB416717616C9D00152C10 /* LQEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEnumerator.h; sourceTree = "<group>"; };
-		D1EB416817616C9D00152C10 /* LQEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQEnumerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +125,6 @@
 		D14AC1FB1766C4C100CB955C /* Mac_Linq2ObjcTests */ = {
 			isa = PBXGroup;
 			children = (
-				D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */,
-				D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */,
 				D14AC1FC1766C4C100CB955C /* Supporting Files */,
 			);
 			path = Mac_Linq2ObjcTests;
@@ -142,6 +138,15 @@
 				D14AC2041766C4C100CB955C /* Mac_Linq2ObjcTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D162CC8217697A2F00FD75B5 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				D162CC8E17697A7500FD75B5 /* Linq2ObjCTests.h */,
+				D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */,
+			);
+			name = tests;
 			sourceTree = "<group>";
 		};
 		D1EB41041760415900152C10 = {
@@ -180,15 +185,16 @@
 		D1EB41121760415900152C10 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				D162CC8317697A5400FD75B5 /* AppledocSettings.plist */,
+				D162CC8417697A5400FD75B5 /* LQEnumerable.h */,
+				D162CC8517697A5400FD75B5 /* LQEnumerator.h */,
+				D162CC8617697A5400FD75B5 /* LQEnumerator.m */,
+				D162CC8717697A5400FD75B5 /* Macros.h */,
+				D162CC8817697A5400FD75B5 /* NSArray+Linq.h */,
+				D162CC8917697A5400FD75B5 /* NSArray+Linq.m */,
+				D162CC8A17697A5400FD75B5 /* objclinq.h */,
+				D162CC8217697A2F00FD75B5 /* tests */,
 				D1EB41131760415900152C10 /* Supporting Files */,
-				D1EB415A1760460D00152C10 /* objclinq.h */,
-				D1EB415C1760488300152C10 /* NSArray+Linq.h */,
-				D1EB415D1760488300152C10 /* NSArray+Linq.m */,
-				D1EB416017604E3200152C10 /* Macros.h */,
-				D1EB41611761611C00152C10 /* LQEnumerable.h */,
-				D1EB416717616C9D00152C10 /* LQEnumerator.h */,
-				D1EB416817616C9D00152C10 /* LQEnumerator.m */,
-				D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */,
 			);
 			name = core;
 			path = Linq2ObjC;
@@ -197,7 +203,7 @@
 		D1EB41131760415900152C10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1EB41141760415900152C10 /* objclinq-Prefix.pch */,
+				D162CC8D17697A5E00FD75B5 /* objclinq-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,8 +211,6 @@
 		D1EB412D1760438100152C10 /* iOS_Linq2ObjCTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1EB413A1760448800152C10 /* Linq2ObjCTests.h */,
-				D1EB413B1760448800152C10 /* Linq2ObjCTests.m */,
 				D1EB412E1760438100152C10 /* Supporting Files */,
 			);
 			path = iOS_Linq2ObjCTests;
@@ -384,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14AC20A1766C4D700CB955C /* Linq2ObjCTests.m in Sources */,
+				D162CC9117697A7500FD75B5 /* Linq2ObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,8 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1EB415E1760488300152C10 /* NSArray+Linq.m in Sources */,
-				D1EB416917616C9D00152C10 /* LQEnumerator.m in Sources */,
+				D162CC8B17697A5400FD75B5 /* LQEnumerator.m in Sources */,
+				D162CC8C17697A5400FD75B5 /* NSArray+Linq.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1EB413C1760448800152C10 /* Linq2ObjCTests.m in Sources */,
+				D162CC9017697A7500FD75B5 /* Linq2ObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +556,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				DSTROOT = /tmp/Linq2ObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Linq2ObjC/objclinq-Prefix.pch";
+				GCC_PREFIX_HEADER = "Core/objclinq-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -589,7 +593,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				DSTROOT = /tmp/Linq2ObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Linq2ObjC/objclinq-Prefix.pch";
+				GCC_PREFIX_HEADER = "Core/objclinq-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -664,6 +668,7 @@
 				D162CC7B17695C2300FD75B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1EB41081760415900152C10 /* Build configuration list for PBXProject "objclinq" */ = {
 			isa = XCConfigurationList;
