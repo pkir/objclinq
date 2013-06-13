@@ -1,10 +1,70 @@
-#import "NSArray+Linq.h"
+#import "NSDictionary+Linq.h"
 #import "LQEnumerator.h"
 
-@implementation NSArray (Linq)
+@implementation LQKeyValuePair
+
+- (id) initWithKey:(id)key andValue:(id)value {
+    self = [super init];
+    if (self) {
+        self.key = key;
+        self.value = value;
+    }
+    
+    return self;
+}
+
++ (LQKeyValuePair*) makeWithKey:(id)key andValue:(id)value {
+    return [[[self alloc] initWithKey:key andValue:value] autorelease];
+}
+
+- (void) dealloc {
+    self.key = nil;
+    self.value = nil;
+    [super dealloc];
+}
+
+@end
+
+@interface LQKeyValueEnumerator() {
+    NSEnumerator* keyEnumerator_;
+    NSDictionary* dict_;
+}
+
+@end
+
+@implementation LQKeyValueEnumerator
+
+- (id)initWithDictionary:(NSDictionary*)dict {
+    self = [super init];
+    if (self) {
+        keyEnumerator_ = [[dict keyEnumerator] retain];
+        dict_ = dict;
+    }
+    
+    return self;
+}
+
+- (id) nextObject {
+    id key = keyEnumerator_.nextObject;
+    if (key) {
+        return [LQKeyValuePair makeWithKey:key andValue:dict_[key]];
+    }
+    
+    return nil;
+}
+
+- (void) dealloc {
+    [keyEnumerator_ release];
+    dict_ = nil;
+    [super dealloc];
+}
+
+@end
+
+@implementation NSDictionary (Linq)
 
 - (NSEnumerator*) linqEnumerator {
-    return [self objectEnumerator];
+    return [[[LQKeyValueEnumerator alloc] initWithDictionary:self] autorelease];
 }
 
 @dynamic select;
@@ -24,23 +84,13 @@
 
 @dynamic toArray;
 - (LQArrayBlock) toArray {
-    WeakRefAttribute NSArray* weakSelf = self;
-    LQArrayBlock block = ^NSArray*(void) {
-        return [[weakSelf retain] autorelease];
-    };
-    
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [self linqEnumerator].toArray;
 }
 
 
 @dynamic toSet;
 - (LQSetBlock) toSet {
-    WeakRefAttribute NSArray* weakSelf = self;
-    LQSetBlock block = ^(void) {
-        return [NSSet setWithArray:weakSelf];
-    };
-    
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [self linqEnumerator].toSet;
 }
 
 @dynamic orderBy;
@@ -183,9 +233,9 @@
 
 @dynamic contains;
 - (LQPredicate) contains {
-    WeakRefAttribute NSArray* weakSelf = self;
+    WeakRefAttribute NSDictionary* weakSelf = self;
     LQPredicate block = ^BOOL(id item){
-        return [weakSelf containsObject:item];
+        return [weakSelf objectForKey:item] != nil;
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
@@ -243,4 +293,4 @@
 
 @end
 
-CATEGORY_LINK_FIX_IMPL(NSArray_Linq)
+CATEGORY_LINK_FIX_IMPL(NSDictionary_Linq)

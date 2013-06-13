@@ -1,6 +1,5 @@
 #import "Linq2ObjCTests.h"
 #import "objclinq.h"
-#import "NSArray+Linq.h"
 
 @implementation Linq2ObjCTests
 
@@ -347,4 +346,8 @@
     STAssertEqualObjects((@[]), (@[@1, @2]).zip(@[], ^(NSNumber* a, NSNumber* b) { return @([a integerValue] + [b integerValue]); }).toArray(), nil);
 }
 
+- (void)testDictionary {
+    NSDictionary* test = @{@1 : @1};
+    STAssertEquals(test.count, test.ofClass([LQKeyValuePair class]).length(), nil);
+}
 @end

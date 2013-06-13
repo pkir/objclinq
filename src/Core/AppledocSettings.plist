@@ -12,6 +12,7 @@
 	<true/>
 	<key>--ignore</key>
 	<array>
+		<string>*.m</string>
 		<string>ThirdParty</string>
 		<string>Libraries</string>
 		<string>Frameworks</string>

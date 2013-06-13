@@ -1,3 +1,5 @@
 #import "LQEnumerable.h"
-#import "NSArray+Linq.h"
 #import "LQEnumerator.h"
+#import "NSArray+Linq.h"
+#import "NSSet+Linq.h"
+#import "NSDictionary+Linq.h"

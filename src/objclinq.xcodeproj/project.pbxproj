@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		D162CC7817695C2300FD75B5 /* Documentation */ = {
+		D162CC981769880F00FD75B5 /* Documentation */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D162CC7917695C2300FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildConfigurationList = D162CC991769881000FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */;
 			buildPhases = (
-				D162CC7C17695C4400FD75B5 /* ShellScript */,
+				D162CC9C1769881700FD75B5 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -29,6 +29,8 @@
 		D162CC8C17697A5400FD75B5 /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8917697A5400FD75B5 /* NSArray+Linq.m */; };
 		D162CC9017697A7500FD75B5 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */; };
 		D162CC9117697A7500FD75B5 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */; };
+		D162CC9417697FD500FD75B5 /* NSSet+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC9317697FD500FD75B5 /* NSSet+Linq.m */; };
+		D162CC971769813800FD75B5 /* NSDictionary+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D162CC961769813800FD75B5 /* NSDictionary+Linq.m */; };
 		D1EB41111760415900152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41291760438100152C10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D1EB412B1760438100152C10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB412A1760438100152C10 /* UIKit.framework */; };
@@ -75,6 +77,10 @@
 		D162CC8D17697A5E00FD75B5 /* objclinq-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objclinq-Prefix.pch"; path = "Core/objclinq-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		D162CC8E17697A7500FD75B5 /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Core/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
 		D162CC8F17697A7500FD75B5 /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Core/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
+		D162CC9217697FD400FD75B5 /* NSSet+Linq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSet+Linq.h"; path = "Core/NSSet+Linq.h"; sourceTree = SOURCE_ROOT; };
+		D162CC9317697FD500FD75B5 /* NSSet+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+Linq.m"; path = "Core/NSSet+Linq.m"; sourceTree = SOURCE_ROOT; };
+		D162CC951769813800FD75B5 /* NSDictionary+Linq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Linq.h"; path = "Core/NSDictionary+Linq.h"; sourceTree = SOURCE_ROOT; };
+		D162CC961769813800FD75B5 /* NSDictionary+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Linq.m"; path = "Core/NSDictionary+Linq.m"; sourceTree = SOURCE_ROOT; };
 		D1EB410D1760415900152C10 /* libobjclinq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libobjclinq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41101760415900152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1EB41271760438100152C10 /* iOS_objclinqTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_objclinqTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +191,8 @@
 		D1EB41121760415900152C10 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				D162CC8217697A2F00FD75B5 /* tests */,
+				D1EB41131760415900152C10 /* Supporting Files */,
 				D162CC8317697A5400FD75B5 /* AppledocSettings.plist */,
 				D162CC8417697A5400FD75B5 /* LQEnumerable.h */,
 				D162CC8517697A5400FD75B5 /* LQEnumerator.h */,
@@ -193,8 +201,10 @@
 				D162CC8817697A5400FD75B5 /* NSArray+Linq.h */,
 				D162CC8917697A5400FD75B5 /* NSArray+Linq.m */,
 				D162CC8A17697A5400FD75B5 /* objclinq.h */,
-				D162CC8217697A2F00FD75B5 /* tests */,
-				D1EB41131760415900152C10 /* Supporting Files */,
+				D162CC9217697FD400FD75B5 /* NSSet+Linq.h */,
+				D162CC9317697FD500FD75B5 /* NSSet+Linq.m */,
+				D162CC951769813800FD75B5 /* NSDictionary+Linq.h */,
+				D162CC961769813800FD75B5 /* NSDictionary+Linq.m */,
 			);
 			name = core;
 			path = Linq2ObjC;
@@ -317,7 +327,7 @@
 				D1EB410C1760415900152C10 /* objclinq */,
 				D1EB41261760438100152C10 /* iOS_objclinqTests */,
 				D14AC1F71766C4C100CB955C /* Mac_Linq2ObjcTests */,
-				D162CC7817695C2300FD75B5 /* Documentation */,
+				D162CC981769880F00FD75B5 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +365,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		D162CC7C17695C4400FD75B5 /* ShellScript */ = {
+		D162CC9C1769881700FD75B5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Build an Xcode documentation\nappledoc \"$SOURCE_ROOT/$PROJECT_NAME\"";
+			shellScript = "# Build an Xcode documentation\nappledoc \"$SOURCE_ROOT/Core\"";
 		};
 		D1EB41251760438100152C10 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,6 +408,8 @@
 			files = (
 				D162CC8B17697A5400FD75B5 /* LQEnumerator.m in Sources */,
 				D162CC8C17697A5400FD75B5 /* NSArray+Linq.m in Sources */,
+				D162CC9417697FD500FD75B5 /* NSSet+Linq.m in Sources */,
+				D162CC971769813800FD75B5 /* NSDictionary+Linq.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,14 +490,14 @@
 			};
 			name = Release;
 		};
-		D162CC7A17695C2300FD75B5 /* Debug */ = {
+		D162CC9A1769881000FD75B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		D162CC7B17695C2300FD75B5 /* Release */ = {
+		D162CC9B1769881000FD75B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -538,6 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -661,14 +675,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D162CC7917695C2300FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+		D162CC991769881000FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D162CC7A17695C2300FD75B5 /* Debug */,
-				D162CC7B17695C2300FD75B5 /* Release */,
+				D162CC9A1769881000FD75B5 /* Debug */,
+				D162CC9B1769881000FD75B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		D1EB41081760415900152C10 /* Build configuration list for PBXProject "objclinq" */ = {
 			isa = XCConfigurationList;

@@ -1,7 +1,7 @@
-#import "NSArray+Linq.h"
+#import "NSSet+Linq.h"
 #import "LQEnumerator.h"
 
-@implementation NSArray (Linq)
+@implementation NSSet (Linq)
 
 - (NSEnumerator*) linqEnumerator {
     return [self objectEnumerator];
@@ -24,9 +24,9 @@
 
 @dynamic toArray;
 - (LQArrayBlock) toArray {
-    WeakRefAttribute NSArray* weakSelf = self;
+    WeakRefAttribute NSSet* weakSelf = self;
     LQArrayBlock block = ^NSArray*(void) {
-        return [[weakSelf retain] autorelease];
+        return [weakSelf allObjects];
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
@@ -35,9 +35,9 @@
 
 @dynamic toSet;
 - (LQSetBlock) toSet {
-    WeakRefAttribute NSArray* weakSelf = self;
+    WeakRefAttribute NSSet* weakSelf = self;
     LQSetBlock block = ^(void) {
-        return [NSSet setWithArray:weakSelf];
+        return [[weakSelf retain] autorelease];
     };
     
     return LQ_AUTORELEASE(Block_copy(block));
@@ -183,7 +183,7 @@
 
 @dynamic contains;
 - (LQPredicate) contains {
-    WeakRefAttribute NSArray* weakSelf = self;
+    WeakRefAttribute NSSet* weakSelf = self;
     LQPredicate block = ^BOOL(id item){
         return [weakSelf containsObject:item];
     };
@@ -243,4 +243,4 @@
 
 @end
 
-CATEGORY_LINK_FIX_IMPL(NSArray_Linq)
+CATEGORY_LINK_FIX_IMPL(NSSet_Linq)
