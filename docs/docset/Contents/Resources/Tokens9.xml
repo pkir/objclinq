@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSDictionary+Linq.html">
+	<File path="Protocols/LQEnumerable.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSDictionary(Linq)</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/LQEnumerable</TokenIdentifier>
+			<Abstract type="html">Common interface for all collections that can be enumerated</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>
 			
-			<NodeRef refid="6"/>
+			<NodeRef refid="9"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSelect:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSelect:</TokenIdentifier>
 			<Abstract type="html">Projects each element of a sequence into a new form.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSelectBlock select</Declaration>
 			<Parameters>
@@ -28,9 +28,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/select</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/select</TokenIdentifier>
 			<Abstract type="html">Projects each element of a sequence into a new form.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSelectBlock select</Declaration>
 			<Parameters>
@@ -44,9 +44,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setWhere:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setWhere:</TokenIdentifier>
 			<Abstract type="html">Filters a sequence of values based on a predicate.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQWhereBlock where</Declaration>
 			<Parameters>
@@ -60,9 +60,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/where</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/where</TokenIdentifier>
 			<Abstract type="html">Filters a sequence of values based on a predicate.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQWhereBlock where</Declaration>
 			<Parameters>
@@ -76,9 +76,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSelectMany:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSelectMany:</TokenIdentifier>
 			<Abstract type="html">Projects each element of a sequence to an id&lt;LQEnumerable&gt; and flattens the resulting sequences into one sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSelectManyBlock selectMany</Declaration>
 			<Parameters>
@@ -92,9 +92,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/selectMany</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/selectMany</TokenIdentifier>
 			<Abstract type="html">Projects each element of a sequence to an id&lt;LQEnumerable&gt; and flattens the resulting sequences into one sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSelectManyBlock selectMany</Declaration>
 			<Parameters>
@@ -108,9 +108,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setDistinct:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setDistinct:</TokenIdentifier>
 			<Abstract type="html">Returns distinct elements from a sequence by using isEqual method to compare items</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQDistinctBlock distinct</Declaration>
 			
@@ -119,9 +119,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/distinct</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/distinct</TokenIdentifier>
 			<Abstract type="html">Returns distinct elements from a sequence by using isEqual method to compare items</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQDistinctBlock distinct</Declaration>
 			
@@ -130,9 +130,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSkip:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSkip:</TokenIdentifier>
 			<Abstract type="html">Bypasses a specified number of elements in a sequence and then returns the remaining elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSkipBlock skip</Declaration>
 			<Parameters>
@@ -146,9 +146,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/skip</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/skip</TokenIdentifier>
 			<Abstract type="html">Bypasses a specified number of elements in a sequence and then returns the remaining elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSkipBlock skip</Declaration>
 			<Parameters>
@@ -162,9 +162,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSkipWhile:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSkipWhile:</TokenIdentifier>
 			<Abstract type="html">Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSkipWithPredicateBlock skipWhile</Declaration>
 			<Parameters>
@@ -178,9 +178,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/skipWhile</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/skipWhile</TokenIdentifier>
 			<Abstract type="html">Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSkipWithPredicateBlock skipWhile</Declaration>
 			<Parameters>
@@ -194,9 +194,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setTake:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setTake:</TokenIdentifier>
 			<Abstract type="html">Returns a specified number of contiguous elements from the start of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSTakeBlock take</Declaration>
 			<Parameters>
@@ -210,9 +210,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/take</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/take</TokenIdentifier>
 			<Abstract type="html">Returns a specified number of contiguous elements from the start of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSTakeBlock take</Declaration>
 			<Parameters>
@@ -226,9 +226,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setTakeWhile:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setTakeWhile:</TokenIdentifier>
 			<Abstract type="html">Returns elements from a sequence as long as a specified condition is true.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSTakeWithPredicateBlock takeWhile</Declaration>
 			<Parameters>
@@ -242,9 +242,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/takeWhile</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/takeWhile</TokenIdentifier>
 			<Abstract type="html">Returns elements from a sequence as long as a specified condition is true.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQSTakeWithPredicateBlock takeWhile</Declaration>
 			<Parameters>
@@ -258,9 +258,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setAll:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setAll:</TokenIdentifier>
 			<Abstract type="html">Determines whether all elements of a sequence satisfy a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAllBlock all</Declaration>
 			<Parameters>
@@ -274,9 +274,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/all</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/all</TokenIdentifier>
 			<Abstract type="html">Determines whether all elements of a sequence satisfy a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAllBlock all</Declaration>
 			<Parameters>
@@ -290,9 +290,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setAny:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setAny:</TokenIdentifier>
 			<Abstract type="html">Determines whether any element of a sequence satisfies a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAnyBlock any</Declaration>
 			<Parameters>
@@ -306,9 +306,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/any</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/any</TokenIdentifier>
 			<Abstract type="html">Determines whether any element of a sequence satisfies a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAnyBlock any</Declaration>
 			<Parameters>
@@ -322,41 +322,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setAggregateWithSeed:</TokenIdentifier>
-			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
-			
-			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aggregator</Name>
-					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
-			<Anchor>//api/name/aggregateWithSeed</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/aggregateWithSeed</TokenIdentifier>
-			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
-			
-			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aggregator</Name>
-					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
-			<Anchor>//api/name/aggregateWithSeed</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setAggregate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setAggregate:</TokenIdentifier>
 			<Abstract type="html">Applies an accumulator function over a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAggregate aggregate</Declaration>
 			<Parameters>
@@ -373,9 +341,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/aggregate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/aggregate</TokenIdentifier>
 			<Abstract type="html">Applies an accumulator function over a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQAggregate aggregate</Declaration>
 			<Parameters>
@@ -392,9 +360,41 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSingle:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setAggregateWithSeed:</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregateWithSeed</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/aggregateWithSeed</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregateWithSeed</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSingle:</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock single</Declaration>
 			
@@ -403,9 +403,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/single</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/single</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock single</Declaration>
 			
@@ -414,9 +414,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSingleWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSingleWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition, and throws an exception if more than one such element exists.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate</Declaration>
 			<Parameters>
@@ -430,9 +430,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/singleWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/singleWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition, and throws an exception if more than one such element exists.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate</Declaration>
 			<Parameters>
@@ -446,9 +446,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSingleOrNil:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSingleOrNil:</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock singleOrNil</Declaration>
 			
@@ -458,9 +458,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/singleOrNil</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/singleOrNil</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock singleOrNil</Declaration>
 			
@@ -470,9 +470,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setSingleOrNilWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setSingleOrNilWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition or a default value if no such element exists; this method throws an exception if more than one element satisfies the condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -486,9 +486,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/singleOrNilWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/singleOrNilWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition or a default value if no such element exists; this method throws an exception if more than one element satisfies the condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -502,9 +502,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setFirst:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setFirst:</TokenIdentifier>
 			<Abstract type="html">Returns the first element of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock first</Declaration>
 			
@@ -513,9 +513,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/first</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/first</TokenIdentifier>
 			<Abstract type="html">Returns the first element of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock first</Declaration>
 			
@@ -524,9 +524,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setFirstWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setFirstWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the first element in a sequence that satisfies a specified condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate</Declaration>
 			<Parameters>
@@ -541,9 +541,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/firstWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/firstWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the first element in a sequence that satisfies a specified condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate</Declaration>
 			<Parameters>
@@ -558,9 +558,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setFirstOrNil:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setFirstOrNil:</TokenIdentifier>
 			<Abstract type="html">Returns the first element of a sequence, or a default value if the sequence contains no elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock firstOrNil</Declaration>
 			
@@ -569,9 +569,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/firstOrNil</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/firstOrNil</TokenIdentifier>
 			<Abstract type="html">Returns the first element of a sequence, or a default value if the sequence contains no elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock firstOrNil</Declaration>
 			
@@ -580,9 +580,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setFirstOrNilWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setFirstOrNilWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the first element of the sequence that satisfies a condition or a default value if no such element is found.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -596,9 +596,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/firstOrNilWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/firstOrNilWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the first element of the sequence that satisfies a condition or a default value if no such element is found.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -612,9 +612,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLast:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLast:</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock last</Declaration>
 			
@@ -623,9 +623,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/last</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/last</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock last</Declaration>
 			
@@ -634,10 +634,10 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLastWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLastWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence that satisfies a specified condition.
 @params predicate - A function to test each element for a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate</Declaration>
 			
@@ -646,10 +646,10 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/lastWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/lastWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence that satisfies a specified condition.
 @params predicate - A function to test each element for a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate</Declaration>
 			
@@ -658,9 +658,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLastOrNil:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLastOrNil:</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence, or a default value if the sequence contains no elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock lastOrNil</Declaration>
 			
@@ -669,9 +669,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/lastOrNil</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/lastOrNil</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence, or a default value if the sequence contains no elements.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultBlock lastOrNil</Declaration>
 			
@@ -680,9 +680,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLastOrNilWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLastOrNilWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence that satisfies a condition or a default value if no such element is found.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -696,9 +696,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/lastOrNilWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/lastOrNilWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns the last element of a sequence that satisfies a condition or a default value if no such element is found.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate</Declaration>
 			<Parameters>
@@ -712,9 +712,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLength:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLength:</TokenIdentifier>
 			<Abstract type="html">Returns the number of elements in a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQCountBlock length</Declaration>
 			
@@ -723,9 +723,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/length</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/length</TokenIdentifier>
 			<Abstract type="html">Returns the number of elements in a sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQCountBlock length</Declaration>
 			
@@ -734,9 +734,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setLengthWithPredicate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setLengthWithPredicate:</TokenIdentifier>
 			<Abstract type="html">Returns a number that represents how many elements in the specified sequence satisfy a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate</Declaration>
 			<Parameters>
@@ -750,9 +750,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/lengthWithPredicate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/lengthWithPredicate</TokenIdentifier>
 			<Abstract type="html">Returns a number that represents how many elements in the specified sequence satisfy a condition.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate</Declaration>
 			<Parameters>
@@ -766,9 +766,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setOfClass:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setOfClass:</TokenIdentifier>
 			<Abstract type="html">Filters the elements of an id&lt;LQEnumerable&gt; based on a specified class.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOfClassBlock ofClass</Declaration>
 			
@@ -777,9 +777,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/ofClass</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/ofClass</TokenIdentifier>
 			<Abstract type="html">Filters the elements of an id&lt;LQEnumerable&gt; based on a specified class.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOfClassBlock ofClass</Declaration>
 			
@@ -788,9 +788,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setContains:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setContains:</TokenIdentifier>
 			<Abstract type="html">Determines whether a sequence contains a specified element by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQPredicate contains</Declaration>
 			<Parameters>
@@ -804,9 +804,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/contains</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/contains</TokenIdentifier>
 			<Abstract type="html">Determines whether a sequence contains a specified element by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQPredicate contains</Declaration>
 			<Parameters>
@@ -820,9 +820,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setForEach:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setForEach:</TokenIdentifier>
 			<Abstract type="html">Enumerates the sequence and invokes the given action for each value in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQForEachBlock forEach</Declaration>
 			<Parameters>
@@ -836,9 +836,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/forEach</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/forEach</TokenIdentifier>
 			<Abstract type="html">Enumerates the sequence and invokes the given action for each value in the sequence.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQForEachBlock forEach</Declaration>
 			<Parameters>
@@ -852,9 +852,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setConcat:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setConcat:</TokenIdentifier>
 			<Abstract type="html">Concatenates two sequences.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock concat</Declaration>
 			<Parameters>
@@ -868,9 +868,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/concat</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/concat</TokenIdentifier>
 			<Abstract type="html">Concatenates two sequences.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock concat</Declaration>
 			<Parameters>
@@ -884,9 +884,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setUnions:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setUnions:</TokenIdentifier>
 			<Abstract type="html">Produces the set union of two sequences by using isEqual method as comparer</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock unions</Declaration>
 			<Parameters>
@@ -900,9 +900,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/unions</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/unions</TokenIdentifier>
 			<Abstract type="html">Produces the set union of two sequences by using isEqual method as comparer</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock unions</Declaration>
 			<Parameters>
@@ -916,9 +916,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setExcept:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setExcept:</TokenIdentifier>
 			<Abstract type="html">Produces the set difference of two sequences by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock except</Declaration>
 			<Parameters>
@@ -932,9 +932,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/except</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/except</TokenIdentifier>
 			<Abstract type="html">Produces the set difference of two sequences by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock except</Declaration>
 			<Parameters>
@@ -948,9 +948,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setIntersect:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setIntersect:</TokenIdentifier>
 			<Abstract type="html">Produces the set intersection of two sequences by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock intersect</Declaration>
 			<Parameters>
@@ -964,9 +964,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/intersect</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/intersect</TokenIdentifier>
 			<Abstract type="html">Produces the set intersection of two sequences by using isEqual method to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQConcatBlock intersect</Declaration>
 			<Parameters>
@@ -980,9 +980,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setOrderBy:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setOrderBy:</TokenIdentifier>
 			<Abstract type="html">Sorts the elements of a sequence in ascending order by using a specified comparer.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderBy</Declaration>
 			<Parameters>
@@ -999,9 +999,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/orderBy</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/orderBy</TokenIdentifier>
 			<Abstract type="html">Sorts the elements of a sequence in ascending order by using a specified comparer.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderBy</Declaration>
 			<Parameters>
@@ -1018,9 +1018,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setOrderByDescending:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setOrderByDescending:</TokenIdentifier>
 			<Abstract type="html">Sorts the elements of a sequence in descending order by using a specified comparer.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderByDescending</Declaration>
 			<Parameters>
@@ -1037,9 +1037,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/orderByDescending</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/orderByDescending</TokenIdentifier>
 			<Abstract type="html">Sorts the elements of a sequence in descending order by using a specified comparer.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderByDescending</Declaration>
 			<Parameters>
@@ -1056,9 +1056,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setMin:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setMin:</TokenIdentifier>
 			<Abstract type="html">Returns the minimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock min</Declaration>
 			<Parameters>
@@ -1072,9 +1072,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/min</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/min</TokenIdentifier>
 			<Abstract type="html">Returns the minimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock min</Declaration>
 			<Parameters>
@@ -1088,9 +1088,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setMax:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setMax:</TokenIdentifier>
 			<Abstract type="html">Returns the maxmimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock max</Declaration>
 			<Parameters>
@@ -1104,9 +1104,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/max</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/max</TokenIdentifier>
 			<Abstract type="html">Returns the maxmimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock max</Declaration>
 			<Parameters>
@@ -1120,9 +1120,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setMinBy:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setMinBy:</TokenIdentifier>
 			<Abstract type="html">Returns the elements with the minimum key value by using the default comparer to compare key values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock minBy</Declaration>
 			<Parameters>
@@ -1139,9 +1139,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/minBy</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/minBy</TokenIdentifier>
 			<Abstract type="html">Returns the elements with the minimum key value by using the default comparer to compare key values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock minBy</Declaration>
 			<Parameters>
@@ -1158,9 +1158,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setMaxBy:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setMaxBy:</TokenIdentifier>
 			<Abstract type="html">Returns the elements with the maxmimum key value by using the default comparer to compare key values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock maxBy</Declaration>
 			<Parameters>
@@ -1177,9 +1177,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/maxBy</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/maxBy</TokenIdentifier>
 			<Abstract type="html">Returns the elements with the maxmimum key value by using the default comparer to compare key values.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock maxBy</Declaration>
 			<Parameters>
@@ -1196,9 +1196,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setZip:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setZip:</TokenIdentifier>
 			<Abstract type="html">Applies a specified function to the corresponding elements of two sequences, which produces a sequence of the results.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQZipBlock zip</Declaration>
 			<Parameters>
@@ -1215,9 +1215,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/zip</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/zip</TokenIdentifier>
 			<Abstract type="html">Applies a specified function to the corresponding elements of two sequences, which produces a sequence of the results.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQZipBlock zip</Declaration>
 			<Parameters>
@@ -1234,9 +1234,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setToArray:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setToArray:</TokenIdentifier>
 			<Abstract type="html">Creates a NSArray from a id&lt;LQEnumerable&gt;.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQArrayBlock toArray</Declaration>
 			
@@ -1245,9 +1245,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/toArray</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/toArray</TokenIdentifier>
 			<Abstract type="html">Creates a NSArray from a id&lt;LQEnumerable&gt;.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQArrayBlock toArray</Declaration>
 			
@@ -1256,31 +1256,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setToSet:</TokenIdentifier>
-			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
-			
-			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
-			
-			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
-			<Anchor>//api/name/toSet</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/toSet</TokenIdentifier>
-			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
-			
-			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
-			
-			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
-			<Anchor>//api/name/toSet</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(Linq)/setToDictionary:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setToDictionary:</TokenIdentifier>
 			<Abstract type="html">Creates a NSDictionary from an id&lt;LQEnumerable&gt; according to specified key selector and element selector functions.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQDictionaryBlock toDictionary</Declaration>
 			<Parameters>
@@ -1297,9 +1275,9 @@ The first element in the sequence that passes the test in the specified predicat
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(Linq)/toDictionary</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/toDictionary</TokenIdentifier>
 			<Abstract type="html">Creates a NSDictionary from an id&lt;LQEnumerable&gt; according to specified key selector and element selector functions.</Abstract>
-			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
 			
 			<Declaration>@property (readonly, nonatomic) LQDictionaryBlock toDictionary</Declaration>
 			<Parameters>
@@ -1313,6 +1291,28 @@ The first element in the sequence that passes the test in the specified predicat
 			</Parameters>
 			<ReturnValue><Abstract type="html">A NSDictionary that contains values selected from the input sequence.</Abstract></ReturnValue>
 			<Anchor>//api/name/toDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setToSet:</TokenIdentifier>
+			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
+			
+			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toSet</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/toSet</TokenIdentifier>
+			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
+			
+			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toSet</Anchor>
 		</Token>
 		
 	</File>

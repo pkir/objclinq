@@ -14,6 +14,8 @@
 						<NodeRef refid="1"/>
 						<NodeRef refid="2"/>
 						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
 						
 					</Subnodes>
 				</Node>
@@ -23,8 +25,10 @@
 					<Name>Categories</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="4"/>
-						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
 						
 					</Subnodes>
 				</Node>
@@ -34,7 +38,7 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="6"/>
+						<NodeRef refid="10"/>
 						
 					</Subnodes>
 				</Node>
@@ -53,20 +57,36 @@
 			<Path>Classes/LQEnumerator.html</Path>
 		</Node>
 		<Node id="3">
+			<Name>LQKeyValueEnumerator</Name>
+			<Path>Classes/LQKeyValueEnumerator.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>LQKeyValuePair</Name>
+			<Path>Classes/LQKeyValuePair.html</Path>
+		</Node>
+		<Node id="5">
 			<Name>LinkFix</Name>
 			<Path>Classes/LinkFix.html</Path>
 		</Node>
 		
-		<Node id="4">
+		<Node id="6">
 			<Name>NSArray(Linq)</Name>
 			<Path>Categories/NSArray+Linq.html</Path>
 		</Node>
-		<Node id="5">
+		<Node id="7">
+			<Name>NSDictionary(Linq)</Name>
+			<Path>Categories/NSDictionary+Linq.html</Path>
+		</Node>
+		<Node id="8">
 			<Name>NSEnumerator(Linq)</Name>
 			<Path>Categories/NSEnumerator+Linq.html</Path>
 		</Node>
+		<Node id="9">
+			<Name>NSSet(Linq)</Name>
+			<Path>Categories/NSSet+Linq.html</Path>
+		</Node>
 		
-		<Node id="6">
+		<Node id="10">
 			<Name>LQEnumerable</Name>
 			<Path>Protocols/LQEnumerable.html</Path>
 		</Node>

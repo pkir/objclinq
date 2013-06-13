@@ -1,15 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/LinkFix.html">
+	<File path="Classes/LQKeyValuePair.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/LinkFix</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>Macros.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/LQKeyValuePair</TokenIdentifier>
+			<Abstract type="html">Represents key and value that is stored in NSDictionary</Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>
 			
 			<NodeRef refid="3"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LQKeyValuePair/setKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id key</Declaration>
+			
+			
+			<Anchor>//api/name/key</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LQKeyValuePair/key</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id key</Declaration>
+			
+			
+			<Anchor>//api/name/key</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LQKeyValuePair/setValue:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LQKeyValuePair/value</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LQKeyValuePair/initWithKey:andValue:</TokenIdentifier>
+			<Abstract type="html">Creates new instance and intializes it with key and value</Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithKey:(id)key andValue:(id)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">- key</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">- value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithKey:andValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/LQKeyValuePair/makeWithKey:andValue:</TokenIdentifier>
+			<Abstract type="html">Factory method @see [LQKeyValuePair initWithKey:andValue:]</Abstract>
+			<DeclaredIn>NSDictionary+Linq.h</DeclaredIn>			
+			
+			<Declaration>+ (LQKeyValuePair *)makeWithKey:(id)key andValue:(id)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">- key</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">- value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/makeWithKey:andValue:</Anchor>
+		</Token>
 		
 	</File>
 </Tokens>
