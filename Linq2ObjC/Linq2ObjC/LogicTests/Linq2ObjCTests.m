@@ -1,5 +1,5 @@
 #import "Linq2ObjCTests.h"
-#import "Linq2ObjC.h"
+#import "objclinq.h"
 #import "NSArray+Linq.h"
 
 @implementation Linq2ObjCTests

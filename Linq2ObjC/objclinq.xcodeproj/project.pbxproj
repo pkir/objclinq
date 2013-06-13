@@ -25,14 +25,14 @@
 		D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB4144176044CB00152C10 /* Cocoa.framework */; };
 		D14AC2001766C4C100CB955C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D14AC1FE1766C4C100CB955C /* InfoPlist.strings */; };
 		D14AC20A1766C4D700CB955C /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */; };
-		D14AC20D1766C4FB00CB955C /* libLinq2ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libLinq2ObjC.a */; };
+		D14AC20D1766C4FB00CB955C /* libobjclinq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libobjclinq.a */; };
 		D1EB41111760415900152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41291760438100152C10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D1EB412B1760438100152C10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB412A1760438100152C10 /* UIKit.framework */; };
 		D1EB412C1760438100152C10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41101760415900152C10 /* Foundation.framework */; };
 		D1EB41321760438100152C10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1EB41301760438100152C10 /* InfoPlist.strings */; };
 		D1EB413C1760448800152C10 /* Linq2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB413B1760448800152C10 /* Linq2ObjCTests.m */; };
-		D1EB415B1760481B00152C10 /* libLinq2ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libLinq2ObjC.a */; };
+		D1EB415B1760481B00152C10 /* libobjclinq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB410D1760415900152C10 /* libobjclinq.a */; };
 		D1EB415E1760488300152C10 /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB415D1760488300152C10 /* NSArray+Linq.m */; };
 		D1EB416917616C9D00152C10 /* LQEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB416817616C9D00152C10 /* LQEnumerator.m */; };
 /* End PBXBuildFile section */
@@ -67,22 +67,22 @@
 		D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
 		D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
 		D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
-		D1EB410D1760415900152C10 /* libLinq2ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLinq2ObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EB410D1760415900152C10 /* libobjclinq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libobjclinq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41101760415900152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1EB41141760415900152C10 /* Linq2ObjC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Linq2ObjC-Prefix.pch"; sourceTree = "<group>"; };
-		D1EB41271760438100152C10 /* iOS_Linq2ObjCTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Linq2ObjCTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EB41141760415900152C10 /* objclinq-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objclinq-Prefix.pch"; sourceTree = "<group>"; };
+		D1EB41271760438100152C10 /* iOS_objclinqTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_objclinqTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41281760438100152C10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1EB412A1760438100152C10 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1EB412F1760438100152C10 /* iOS_Linq2ObjCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS_Linq2ObjCTests-Info.plist"; sourceTree = "<group>"; };
+		D1EB412F1760438100152C10 /* iOS_objclinqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS_objclinqTests-Info.plist"; sourceTree = "<group>"; };
 		D1EB41311760438100152C10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1EB41361760438100152C10 /* iOS_Linq2ObjCTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Linq2ObjCTests-Prefix.pch"; sourceTree = "<group>"; };
+		D1EB41361760438100152C10 /* iOS_objclinqTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_objclinqTests-Prefix.pch"; sourceTree = "<group>"; };
 		D1EB413A1760448800152C10 /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
 		D1EB413B1760448800152C10 /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
 		D1EB4144176044CB00152C10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D1EB4147176044CB00152C10 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D1EB4148176044CB00152C10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D1EB4149176044CB00152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1EB415A1760460D00152C10 /* Linq2ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Linq2ObjC.h; sourceTree = "<group>"; };
+		D1EB415A1760460D00152C10 /* objclinq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objclinq.h; sourceTree = "<group>"; };
 		D1EB415C1760488300152C10 /* NSArray+Linq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Linq.h"; sourceTree = "<group>"; };
 		D1EB415D1760488300152C10 /* NSArray+Linq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Linq.m"; sourceTree = "<group>"; };
 		D1EB416017604E3200152C10 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14AC20D1766C4FB00CB955C /* libLinq2ObjC.a in Frameworks */,
+				D14AC20D1766C4FB00CB955C /* libobjclinq.a in Frameworks */,
 				D14AC1F91766C4C100CB955C /* SenTestingKit.framework in Frameworks */,
 				D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */,
 			);
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1EB415B1760481B00152C10 /* libLinq2ObjC.a in Frameworks */,
+				D1EB415B1760481B00152C10 /* libobjclinq.a in Frameworks */,
 				D1EB41291760438100152C10 /* SenTestingKit.framework in Frameworks */,
 				D1EB412B1760438100152C10 /* UIKit.framework in Frameworks */,
 				D1EB412C1760438100152C10 /* Foundation.framework in Frameworks */,
@@ -147,7 +147,7 @@
 		D1EB41041760415900152C10 = {
 			isa = PBXGroup;
 			children = (
-				D1EB41121760415900152C10 /* Linq2ObjC */,
+				D1EB41121760415900152C10 /* core */,
 				D1EB412D1760438100152C10 /* iOS_Linq2ObjCTests */,
 				D14AC1FB1766C4C100CB955C /* Mac_Linq2ObjcTests */,
 				D1EB410F1760415900152C10 /* Frameworks */,
@@ -158,8 +158,8 @@
 		D1EB410E1760415900152C10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1EB410D1760415900152C10 /* libLinq2ObjC.a */,
-				D1EB41271760438100152C10 /* iOS_Linq2ObjCTests.octest */,
+				D1EB410D1760415900152C10 /* libobjclinq.a */,
+				D1EB41271760438100152C10 /* iOS_objclinqTests.octest */,
 				D14AC1F81766C4C100CB955C /* Mac_Linq2ObjcTests.octest */,
 			);
 			name = Products;
@@ -177,11 +177,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D1EB41121760415900152C10 /* Linq2ObjC */ = {
+		D1EB41121760415900152C10 /* core */ = {
 			isa = PBXGroup;
 			children = (
 				D1EB41131760415900152C10 /* Supporting Files */,
-				D1EB415A1760460D00152C10 /* Linq2ObjC.h */,
+				D1EB415A1760460D00152C10 /* objclinq.h */,
 				D1EB415C1760488300152C10 /* NSArray+Linq.h */,
 				D1EB415D1760488300152C10 /* NSArray+Linq.m */,
 				D1EB416017604E3200152C10 /* Macros.h */,
@@ -190,13 +190,14 @@
 				D1EB416817616C9D00152C10 /* LQEnumerator.m */,
 				D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */,
 			);
+			name = core;
 			path = Linq2ObjC;
 			sourceTree = "<group>";
 		};
 		D1EB41131760415900152C10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1EB41141760415900152C10 /* Linq2ObjC-Prefix.pch */,
+				D1EB41141760415900152C10 /* objclinq-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -214,9 +215,9 @@
 		D1EB412E1760438100152C10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1EB412F1760438100152C10 /* iOS_Linq2ObjCTests-Info.plist */,
+				D1EB412F1760438100152C10 /* iOS_objclinqTests-Info.plist */,
 				D1EB41301760438100152C10 /* InfoPlist.strings */,
-				D1EB41361760438100152C10 /* iOS_Linq2ObjCTests-Prefix.pch */,
+				D1EB41361760438100152C10 /* iOS_objclinqTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,9 +254,9 @@
 			productReference = D14AC1F81766C4C100CB955C /* Mac_Linq2ObjcTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		D1EB410C1760415900152C10 /* Linq2ObjC */ = {
+		D1EB410C1760415900152C10 /* objclinq */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1EB411B1760415900152C10 /* Build configuration list for PBXNativeTarget "Linq2ObjC" */;
+			buildConfigurationList = D1EB411B1760415900152C10 /* Build configuration list for PBXNativeTarget "objclinq" */;
 			buildPhases = (
 				D1EB41091760415900152C10 /* Sources */,
 				D1EB410A1760415900152C10 /* Frameworks */,
@@ -265,14 +266,14 @@
 			);
 			dependencies = (
 			);
-			name = Linq2ObjC;
+			name = objclinq;
 			productName = Linq2ObjC;
-			productReference = D1EB410D1760415900152C10 /* libLinq2ObjC.a */;
+			productReference = D1EB410D1760415900152C10 /* libobjclinq.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D1EB41261760438100152C10 /* iOS_Linq2ObjCTests */ = {
+		D1EB41261760438100152C10 /* iOS_objclinqTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1EB41371760438100152C10 /* Build configuration list for PBXNativeTarget "iOS_Linq2ObjCTests" */;
+			buildConfigurationList = D1EB41371760438100152C10 /* Build configuration list for PBXNativeTarget "iOS_objclinqTests" */;
 			buildPhases = (
 				D1EB41221760438100152C10 /* Sources */,
 				D1EB41231760438100152C10 /* Frameworks */,
@@ -283,9 +284,9 @@
 			);
 			dependencies = (
 			);
-			name = iOS_Linq2ObjCTests;
+			name = iOS_objclinqTests;
 			productName = iOS_Linq2ObjCTests;
-			productReference = D1EB41271760438100152C10 /* iOS_Linq2ObjCTests.octest */;
+			productReference = D1EB41271760438100152C10 /* iOS_objclinqTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +298,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Kirill Pugin";
 			};
-			buildConfigurationList = D1EB41081760415900152C10 /* Build configuration list for PBXProject "Linq2ObjC" */;
+			buildConfigurationList = D1EB41081760415900152C10 /* Build configuration list for PBXProject "objclinq" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,8 +310,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D1EB410C1760415900152C10 /* Linq2ObjC */,
-				D1EB41261760438100152C10 /* iOS_Linq2ObjCTests */,
+				D1EB410C1760415900152C10 /* objclinq */,
+				D1EB41261760438100152C10 /* iOS_objclinqTests */,
 				D14AC1F71766C4C100CB955C /* Mac_Linq2ObjcTests */,
 				D162CC7817695C2300FD75B5 /* Documentation */,
 			);
@@ -409,7 +410,7 @@
 /* Begin PBXTargetDependency section */
 		D14AC20C1766C4E100CB955C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D1EB410C1760415900152C10 /* Linq2ObjC */;
+			target = D1EB410C1760415900152C10 /* objclinq */;
 			targetProxy = D14AC20B1766C4E100CB955C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -551,7 +552,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				DSTROOT = /tmp/Linq2ObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Linq2ObjC/Linq2ObjC-Prefix.pch";
+				GCC_PREFIX_HEADER = "Linq2ObjC/objclinq-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -567,7 +568,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = objclinq;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
@@ -588,7 +589,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				DSTROOT = /tmp/Linq2ObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Linq2ObjC/Linq2ObjC-Prefix.pch";
+				GCC_PREFIX_HEADER = "Linq2ObjC/objclinq-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -604,7 +605,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = objclinq;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
@@ -620,10 +621,10 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS_Linq2ObjCTests/iOS_Linq2ObjCTests-Prefix.pch";
-				INFOPLIST_FILE = "iOS_Linq2ObjCTests/iOS_Linq2ObjCTests-Info.plist";
+				GCC_PREFIX_HEADER = "iOS_Linq2ObjCTests/iOS_objclinqTests-Prefix.pch";
+				INFOPLIST_FILE = "iOS_Linq2ObjCTests/iOS_objclinqTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iOS_objclinqTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -636,10 +637,10 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS_Linq2ObjCTests/iOS_Linq2ObjCTests-Prefix.pch";
-				INFOPLIST_FILE = "iOS_Linq2ObjCTests/iOS_Linq2ObjCTests-Info.plist";
+				GCC_PREFIX_HEADER = "iOS_Linq2ObjCTests/iOS_objclinqTests-Prefix.pch";
+				INFOPLIST_FILE = "iOS_Linq2ObjCTests/iOS_objclinqTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iOS_objclinqTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -664,7 +665,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		D1EB41081760415900152C10 /* Build configuration list for PBXProject "Linq2ObjC" */ = {
+		D1EB41081760415900152C10 /* Build configuration list for PBXProject "objclinq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1EB41191760415900152C10 /* Debug */,
@@ -673,7 +674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1EB411B1760415900152C10 /* Build configuration list for PBXNativeTarget "Linq2ObjC" */ = {
+		D1EB411B1760415900152C10 /* Build configuration list for PBXNativeTarget "objclinq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1EB411C1760415900152C10 /* Debug */,
@@ -682,7 +683,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1EB41371760438100152C10 /* Build configuration list for PBXNativeTarget "iOS_Linq2ObjCTests" */ = {
+		D1EB41371760438100152C10 /* Build configuration list for PBXNativeTarget "iOS_objclinqTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1EB41381760438100152C10 /* Debug */,
