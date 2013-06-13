@@ -41,12 +41,12 @@
 
 @dynamic orderBy;
 - (LQOrderByBlock) orderBy {
-    WeakRefAttribute NSArray* weakSelf = self;
-    LQOrderByBlock block = ^(NSComparator comparator) {
-        return [weakSelf sortedArrayUsingComparator:comparator];
-    };
-    
-    return LQ_AUTORELEASE(Block_copy(block));
+    return self.objectEnumerator.orderBy;
+}
+
+@dynamic orderByDescending;
+- (LQOrderByBlock) orderByDescending {
+    return self.objectEnumerator.orderByDescending;
 }
 
 @dynamic toDictionary;

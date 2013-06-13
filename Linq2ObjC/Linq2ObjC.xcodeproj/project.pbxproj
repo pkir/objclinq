@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D162CC7817695C2300FD75B5 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D162CC7917695C2300FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				D162CC7C17695C4400FD75B5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		D14AC1F91766C4C100CB955C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB41281760438100152C10 /* SenTestingKit.framework */; };
 		D14AC1FA1766C4C100CB955C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EB4144176044CB00152C10 /* Cocoa.framework */; };
@@ -52,6 +66,7 @@
 		D14AC2041766C4C100CB955C /* Mac_Linq2ObjcTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac_Linq2ObjcTests-Prefix.pch"; sourceTree = "<group>"; };
 		D14AC2081766C4D700CB955C /* Linq2ObjCTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linq2ObjCTests.h; path = Linq2ObjC/LogicTests/Linq2ObjCTests.h; sourceTree = SOURCE_ROOT; };
 		D14AC2091766C4D700CB955C /* Linq2ObjCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Linq2ObjCTests.m; path = Linq2ObjC/LogicTests/Linq2ObjCTests.m; sourceTree = SOURCE_ROOT; };
+		D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
 		D1EB410D1760415900152C10 /* libLinq2ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLinq2ObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EB41101760415900152C10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1EB41141760415900152C10 /* Linq2ObjC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Linq2ObjC-Prefix.pch"; sourceTree = "<group>"; };
@@ -173,6 +188,7 @@
 				D1EB41611761611C00152C10 /* LQEnumerable.h */,
 				D1EB416717616C9D00152C10 /* LQEnumerator.h */,
 				D1EB416817616C9D00152C10 /* LQEnumerator.m */,
+				D162CC7717695B9B00FD75B5 /* AppledocSettings.plist */,
 			);
 			path = Linq2ObjC;
 			sourceTree = "<group>";
@@ -296,6 +312,7 @@
 				D1EB410C1760415900152C10 /* Linq2ObjC */,
 				D1EB41261760438100152C10 /* iOS_Linq2ObjCTests */,
 				D14AC1F71766C4C100CB955C /* Mac_Linq2ObjcTests */,
+				D162CC7817695C2300FD75B5 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +349,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		D162CC7C17695C4400FD75B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build an Xcode documentation\nappledoc \"$SOURCE_ROOT/$PROJECT_NAME\"";
 		};
 		D1EB41251760438100152C10 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -440,6 +470,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		D162CC7A17695C2300FD75B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D162CC7B17695C2300FD75B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -608,6 +652,15 @@
 			buildConfigurations = (
 				D14AC2061766C4C100CB955C /* Debug */,
 				D14AC2071766C4C100CB955C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D162CC7917695C2300FD75B5 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D162CC7A17695C2300FD75B5 /* Debug */,
+				D162CC7B17695C2300FD75B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

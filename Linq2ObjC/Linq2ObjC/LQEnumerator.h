@@ -2,6 +2,8 @@
 #import "LQEnumerable.h"
 
 extern LQProjection kLQIdentity;
+extern LQPredicate kLQYesPredicate;
+extern LQPredicate kLQNoPredicate;
 extern NSComparator kLQDefaultComparator;
 
 @interface LQEnumerator : NSEnumerator {

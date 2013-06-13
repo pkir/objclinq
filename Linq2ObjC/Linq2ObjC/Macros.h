@@ -1,5 +1,5 @@
-#define CATEGORY_LINK_FIX(Name) @interface LinkFix_##Name: NSObject @end
-#define CATEGORY_LINK_FIX_IMPL(Name) @implementation LinkFix_##Name @end
+#define CATEGORY_LINK_FIX(name) @interface LinkFix##name: NSObject @end
+#define CATEGORY_LINK_FIX_IMPL(name) @implementation LinkFix##name @end
 
 #define LQ_AUTORELEASE(obj) [obj autorelease]
 

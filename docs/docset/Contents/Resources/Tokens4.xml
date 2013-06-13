@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSArray+Linq.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(Linq)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSelect:</TokenIdentifier>
+			<Abstract type="html">Projects each element of a sequence into a new form.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSelectBlock select</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">- A transform function to apply to each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">- an id&lt;LQEnumerable&gt; whose elements are the result of invoking the transform function on each element of source.</Abstract></ReturnValue>
+			<Anchor>//api/name/select</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/select</TokenIdentifier>
+			<Abstract type="html">Projects each element of a sequence into a new form.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSelectBlock select</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">- A transform function to apply to each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">- an id&lt;LQEnumerable&gt; whose elements are the result of invoking the transform function on each element of source.</Abstract></ReturnValue>
+			<Anchor>//api/name/select</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setWhere:</TokenIdentifier>
+			<Abstract type="html">Filters a sequence of values based on a predicate.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQWhereBlock where</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an id&lt;LQEnumerable&gt; that contains elements from the input sequence that satisfy the condition.</Abstract></ReturnValue>
+			<Anchor>//api/name/where</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/where</TokenIdentifier>
+			<Abstract type="html">Filters a sequence of values based on a predicate.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQWhereBlock where</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an id&lt;LQEnumerable&gt; that contains elements from the input sequence that satisfy the condition.</Abstract></ReturnValue>
+			<Anchor>//api/name/where</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSelectMany:</TokenIdentifier>
+			<Abstract type="html">Projects each element of a sequence to an id&lt;LQEnumerable&gt; and flattens the resulting sequences into one sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSelectManyBlock selectMany</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector:</Name>
+					<Abstract type="html">- A transform function to apply to each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are the result of invoking the one-to-many transform function on each element of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/selectMany</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/selectMany</TokenIdentifier>
+			<Abstract type="html">Projects each element of a sequence to an id&lt;LQEnumerable&gt; and flattens the resulting sequences into one sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSelectManyBlock selectMany</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector:</Name>
+					<Abstract type="html">- A transform function to apply to each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are the result of invoking the one-to-many transform function on each element of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/selectMany</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setDistinct:</TokenIdentifier>
+			<Abstract type="html">Returns distinct elements from a sequence by using isEqual method to compare items</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQDistinctBlock distinct</Declaration>
+			
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains distinct elements from the source sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/distinct</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/distinct</TokenIdentifier>
+			<Abstract type="html">Returns distinct elements from a sequence by using isEqual method to compare items</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQDistinctBlock distinct</Declaration>
+			
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains distinct elements from the source sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/distinct</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSkip:</TokenIdentifier>
+			<Abstract type="html">Bypasses a specified number of elements in a sequence and then returns the remaining elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSkipBlock skip</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>count</Name>
+					<Abstract type="html">- The number of elements to skip before returning the remaining elements.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements that occur after the specified index in the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/skip</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/skip</TokenIdentifier>
+			<Abstract type="html">Bypasses a specified number of elements in a sequence and then returns the remaining elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSkipBlock skip</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>count</Name>
+					<Abstract type="html">- The number of elements to skip before returning the remaining elements.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements that occur after the specified index in the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/skip</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSkipWhile:</TokenIdentifier>
+			<Abstract type="html">Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSkipWithPredicateBlock skipWhile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by predicate.</Abstract></ReturnValue>
+			<Anchor>//api/name/skipWhile</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/skipWhile</TokenIdentifier>
+			<Abstract type="html">Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSkipWithPredicateBlock skipWhile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by predicate.</Abstract></ReturnValue>
+			<Anchor>//api/name/skipWhile</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setTake:</TokenIdentifier>
+			<Abstract type="html">Returns a specified number of contiguous elements from the start of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSTakeBlock take</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>count</Name>
+					<Abstract type="html">- The number of elements to return.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the specified number of elements from the start of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/take</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/take</TokenIdentifier>
+			<Abstract type="html">Returns a specified number of contiguous elements from the start of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSTakeBlock take</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>count</Name>
+					<Abstract type="html">- The number of elements to return.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the specified number of elements from the start of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/take</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setTakeWhile:</TokenIdentifier>
+			<Abstract type="html">Returns elements from a sequence as long as a specified condition is true.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSTakeWithPredicateBlock takeWhile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from the input sequence that occur before the element at which the test no longer passes.</Abstract></ReturnValue>
+			<Anchor>//api/name/takeWhile</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/takeWhile</TokenIdentifier>
+			<Abstract type="html">Returns elements from a sequence as long as a specified condition is true.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSTakeWithPredicateBlock takeWhile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from the input sequence that occur before the element at which the test no longer passes.</Abstract></ReturnValue>
+			<Anchor>//api/name/takeWhile</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setAll:</TokenIdentifier>
+			<Abstract type="html">Determines whether all elements of a sequence satisfy a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAllBlock all</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/all</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/all</TokenIdentifier>
+			<Abstract type="html">Determines whether all elements of a sequence satisfy a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAllBlock all</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/all</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setAny:</TokenIdentifier>
+			<Abstract type="html">Determines whether any element of a sequence satisfies a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAnyBlock any</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if at least one element of the source sequence passes the test in the specified predicate; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/any</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/any</TokenIdentifier>
+			<Abstract type="html">Determines whether any element of a sequence satisfies a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAnyBlock any</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if at least one element of the source sequence passes the test in the specified predicate; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/any</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setAggregateWithSeed:</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregateWithSeed</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/aggregateWithSeed</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence. The specified seed value is used as the initial accumulator value.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregateWithSeed aggregateWithSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregateWithSeed</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setAggregate:</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregate aggregate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">- The initial accumulator value.</Abstract>
+				</Parameter><Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/aggregate</TokenIdentifier>
+			<Abstract type="html">Applies an accumulator function over a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQAggregate aggregate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">- The initial accumulator value.</Abstract>
+				</Parameter><Parameter>
+					<Name>aggregator</Name>
+					<Abstract type="html">- An accumulator function to be invoked on each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The final accumulator value.</Abstract></ReturnValue>
+			<Anchor>//api/name/aggregate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSingle:</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock single</Declaration>
+			
+			<ReturnValue><Abstract type="html">The single element of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/single</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/single</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock single</Declaration>
+			
+			<ReturnValue><Abstract type="html">The single element of the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/single</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSingleWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition, and throws an exception if more than one such element exists.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test an element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The single element of the input sequence that satisfies a condition.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/singleWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition, and throws an exception if more than one such element exists.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test an element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The single element of the input sequence that satisfies a condition.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSingleOrNil:</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock singleOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">The single element of the input sequence, or nil if the sequence contains no elements.
+@exeption InvalidOperationException The input sequence contains more than one element.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/singleOrNil</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock singleOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">The single element of the input sequence, or nil if the sequence contains no elements.
+@exeption InvalidOperationException The input sequence contains more than one element.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setSingleOrNilWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition or a default value if no such element exists; this method throws an exception if more than one element satisfies the condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test an element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The single element of the input sequence that satisfies the condition, or nil if no such element is found.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/singleOrNilWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the only element of a sequence that satisfies a specified condition or a default value if no such element exists; this method throws an exception if more than one element satisfies the condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock singleOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test an element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The single element of the input sequence that satisfies the condition, or nil if no such element is found.</Abstract></ReturnValue>
+			<Anchor>//api/name/singleOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setFirst:</TokenIdentifier>
+			<Abstract type="html">Returns the first element of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock first</Declaration>
+			
+			<ReturnValue><Abstract type="html">The first element in the specified sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/first</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/first</TokenIdentifier>
+			<Abstract type="html">Returns the first element of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock first</Declaration>
+			
+			<ReturnValue><Abstract type="html">The first element in the specified sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/first</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setFirstWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the first element in a sequence that satisfies a specified condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.
+The first element in the sequence that passes the test in the specified predicate function.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firstWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/firstWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the first element in a sequence that satisfies a specified condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.
+The first element in the sequence that passes the test in the specified predicate function.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firstWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setFirstOrNil:</TokenIdentifier>
+			<Abstract type="html">Returns the first element of a sequence, or a default value if the sequence contains no elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock firstOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">nil if source is empty; otherwise, the first element in source.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/firstOrNil</TokenIdentifier>
+			<Abstract type="html">Returns the first element of a sequence, or a default value if the sequence contains no elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock firstOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">nil if source is empty; otherwise, the first element in source.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setFirstOrNilWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the first element of the sequence that satisfies a condition or a default value if no such element is found.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">nil if source is empty or if no element passes the test specified by predicate; otherwise, the first element in source that passes the test specified by predicate.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/firstOrNilWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the first element of the sequence that satisfies a condition or a default value if no such element is found.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock firstOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">nil if source is empty or if no element passes the test specified by predicate; otherwise, the first element in source that passes the test specified by predicate.</Abstract></ReturnValue>
+			<Anchor>//api/name/firstOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLast:</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock last</Declaration>
+			
+			<ReturnValue><Abstract type="html">The value at the last position in the source sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/last</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/last</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock last</Declaration>
+			
+			<ReturnValue><Abstract type="html">The value at the last position in the source sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/last</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLastWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence that satisfies a specified condition.
+@params predicate - A function to test each element for a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate</Declaration>
+			
+			<ReturnValue><Abstract type="html">The last element in the sequence that passes the test in the specified predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/lastWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence that satisfies a specified condition.
+@params predicate - A function to test each element for a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastWithPredicate</Declaration>
+			
+			<ReturnValue><Abstract type="html">The last element in the sequence that passes the test in the specified predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLastOrNil:</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence, or a default value if the sequence contains no elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock lastOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">nil if the source sequence is empty; otherwise, the last element in the id&lt;LQEnumerable&gt;.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/lastOrNil</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence, or a default value if the sequence contains no elements.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultBlock lastOrNil</Declaration>
+			
+			<ReturnValue><Abstract type="html">nil if the source sequence is empty; otherwise, the last element in the id&lt;LQEnumerable&gt;.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastOrNil</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLastOrNilWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence that satisfies a condition or a default value if no such element is found.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">nil if the sequence is empty or if no elements pass the test in the predicate function; otherwise, the last element that passes the test in the predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/lastOrNilWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns the last element of a sequence that satisfies a condition or a default value if no such element is found.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) ResultWithPredicateBlock lastOrNilWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">nil if the sequence is empty or if no elements pass the test in the predicate function; otherwise, the last element that passes the test in the predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lastOrNilWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLength:</TokenIdentifier>
+			<Abstract type="html">Returns the number of elements in a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQCountBlock length</Declaration>
+			
+			<ReturnValue><Abstract type="html">The number of elements in the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/length</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/length</TokenIdentifier>
+			<Abstract type="html">Returns the number of elements in a sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQCountBlock length</Declaration>
+			
+			<ReturnValue><Abstract type="html">The number of elements in the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/length</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setLengthWithPredicate:</TokenIdentifier>
+			<Abstract type="html">Returns a number that represents how many elements in the specified sequence satisfy a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A number that represents how many elements in the sequence satisfy the condition in the predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lengthWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/lengthWithPredicate</TokenIdentifier>
+			<Abstract type="html">Returns a number that represents how many elements in the specified sequence satisfy a condition.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQCountWithPredicateBlock lengthWithPredicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">- A function to test each element for a condition.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A number that represents how many elements in the sequence satisfy the condition in the predicate function.</Abstract></ReturnValue>
+			<Anchor>//api/name/lengthWithPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setOfClass:</TokenIdentifier>
+			<Abstract type="html">Filters the elements of an id&lt;LQEnumerable&gt; based on a specified class.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOfClassBlock ofClass</Declaration>
+			
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains elements from the input sequence of given class.</Abstract></ReturnValue>
+			<Anchor>//api/name/ofClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/ofClass</TokenIdentifier>
+			<Abstract type="html">Filters the elements of an id&lt;LQEnumerable&gt; based on a specified class.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOfClassBlock ofClass</Declaration>
+			
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains elements from the input sequence of given class.</Abstract></ReturnValue>
+			<Anchor>//api/name/ofClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setContains:</TokenIdentifier>
+			<Abstract type="html">Determines whether a sequence contains a specified element by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQPredicate contains</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">- The value to locate in the sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the source sequence contains an element that has the specified value; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/contains</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/contains</TokenIdentifier>
+			<Abstract type="html">Determines whether a sequence contains a specified element by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQPredicate contains</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">- The value to locate in the sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the source sequence contains an element that has the specified value; otherwise, NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/contains</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setForEach:</TokenIdentifier>
+			<Abstract type="html">Enumerates the sequence and invokes the given action for each value in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQForEachBlock forEach</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>actino</Name>
+					<Abstract type="html">- Action to invoke for each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/forEach</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/forEach</TokenIdentifier>
+			<Abstract type="html">Enumerates the sequence and invokes the given action for each value in the sequence.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQForEachBlock forEach</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>actino</Name>
+					<Abstract type="html">- Action to invoke for each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/forEach</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setConcat:</TokenIdentifier>
+			<Abstract type="html">Concatenates two sequences.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock concat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- The sequence to concatenate to the first sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the concatenated elements of the two input sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/concat</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/concat</TokenIdentifier>
+			<Abstract type="html">Concatenates two sequences.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock concat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- The sequence to concatenate to the first sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the concatenated elements of the two input sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/concat</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setUnions:</TokenIdentifier>
+			<Abstract type="html">Produces the set union of two sequences by using isEqual method as comparer</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock unions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">An id&lt;LQEnumerable&gt; whose distinct elements form the second set for the union.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from both input sequences, excluding duplicates.</Abstract></ReturnValue>
+			<Anchor>//api/name/unions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/unions</TokenIdentifier>
+			<Abstract type="html">Produces the set union of two sequences by using isEqual method as comparer</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock unions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">An id&lt;LQEnumerable&gt; whose distinct elements form the second set for the union.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains the elements from both input sequences, excluding duplicates.</Abstract></ReturnValue>
+			<Anchor>//api/name/unions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setExcept:</TokenIdentifier>
+			<Abstract type="html">Produces the set difference of two sequences by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock except</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>An</Name>
+					<Abstract type="html">id&lt;LQEnumerable&gt; whose elements that also occur in the first sequence will cause those elements to be removed from the returned sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A sequence that contains the set difference of the elements of two sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/except</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/except</TokenIdentifier>
+			<Abstract type="html">Produces the set difference of two sequences by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock except</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>An</Name>
+					<Abstract type="html">id&lt;LQEnumerable&gt; whose elements that also occur in the first sequence will cause those elements to be removed from the returned sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A sequence that contains the set difference of the elements of two sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/except</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setIntersect:</TokenIdentifier>
+			<Abstract type="html">Produces the set intersection of two sequences by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock intersect</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- An id&lt;LQEnumerable&gt; whose distinct elements that also appear in the first sequence will be returned.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A sequence that contains the elements that form the set intersection of two sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/intersect</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/intersect</TokenIdentifier>
+			<Abstract type="html">Produces the set intersection of two sequences by using isEqual method to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQConcatBlock intersect</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- An id&lt;LQEnumerable&gt; whose distinct elements that also appear in the first sequence will be returned.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A sequence that contains the elements that form the set intersection of two sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/intersect</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setOrderBy:</TokenIdentifier>
+			<Abstract type="html">Sorts the elements of a sequence in ascending order by using a specified comparer.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from an element.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- A function to compare two values</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are sorted according to a key.</Abstract></ReturnValue>
+			<Anchor>//api/name/orderBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/orderBy</TokenIdentifier>
+			<Abstract type="html">Sorts the elements of a sequence in ascending order by using a specified comparer.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from an element.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- A function to compare two values</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are sorted according to a key.</Abstract></ReturnValue>
+			<Anchor>//api/name/orderBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setOrderByDescending:</TokenIdentifier>
+			<Abstract type="html">Sorts the elements of a sequence in descending order by using a specified comparer.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderByDescending</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from an element.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- A function to compare two values</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are sorted in descending order according to a key.</Abstract></ReturnValue>
+			<Anchor>//api/name/orderByDescending</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/orderByDescending</TokenIdentifier>
+			<Abstract type="html">Sorts the elements of a sequence in descending order by using a specified comparer.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQOrderByBlock orderByDescending</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from an element.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- A function to compare two values</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; whose elements are sorted in descending order according to a key.</Abstract></ReturnValue>
+			<Anchor>//api/name/orderByDescending</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setMin:</TokenIdentifier>
+			<Abstract type="html">Returns the minimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock min</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the minimum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Minimum value in the sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/min</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/min</TokenIdentifier>
+			<Abstract type="html">Returns the minimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock min</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the minimum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Minimum value in the sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/min</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setMax:</TokenIdentifier>
+			<Abstract type="html">Returns the maxmimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock max</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the maxmimum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">MAximum value in the sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/max</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/max</TokenIdentifier>
+			<Abstract type="html">Returns the maxmimum value in the enumerable sequence by using the specified comparer to compare values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxBlock max</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the maxmimum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">MAximum value in the sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/max</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setMinBy:</TokenIdentifier>
+			<Abstract type="html">Returns the elements with the minimum key value by using the default comparer to compare key values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock minBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- Key selector used to extract the key for each element in the sequence.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the minimum key value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">List with the elements that share the same minimum key value.</Abstract></ReturnValue>
+			<Anchor>//api/name/minBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/minBy</TokenIdentifier>
+			<Abstract type="html">Returns the elements with the minimum key value by using the default comparer to compare key values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock minBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- Key selector used to extract the key for each element in the sequence.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the minimum key value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">List with the elements that share the same minimum key value.</Abstract></ReturnValue>
+			<Anchor>//api/name/minBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setMaxBy:</TokenIdentifier>
+			<Abstract type="html">Returns the elements with the maxmimum key value by using the default comparer to compare key values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock maxBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- Key selector used to extract the key for each element in the sequence.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the maxmimum key value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">List with the elements that share the same maxmimum key value.</Abstract></ReturnValue>
+			<Anchor>//api/name/maxBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/maxBy</TokenIdentifier>
+			<Abstract type="html">Returns the elements with the maxmimum key value by using the default comparer to compare key values.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQMinMaxByBlock maxBy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- Key selector used to extract the key for each element in the sequence.</Abstract>
+				</Parameter><Parameter>
+					<Name>comparer</Name>
+					<Abstract type="html">- Comparer used to determine the maxmimum key value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">List with the elements that share the same maxmimum key value.</Abstract></ReturnValue>
+			<Anchor>//api/name/maxBy</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setZip:</TokenIdentifier>
+			<Abstract type="html">Applies a specified function to the corresponding elements of two sequences, which produces a sequence of the results.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQZipBlock zip</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- The second sequence to merge.</Abstract>
+				</Parameter><Parameter>
+					<Name>resultSelector</Name>
+					<Abstract type="html">A function that specifies how to merge the elements from the two sequences.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains merged elements of two input sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/zip</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/zip</TokenIdentifier>
+			<Abstract type="html">Applies a specified function to the corresponding elements of two sequences, which produces a sequence of the results.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQZipBlock zip</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>second</Name>
+					<Abstract type="html">- The second sequence to merge.</Abstract>
+				</Parameter><Parameter>
+					<Name>resultSelector</Name>
+					<Abstract type="html">A function that specifies how to merge the elements from the two sequences.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that contains merged elements of two input sequences.</Abstract></ReturnValue>
+			<Anchor>//api/name/zip</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setToArray:</TokenIdentifier>
+			<Abstract type="html">Creates a NSArray from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQArrayBlock toArray</Declaration>
+			
+			<ReturnValue><Abstract type="html">An array that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toArray</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/toArray</TokenIdentifier>
+			<Abstract type="html">Creates a NSArray from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQArrayBlock toArray</Declaration>
+			
+			<ReturnValue><Abstract type="html">An array that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toArray</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setToSet:</TokenIdentifier>
+			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
+			
+			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toSet</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/toSet</TokenIdentifier>
+			<Abstract type="html">Creates a NSSet from a id&lt;LQEnumerable&gt;.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQSetBlock toSet</Declaration>
+			
+			<ReturnValue><Abstract type="html">A set that contains the elements from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toSet</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSArray(Linq)/setToDictionary:</TokenIdentifier>
+			<Abstract type="html">Creates a NSDictionary from an id&lt;LQEnumerable&gt; according to specified key selector and element selector functions.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQDictionaryBlock toDictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from each element.</Abstract>
+				</Parameter><Parameter>
+					<Name>valueSelector</Name>
+					<Abstract type="html">- A transform function to produce a result element value from each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSDictionary that contains values selected from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSArray(Linq)/toDictionary</TokenIdentifier>
+			<Abstract type="html">Creates a NSDictionary from an id&lt;LQEnumerable&gt; according to specified key selector and element selector functions.</Abstract>
+			<DeclaredIn>NSArray+Linq.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQDictionaryBlock toDictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">- A function to extract a key from each element.</Abstract>
+				</Parameter><Parameter>
+					<Name>valueSelector</Name>
+					<Abstract type="html">- A transform function to produce a result element value from each element.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSDictionary that contains values selected from the input sequence.</Abstract></ReturnValue>
+			<Anchor>//api/name/toDictionary</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

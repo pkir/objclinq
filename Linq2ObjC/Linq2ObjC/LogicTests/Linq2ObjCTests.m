@@ -89,6 +89,8 @@
     
     result = test.all(^BOOL(id item) { return [item isEqualToString:@"1"];});
     STAssertEquals(NO, result, nil);
+    
+    STAssertEquals(YES, @[].all(kLQNoPredicate), nil);
 }
 
 - (void)testAny
@@ -301,8 +303,13 @@
 - (void)testOrderBy
 {
     
-    STAssertEqualObjects((@[]), (@[]).orderBy(kLQDefaultComparator).toArray(), nil);
-    STAssertEqualObjects((@[@1, @2]), (@[@2, @1]).orderBy(kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[]), (@[]).orderBy(kLQIdentity, kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[@1, @2]), (@[@2, @1]).orderBy(kLQIdentity, kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[@1, @2]), (@[@1, @2]).orderBy(kLQIdentity, kLQDefaultComparator).toArray(), nil);
+    
+    STAssertEqualObjects((@[]), (@[]).orderByDescending(kLQIdentity, kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[@2, @1]), (@[@2, @1]).orderByDescending(kLQIdentity, kLQDefaultComparator).toArray(), nil);
+    STAssertEqualObjects((@[@2, @1]), (@[@1, @2]).orderByDescending(kLQIdentity, kLQDefaultComparator).toArray(), nil);
 }
 
 - (void)testMin

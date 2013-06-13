@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>linqobjc</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="6"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>LQEnumerableEnumerator</Name>
+			<Path>Classes/LQEnumerableEnumerator.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>LQEnumerator</Name>
+			<Path>Classes/LQEnumerator.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>LinkFix</Name>
+			<Path>Classes/LinkFix.html</Path>
+		</Node>
+		
+		<Node id="4">
+			<Name>NSArray(Linq)</Name>
+			<Path>Categories/NSArray+Linq.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>NSEnumerator(Linq)</Name>
+			<Path>Categories/NSEnumerator+Linq.html</Path>
+		</Node>
+		
+		<Node id="6">
+			<Name>LQEnumerable</Name>
+			<Path>Protocols/LQEnumerable.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

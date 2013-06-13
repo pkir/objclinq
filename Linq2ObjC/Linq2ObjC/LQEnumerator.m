@@ -10,6 +10,14 @@ NSComparator kLQDefaultComparator = ^(id a, id b) {
     return [a compare:b];
 };
 
+LQPredicate kLQYesPredicate = ^(id item) {
+    return YES;
+};
+
+LQPredicate kLQNoPredicate = ^(id item) {
+    return NO;
+};
+
 @implementation LQEnumerator
 
 - (id)initWithFunction:(NSEnumerator*)src nextObjectBlock:(id(^)(NSEnumerator*))nextObject {
@@ -83,7 +91,7 @@ NSComparator kLQDefaultComparator = ^(id a, id b) {
 }
 
 + (LQEnumerableEnumerator*) enumeratorWithEnumerable:(id<LQEnumerable>)collection {
-    return [[self alloc] initWithEnumerable:collection];
+    return [[[self alloc] initWithEnumerable:collection] autorelease];
 }
 
 - (id) nextObject {
@@ -560,23 +568,16 @@ NSComparator kLQDefaultComparator = ^(id a, id b) {
 @dynamic concat;
 - (LQConcatBlock) concat {
     WeakRefAttribute NSEnumerator* weakSelf = self;
-    __block LQEnumerableEnumerator* enumerator = nil;
-    __block BOOL selfDone = NO;
     LQConcatBlock block = ^(id<LQEnumerable> collection) {
-        return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
+        return [LQEnumerator enumeratorWithFunction:[LQEnumerableEnumerator enumeratorWithEnumerable:collection]
+                                    nextObjectBlock:^id(NSEnumerator* src)
+        {
             id item = nil;
-            if (!selfDone) {
-                while ((item = [src nextObject])) {
-                    return item;
-                }
-                selfDone = YES;
+            while ((item = [weakSelf nextObject])) {
+                return item;
             }
             
-            if (selfDone && enumerator == nil) {
-                enumerator = [LQEnumerableEnumerator enumeratorWithEnumerable:collection];
-            }
-            
-            while ((item = [enumerator nextObject])) {
+            while ((item = [src nextObject])) {
                 return item;
             }
             
@@ -622,8 +623,26 @@ NSComparator kLQDefaultComparator = ^(id a, id b) {
 @dynamic orderBy;
 - (LQOrderByBlock) orderBy {
     WeakRefAttribute NSEnumerator* weakSelf = self;
-    LQOrderByBlock block = ^(NSComparator comparator) {
-        return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:comparator];
+    LQOrderByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
+        NSComparator cmp = ^(id x, id y) {
+            return comparator(keySelector(x), keySelector(y));
+        };
+        
+        return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:cmp];
+    };
+    
+    return LQ_AUTORELEASE(Block_copy(block));
+}
+
+@dynamic orderByDescending;
+- (LQOrderByBlock) orderByDescending {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQOrderByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
+        NSComparator cmp = ^(id x, id y) {
+            return -comparator(keySelector(x), keySelector(y));
+        };
+        
+        return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:cmp];
     };
     
     return LQ_AUTORELEASE(Block_copy(block));

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LQEnumerator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LQEnumerator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LQEnumerator.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/LQEnumerator/enumeratorWithFunction:nextObjectBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LQEnumerator.h</DeclaredIn>			
+			
+			<Declaration>+ (LQEnumerator *)enumeratorWithFunction:(NSEnumerator *)src nextObjectBlock:(id ( ^ ) ( NSEnumerator *))nextObject</Declaration>
+			
+			
+			<Anchor>//api/name/enumeratorWithFunction:nextObjectBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LQEnumerator/initWithFunction:nextObjectBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LQEnumerator.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFunction:(NSEnumerator *)src nextObjectBlock:(id ( ^ ) ( NSEnumerator *))nextObject</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFunction:nextObjectBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LQEnumerator/nextObject</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LQEnumerator.h</DeclaredIn>			
+			
+			<Declaration>- (id)nextObject</Declaration>
+			
+			
+			<Anchor>//api/name/nextObject</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

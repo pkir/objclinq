@@ -61,6 +61,7 @@
 @property (readonly, nonatomic) LQConcatBlock intersect;
 
 @property (readonly, nonatomic) LQOrderByBlock orderBy;
+@property (readonly, nonatomic) LQOrderByBlock orderByDescending;
 
 @property (readonly, nonatomic) LQMinMaxBlock min;
 @property (readonly, nonatomic) LQMinMaxBlock max;
