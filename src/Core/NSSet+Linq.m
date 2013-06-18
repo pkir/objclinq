@@ -29,7 +29,7 @@
         return [weakSelf allObjects];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 
@@ -40,7 +40,7 @@
         return [[weakSelf retain] autorelease];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic orderBy;
@@ -188,7 +188,7 @@
         return [weakSelf containsObject:item];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic forEach;

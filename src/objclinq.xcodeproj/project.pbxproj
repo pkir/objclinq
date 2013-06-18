@@ -376,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Build an Xcode documentation\nappledoc \"$SOURCE_ROOT/Core\"";
+			shellScript = "# Build an Xcode documentation\n/usr/local/bin/appledoc \"$SOURCE_ROOT/Core\"";
 		};
 		D1EB41251760438100152C10 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -682,6 +682,7 @@
 				D162CC9B1769881000FD75B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1EB41081760415900152C10 /* Build configuration list for PBXProject "objclinq" */ = {
 			isa = XCConfigurationList;

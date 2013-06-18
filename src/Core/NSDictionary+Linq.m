@@ -238,7 +238,7 @@
         return [weakSelf objectForKey:item] != nil;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic forEach;
