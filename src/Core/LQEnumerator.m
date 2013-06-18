@@ -23,7 +23,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (id)initWithFunction:(NSEnumerator*)src nextObjectBlock:(id(^)(NSEnumerator*))nextObject {
     if (self = [super init]) {
         _src = src;
-        _nextObject = LQ_AUTORELEASE(Block_copy(nextObject));
+        _nextObject = [Block_copy(nextObject) autorelease];
     }
     
     return self;
@@ -113,7 +113,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQSelectBlock) select {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectBlock block = ^id<LQEnumerable>(LQProjection fn) {
-        LQProjection sel = LQ_AUTORELEASE(Block_copy(fn));
+        LQProjection sel = [Block_copy(fn) autorelease];
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
@@ -124,14 +124,14 @@ LQPredicate kLQNoPredicate = ^(id item) {
         }];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic where;
 - (LQWhereBlock) where {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQWhereBlock block = ^id<LQEnumerable>(LQPredicate fn) {
-        LQPredicate filter = LQ_AUTORELEASE(Block_copy(fn));
+        LQPredicate filter = [Block_copy(fn) autorelease];
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
             while((item = [src nextObject])) {
@@ -159,7 +159,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQSelectManyBlock) selectMany {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectManyBlock block = ^id<LQEnumerable>(LQSelectMany fn) {
-        LQSelectMany collectionSelector = LQ_AUTORELEASE(Block_copy(fn));
+        LQSelectMany collectionSelector = [Block_copy(fn) autorelease];
         __block NSEnumerator* it = nil;
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             while (true) {
@@ -239,7 +239,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQSkipWithPredicateBlock) skipWhile {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSkipWithPredicateBlock block = ^(LQPredicate fn){
-        LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
+        LQPredicate predicate = [Block_copy(fn) autorelease];
         __block BOOL skip = YES;
         
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
@@ -283,7 +283,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQSTakeWithPredicateBlock) takeWhile {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSTakeWithPredicateBlock block = ^(LQPredicate fn){
-        LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
+        LQPredicate predicate = [Block_copy(fn) autorelease];
         
         return [LQEnumerator enumeratorWithFunction:weakSelf nextObjectBlock:^id(NSEnumerator* src) {
             id item = nil;
@@ -307,7 +307,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQAllBlock) all {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAllBlock block = ^(LQPredicate fn){
-        LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
+        LQPredicate predicate = [Block_copy(fn) autorelease];
         
         for (id item in weakSelf) {
             if (!predicate(item)) {
@@ -325,7 +325,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 - (LQAnyBlock) any {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAllBlock block = ^(LQPredicate fn){
-        LQPredicate predicate = LQ_AUTORELEASE(Block_copy(fn));
+        LQPredicate predicate = [Block_copy(fn) autorelease];
         
         for (id item in weakSelf) {
             if (predicate(item)) {
@@ -376,7 +376,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic singleWithPredicate;
@@ -386,7 +386,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).single();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic singleOrNil;
@@ -401,7 +401,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic singleOrNilWithPredicate;
@@ -411,7 +411,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).singleOrNil();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic first;
@@ -426,7 +426,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic firstWithPredicate;
@@ -436,7 +436,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).first();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic firstOrNil;
@@ -447,7 +447,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return obj;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic firstOrNilWithPredicate;
@@ -457,7 +457,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).firstOrNil();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic last;
@@ -472,7 +472,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         @throw [NSException exceptionWithName:@"InvalidOperationException" reason:nil userInfo:nil];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 
 }
 
@@ -483,7 +483,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).last();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic lastOrNil;
@@ -494,7 +494,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return [arr lastObject];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic lastOrNilWithPredicate;
@@ -504,7 +504,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).lastOrNil();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic length;
@@ -514,7 +514,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return self.toArray().count;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic lengthWithPredicate;
@@ -524,7 +524,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(predicate).length();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic ofClass;
@@ -534,7 +534,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(^(id item) { return [item isKindOfClass:classType]; });
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic contains;
@@ -550,7 +550,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return NO;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic forEach;
@@ -562,7 +562,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         }
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic concat;
@@ -585,7 +585,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         }];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic unions;
@@ -595,7 +595,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.concat(collection).distinct();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic except;
@@ -606,7 +606,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(^BOOL(id item) { return ![dst containsObject:item]; });
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic intersect;
@@ -617,7 +617,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.where(^BOOL(id item) { return [dst containsObject:item]; });
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic orderBy;
@@ -631,7 +631,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:cmp];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic orderByDescending;
@@ -645,7 +645,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return (id<LQEnumerable>)[weakSelf.toArray() sortedArrayUsingComparator:cmp];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic min;
@@ -655,7 +655,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.minBy(kLQIdentity, comparator).first();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic max;
@@ -665,7 +665,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.maxBy(kLQIdentity, comparator).first();
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic minBy;
@@ -677,7 +677,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         }];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic maxBy;
@@ -687,7 +687,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return [weakSelf extremeBy:keySelector comparator:comparator];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 - (NSArray*) extremeBy:(LQProjection)keySelector comparator:(NSComparator)comparator {
@@ -737,7 +737,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
 
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic toArray;
@@ -747,7 +747,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return weakSelf.allObjects;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic toSet;
@@ -757,7 +757,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return [NSSet setWithArray:weakSelf.allObjects];
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @dynamic toDictionary;
@@ -775,7 +775,7 @@ LQPredicate kLQNoPredicate = ^(id item) {
         return (NSDictionary*)result;
     };
     
-    return LQ_AUTORELEASE(Block_copy(block));
+    return [Block_copy(block) autorelease];
 }
 
 @end
