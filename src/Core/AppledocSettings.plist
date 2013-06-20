@@ -43,7 +43,7 @@
 	<key>--warn-empty-description</key>
 	<true/>
 	<key>--warn-missing-arg</key>
-	<true/>
+	<false/>
 	<key>--warn-unknown-directive</key>
 	<true/>
 	<key>--logformat</key>

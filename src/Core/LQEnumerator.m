@@ -109,7 +109,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
 
 @implementation NSEnumerator(Linq)
 
-@dynamic select;
 - (LQSelectBlock) select {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSelectBlock block = ^id<LQEnumerable>(LQProjection fn) {
@@ -127,7 +126,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic where;
 - (LQWhereBlock) where {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQWhereBlock block = ^id<LQEnumerable>(LQPredicate fn) {
@@ -147,7 +145,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic selectMany;
 // Functional "bind", let's assume there is "yield" operator in ObjC, the
 // result of calling a.SelectMany(LQSelectMany collectionSelector);
 // where a is LQEnumerable would be:
@@ -192,7 +189,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic distinct;
 - (LQDistinctBlock) distinct {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQDistinctBlock block = ^{
@@ -214,7 +210,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic skip;
 - (LQSkipBlock) skip {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSkipBlock block = ^(NSUInteger count){
@@ -235,7 +230,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic skipWhile;
 - (LQSkipWithPredicateBlock) skipWhile {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSkipWithPredicateBlock block = ^(LQPredicate fn){
@@ -261,7 +255,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic take;
 - (LQSTakeBlock) take {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSTakeBlock block = ^(NSUInteger count){
@@ -279,7 +272,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic takeWhile;
 - (LQSTakeWithPredicateBlock) takeWhile {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSTakeWithPredicateBlock block = ^(LQPredicate fn){
@@ -303,7 +295,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
 
 }
 
-@dynamic all;
 - (LQAllBlock) all {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAllBlock block = ^(LQPredicate fn){
@@ -321,7 +312,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic any;
 - (LQAnyBlock) any {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAllBlock block = ^(LQPredicate fn){
@@ -340,7 +330,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
 
 }
 
-@dynamic aggregateWithSeed;
 - (LQAggregateWithSeed) aggregateWithSeed {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAggregateWithSeed block = ^(id seed, LQAggregator aggregator) {
@@ -354,7 +343,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic aggregate;
 - (LQAggregate) aggregate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQAggregate block = ^(LQAggregator fn) {
@@ -364,7 +352,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic single;
 - (ResultBlock) single {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -379,7 +366,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic singleWithPredicate;
 - (ResultWithPredicateBlock) singleWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -389,7 +375,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic singleOrNil;
 - (ResultBlock) singleOrNil {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -404,7 +389,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic singleOrNilWithPredicate;
 - (ResultWithPredicateBlock) singleOrNilWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -414,7 +398,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic first;
 - (ResultBlock) first {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -429,7 +412,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic firstWithPredicate;
 - (ResultWithPredicateBlock) firstWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -439,7 +421,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic firstOrNil;
 - (ResultBlock) firstOrNil {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -450,7 +431,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic firstOrNilWithPredicate;
 - (ResultWithPredicateBlock) firstOrNilWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -460,7 +440,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic last;
 - (ResultBlock) last {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -476,7 +455,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
 
 }
 
-@dynamic lastWithPredicate;
 - (ResultWithPredicateBlock) lastWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -486,7 +464,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic lastOrNil;
 - (ResultBlock) lastOrNil {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultBlock block = ^{
@@ -497,7 +474,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic lastOrNilWithPredicate;
 - (ResultWithPredicateBlock) lastOrNilWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     ResultWithPredicateBlock block = ^(LQPredicate predicate) {
@@ -507,7 +483,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic length;
 - (LQCountBlock) length {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQCountBlock block = ^{
@@ -517,7 +492,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic lengthWithPredicate;
 - (LQCountWithPredicateBlock) lengthWithPredicate {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQCountWithPredicateBlock block = ^NSUInteger(LQPredicate predicate){
@@ -527,7 +501,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic ofClass;
 - (LQOfClassBlock) ofClass {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQOfClassBlock block = ^(Class classType) {
@@ -537,7 +510,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic contains;
 - (LQPredicate) contains {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQPredicate block = ^BOOL(id item){
@@ -553,7 +525,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic forEach;
 - (LQForEachBlock) forEach {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQForEachBlock block = ^(LQAction action){
@@ -565,7 +536,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic concat;
 - (LQConcatBlock) concat {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQConcatBlock block = ^(id<LQEnumerable> collection) {
@@ -588,7 +558,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic unions;
 - (LQConcatBlock) unions {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQConcatBlock block = ^(id<LQEnumerable> collection) {
@@ -598,7 +567,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic except;
 - (LQConcatBlock) except {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQConcatBlock block = ^(id<LQEnumerable> collection) {
@@ -609,7 +577,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic intersect;
 - (LQConcatBlock) intersect {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQConcatBlock block = ^(id<LQEnumerable> collection) {
@@ -620,7 +587,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic orderBy;
 - (LQOrderByBlock) orderBy {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQOrderByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
@@ -634,7 +600,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic orderByDescending;
 - (LQOrderByBlock) orderByDescending {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQOrderByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
@@ -648,7 +613,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic min;
 - (LQMinMaxBlock) min {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQMinMaxBlock block = ^(NSComparator comparator) {
@@ -658,7 +622,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic max;
 - (LQMinMaxBlock) max {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQMinMaxBlock block = ^(NSComparator comparator) {
@@ -668,7 +631,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic minBy;
 - (LQMinMaxByBlock) minBy {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQMinMaxByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
@@ -680,7 +642,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic maxBy;
 - (LQMinMaxByBlock) maxBy {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQMinMaxByBlock block = ^(LQProjection keySelector, NSComparator comparator) {
@@ -718,7 +679,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return result;
 }
 
-@dynamic zip;
 - (LQZipBlock) zip {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQZipBlock block = ^(id<LQEnumerable> second, LQZipper returnSelector) {
@@ -740,7 +700,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic toArray;
 - (LQArrayBlock) toArray {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQArrayBlock block = ^{
@@ -750,7 +709,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic toSet;
 - (LQSetBlock) toSet {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQSetBlock block = ^(void) {
@@ -760,7 +718,6 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return [Block_copy(block) autorelease];
 }
 
-@dynamic toDictionary;
 - (LQDictionaryBlock) toDictionary {
     WeakRefAttribute NSEnumerator* weakSelf = self;
     LQDictionaryBlock block = ^(LQProjection keySelector, LQProjection valueSelector) {
