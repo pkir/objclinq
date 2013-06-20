@@ -68,6 +68,10 @@
 	
 	<option value="//api/name/intersect">&nbsp;&nbsp;&nbsp;&nbsp;intersect</option>
 	
+	<option value="//api/name/join">&nbsp;&nbsp;&nbsp;&nbsp;join</option>
+	
+	<option value="//api/name/joinWithComparator">&nbsp;&nbsp;&nbsp;&nbsp;joinWithComparator</option>
+	
 	<option value="//api/name/last">&nbsp;&nbsp;&nbsp;&nbsp;last</option>
 	
 	<option value="//api/name/lastOrNil">&nbsp;&nbsp;&nbsp;&nbsp;lastOrNil</option>
@@ -182,6 +186,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/intersect">intersect</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/join">join</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/joinWithComparator">joinWithComparator</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/last">last</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastOrNil">lastOrNil</a></span></li>
@@ -282,7 +290,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Common interface for <a href="#//api/name/all">all</a> collections that can be enumerated. It is a heart of the library.
-This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basicas LINQ to Objects
+This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basics LINQ to Objects
 is a different approach to work with collections. In the old way you had to write forin loops in order to retrive data.
 In the LINQ you write declarative code that describes what you want to retrive from the collection.</p>
 
@@ -431,21 +439,21 @@ In the LINQ you write declarative code that describes what you want to retrive f
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/firstWithPredicate">&nbsp;&nbsp;firstWithPredicate</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in a sequence that satisfies a specified condition.</p></span>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/first">first</a> element in a sequence that satisfies a specified condition.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/firstOrNil">&nbsp;&nbsp;firstOrNil</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element of a sequence, or a default value if the sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> no elements.</p></span>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/first">first</a> element of a sequence, or a default value if the sequence <a href="#//api/name/contains">contains</a> no elements.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/firstOrNilWithPredicate">&nbsp;&nbsp;firstOrNilWithPredicate</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element of the sequence that satisfies a condition or a default value if no such element is found.</p></span>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/first">first</a> element of the sequence that satisfies a condition or a default value if no such element is found.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -459,7 +467,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastWithPredicate">&nbsp;&nbsp;lastWithPredicate</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence that satisfies a specified condition.
+		<span class="tooltip"><p>Returns the <a href="#//api/name/last">last</a> element of a sequence that satisfies a specified condition.
 @params predicate &ndash; A function to test each element for a condition.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -467,14 +475,14 @@ In the LINQ you write declarative code that describes what you want to retrive f
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastOrNil">&nbsp;&nbsp;lastOrNil</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence, or a default value if the sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> no elements.</p></span>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/last">last</a> element of a sequence, or a default value if the sequence <a href="#//api/name/contains">contains</a> no elements.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastOrNilWithPredicate">&nbsp;&nbsp;lastOrNilWithPredicate</a></code>
-		<span class="tooltip"><p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence that satisfies a condition or a default value if no such element is found.</p></span>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/last">last</a> element of a sequence that satisfies a condition or a default value if no such element is found.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -488,7 +496,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/lengthWithPredicate">&nbsp;&nbsp;lengthWithPredicate</a></code>
-		<span class="tooltip"><p>Returns a number that represents how m<a href="../Protocols/LQEnumerable.html#//api/name/any">any</a> elements in the specified sequence satisfy a condition.</p></span>
+		<span class="tooltip"><p>Returns a number that represents how m<a href="#//api/name/any">any</a> elements in the specified sequence satisfy a condition.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -587,6 +595,20 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	<span class="tooltip">
 		<code><a href="#//api/name/zip">&nbsp;&nbsp;zip</a></code>
 		<span class="tooltip"><p>Applies a specified function to the corresponding elements of two sequences, which produces a sequence of the results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/join">&nbsp;&nbsp;join</a></code>
+		<span class="tooltip"><p>Correlates the elements of two sequences based on matching keys. The default equality comparer is used to compare keys.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/joinWithComparator">&nbsp;&nbsp;joinWithComparator</a></code>
+		<span class="tooltip"><p>Correlates the elements of two sequences based on matching keys. A specified NSComparator is used to compare keys.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -870,7 +892,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 		<dl class="argument-def parameter-def">
 			<dt><em>second</em></dt>
 			<dd><ul>
-<li>The sequence to concatenate to the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> sequence.</li>
+<li>The sequence to concatenate to the <a href="#//api/name/first">first</a> sequence.</li>
 </ul>
 </dd>
 		</dl>
@@ -881,7 +903,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the concatenated elements of the two input sequences.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the concatenated elements of the two input sequences.</p>
 	</div>
 	
 	
@@ -976,7 +998,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> distinct elements from the source sequence.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> distinct elements from the source sequence.</p>
 	</div>
 	
 	
@@ -1018,7 +1040,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>An</em></dt>
-			<dd><p>id<LQEnumerable> whose elements that also occur in the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> sequence will cause those elements to be removed from the returned sequence.</p></dd>
+			<dd><p>id<LQEnumerable> whose elements that also occur in the <a href="#//api/name/first">first</a> sequence will cause those elements to be removed from the returned sequence.</p></dd>
 		</dl>
 		
 	</div>
@@ -1027,7 +1049,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A sequence that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the set difference of the elements of two sequences.</p>
+		<p>A sequence that <a href="#//api/name/contains">contains</a> the set difference of the elements of two sequences.</p>
 	</div>
 	
 	
@@ -1106,7 +1128,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element of a sequence, or a default value if the sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> no elements.</p>
+		<p>Returns the <a href="#//api/name/first">first</a> element of a sequence, or a default value if the sequence <a href="#//api/name/contains">contains</a> no elements.</p>
 	</div>		
 	
     
@@ -1119,7 +1141,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nil if source is empty; otherwise, the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in source.</p>
+		<p>nil if source is empty; otherwise, the <a href="#//api/name/first">first</a> element in source.</p>
 	</div>
 	
 	
@@ -1147,7 +1169,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element of the sequence that satisfies a condition or a default value if no such element is found.</p>
+		<p>Returns the <a href="#//api/name/first">first</a> element of the sequence that satisfies a condition or a default value if no such element is found.</p>
 	</div>		
 	
     
@@ -1173,7 +1195,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nil if source is empty or if no element passes the test specified by predicate; otherwise, the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in source that passes the test specified by predicate.</p>
+		<p>nil if source is empty or if no element passes the test specified by predicate; otherwise, the <a href="#//api/name/first">first</a> element in source that passes the test specified by predicate.</p>
 	</div>
 	
 	
@@ -1201,7 +1223,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in a sequence that satisfies a specified condition.</p>
+		<p>Returns the <a href="#//api/name/first">first</a> element in a sequence that satisfies a specified condition.</p>
 	</div>		
 	
     
@@ -1217,7 +1239,7 @@ In the LINQ you write declarative code that describes what you want to retrive f
 			<dt><em>predicate</em></dt>
 			<dd><ul>
 <li>A function to test each element for a condition.
-The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in the sequence that passes the test in the specified predicate function.</li>
+The <a href="#//api/name/first">first</a> element in the sequence that passes the test in the specified predicate function.</li>
 </ul>
 </dd>
 		</dl>
@@ -1325,7 +1347,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 		<dl class="argument-def parameter-def">
 			<dt><em>second</em></dt>
 			<dd><ul>
-<li>An id<LQEnumerable> whose <a href="../Protocols/LQEnumerable.html#//api/name/distinct">distinct</a> elements that also appear in the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> sequence will be returned.</li>
+<li>An id<LQEnumerable> whose <a href="#//api/name/distinct">distinct</a> elements that also appear in the <a href="#//api/name/first">first</a> sequence will be returned.</li>
 </ul>
 </dd>
 		</dl>
@@ -1336,7 +1358,191 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A sequence that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements that form the set intersection of two sequences.</p>
+		<p>A sequence that <a href="#//api/name/contains">contains</a> the elements that form the set intersection of two sequences.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LQEnumerable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/join" title="join"></a>
+	<h3 class="subsubtitle method-title">join</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Correlates the elements of two sequences based on matching keys. The default equality comparer is used to compare keys.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) LQJoinBlock join</code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>inner</em></dt>
+			<dd><p>The sequence to join to the self sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>outerKeySelector</em></dt>
+			<dd><p>A function to extract the join key from each element of the self sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>inerKeySelector</em></dt>
+			<dd><p>A function to extract the join key from each element of the second sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resultSelector</em></dt>
+			<dd><p>A function to create a result element from two matching elements.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.</p>
+
+<p>Example:</p>
+
+<pre><code>@interface Person
+@property NSString* name;
++(id)makeWithName:(NSString*)name;
+@end
+
+@interface Pet
+@property NSString* name;
+@property Person* owner;
++(id)makeWithName:(NSString*)name andOwner:(Person*)owner;
+@end
+
+Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
+Person* terry = [Person makeWithName:@"Adams, Terry"];
+Person charlotte = [Person makeWithName:@"Weiss, Charlotte"];
+
+Pet* barley = [Pet  makeWithName:@"Barley" andOwner:terry];
+Pet* boots = [Pet  makeWithName:@"Boots" andOwner:terry];
+Pet* whiskers = [Pet  makeWithName:@"Whiskers" andOwner:charlotte];
+Pet* daisy = [Pet  makeWithName:@"Daisy" andOwner:magnus];
+
+NSArray* people = @[ magnus, terry, charlotte ];
+NSArray* pets = @[ barley, boots, whiskers, daisy ];
+
+// Create a list of Person-Pet pairs where
+// each element is a NSDictionary type that contains a
+// Pet's name and the name of the Person that owns the Pet.
+id&lt;LQEnumerable&gt; query =
+    people.Join(pets,
+        ^id(Person* person) { return person; },
+        ^id(Pet* pet) { return pet.owner; },
+        ^id(Person* person, Pet* pet) { return @{@"OwnerName": person.name, @"Pet": pet.name}; }
+    );
+
+for(NSDictionary* obj in query) {
+    NSLog(@"%@ - %@", obj[@"OwnerName"], obj[@"Pet"]);
+}
+
+This code produces the following output:
+
+Hedlund, Magnus - Daisy
+Adams, Terry - Barley
+Adams, Terry - Boots
+Weiss, Charlotte - Whiskers 
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LQEnumerable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/joinWithComparator" title="joinWithComparator"></a>
+	<h3 class="subsubtitle method-title">joinWithComparator</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Correlates the elements of two sequences based on matching keys. A specified NSComparator is used to compare keys.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) LQJoinWithComparatorBlock joinWithComparator</code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>inner</em></dt>
+			<dd><p>The sequence to <a href="#//api/name/join">join</a> to the self sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>outerKeySelector</em></dt>
+			<dd><p>A function to extract the <a href="#//api/name/join">join</a> key from each element of the self sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>inerKeySelector</em></dt>
+			<dd><p>A function to extract the <a href="#//api/name/join">join</a> key from each element of the second sequence.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resultSelector</em></dt>
+			<dd><p>A function to create a result element from two matching elements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>comparator</em></dt>
+			<dd><p>An LQEqualityComparer to compare keys.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An id<LQEnumerable> that has elements that are obtained by performing an inner <a href="#//api/name/join">join</a> on two sequences.</p>
 	</div>
 	
 	
@@ -1415,7 +1621,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence, or a default value if the sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> no elements.</p>
+		<p>Returns the <a href="#//api/name/last">last</a> element of a sequence, or a default value if the sequence <a href="#//api/name/contains">contains</a> no elements.</p>
 	</div>		
 	
     
@@ -1428,7 +1634,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nil if the source sequence is empty; otherwise, the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element in the id<LQEnumerable>.</p>
+		<p>nil if the source sequence is empty; otherwise, the <a href="#//api/name/last">last</a> element in the id<LQEnumerable>.</p>
 	</div>
 	
 	
@@ -1456,7 +1662,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence that satisfies a condition or a default value if no such element is found.</p>
+		<p>Returns the <a href="#//api/name/last">last</a> element of a sequence that satisfies a condition or a default value if no such element is found.</p>
 	</div>		
 	
     
@@ -1482,7 +1688,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nil if the sequence is empty or if no elements pass the test in the predicate function; otherwise, the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element that passes the test in the predicate function.</p>
+		<p>nil if the sequence is empty or if no elements pass the test in the predicate function; otherwise, the <a href="#//api/name/last">last</a> element that passes the test in the predicate function.</p>
 	</div>
 	
 	
@@ -1510,7 +1716,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element of a sequence that satisfies a specified condition.
+		<p>Returns the <a href="#//api/name/last">last</a> element of a sequence that satisfies a specified condition.
 @params predicate &ndash; A function to test each element for a condition.</p>
 	</div>		
 	
@@ -1524,7 +1730,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The <a href="../Protocols/LQEnumerable.html#//api/name/last">last</a> element in the sequence that passes the test in the specified predicate function.</p>
+		<p>The <a href="#//api/name/last">last</a> element in the sequence that passes the test in the specified predicate function.</p>
 	</div>
 	
 	
@@ -1603,7 +1809,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a number that represents how m<a href="../Protocols/LQEnumerable.html#//api/name/any">any</a> elements in the specified sequence satisfy a condition.</p>
+		<p>Returns a number that represents how m<a href="#//api/name/any">any</a> elements in the specified sequence satisfy a condition.</p>
 	</div>		
 	
     
@@ -1629,7 +1835,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A number that represents how m<a href="../Protocols/LQEnumerable.html#//api/name/any">any</a> elements in the sequence satisfy the condition in the predicate function.</p>
+		<p>A number that represents how m<a href="#//api/name/any">any</a> elements in the sequence satisfy the condition in the predicate function.</p>
 	</div>
 	
 	
@@ -1902,7 +2108,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> elements from the input sequence of given class.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> elements from the input sequence of given class.</p>
 	</div>
 	
 	
@@ -2137,7 +2343,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> whose elements are the result of invoking the one-to-m<a href="../Protocols/LQEnumerable.html#//api/name/any">any</a> transform function on each element of the input sequence.</p>
+		<p>An id<LQEnumerable> whose elements are the result of invoking the one-to-m<a href="#//api/name/any">any</a> transform function on each element of the input sequence.</p>
 	</div>
 	
 	
@@ -2192,7 +2398,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 		
 		<dl class="argument-def exception-def">
 			<dt><em>InvalidOperationException</em></dt>
-			<dd><p>The input sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> more than one element or the input sequence is empty.</p></dd>
+			<dd><p>The input sequence <a href="#//api/name/contains">contains</a> more than one element or the input sequence is empty.</p></dd>
 		</dl>
 		
 	</div>
@@ -2229,8 +2435,8 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The <a href="../Protocols/LQEnumerable.html#//api/name/single">single</a> element of the input sequence, or nil if the sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> no elements.
-@exeption InvalidOperationException The input sequence <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> more than one element.</p>
+		<p>The <a href="#//api/name/single">single</a> element of the input sequence, or nil if the sequence <a href="#//api/name/contains">contains</a> no elements.
+@exeption InvalidOperationException The input sequence <a href="#//api/name/contains">contains</a> more than one element.</p>
 	</div>
 	
 	
@@ -2284,7 +2490,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The <a href="../Protocols/LQEnumerable.html#//api/name/single">single</a> element of the input sequence that satisfies the condition, or nil if no such element is found.</p>
+		<p>The <a href="#//api/name/single">single</a> element of the input sequence that satisfies the condition, or nil if no such element is found.</p>
 	</div>
 	
 	
@@ -2338,7 +2544,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The <a href="../Protocols/LQEnumerable.html#//api/name/single">single</a> element of the input sequence that satisfies a condition.</p>
+		<p>The <a href="#//api/name/single">single</a> element of the input sequence that satisfies a condition.</p>
 	</div>
 	
 	
@@ -2402,7 +2608,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements that occur after the specified index in the input sequence.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the elements that occur after the specified index in the input sequence.</p>
 	</div>
 	
 	
@@ -2456,7 +2662,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements from the input sequence starting at the <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element in the linear series that does not pass the test specified by predicate.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the elements from the input sequence starting at the <a href="#//api/name/first">first</a> element in the linear series that does not pass the test specified by predicate.</p>
 	</div>
 	
 	
@@ -2510,7 +2716,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the specified number of elements from the start of the input sequence.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the specified number of elements from the start of the input sequence.</p>
 	</div>
 	
 	
@@ -2564,7 +2770,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements from the input sequence that occur before the element at which the test no longer passes.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the elements from the input sequence that occur before the element at which the test no longer passes.</p>
 	</div>
 	
 	
@@ -2605,7 +2811,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements from the input sequence.</p>
+		<p>An array that <a href="#//api/name/contains">contains</a> the elements from the input sequence.</p>
 	</div>
 	
 	
@@ -2667,7 +2873,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A NSDictionary that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> values selected from the input sequence.</p>
+		<p>A NSDictionary that <a href="#//api/name/contains">contains</a> values selected from the input sequence.</p>
 	</div>
 	
 	
@@ -2708,7 +2914,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A set that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements from the input sequence.</p>
+		<p>A set that <a href="#//api/name/contains">contains</a> the elements from the input sequence.</p>
 	</div>
 	
 	
@@ -2750,7 +2956,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>second</em></dt>
-			<dd><p>An id<LQEnumerable> whose <a href="../Protocols/LQEnumerable.html#//api/name/distinct">distinct</a> elements form the second set for the union.</p></dd>
+			<dd><p>An id<LQEnumerable> whose <a href="#//api/name/distinct">distinct</a> elements form the second set for the union.</p></dd>
 		</dl>
 		
 	</div>
@@ -2759,7 +2965,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> the elements from both input sequences, excluding duplicates.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> the elements from both input sequences, excluding duplicates.</p>
 	</div>
 	
 	
@@ -2813,7 +3019,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>an id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> elements from the input sequence that satisfy the condition.</p>
+		<p>an id<LQEnumerable> that <a href="#//api/name/contains">contains</a> elements from the input sequence that satisfy the condition.</p>
 	</div>
 	
 	
@@ -2872,7 +3078,7 @@ The <a href="../Protocols/LQEnumerable.html#//api/name/first">first</a> element 
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An id<LQEnumerable> that <a href="../Protocols/LQEnumerable.html#//api/name/contains">contains</a> merged elements of two input sequences.</p>
+		<p>An id<LQEnumerable> that <a href="#//api/name/contains">contains</a> merged elements of two input sequences.</p>
 	</div>
 	
 	
