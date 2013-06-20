@@ -2,6 +2,8 @@
 
 @protocol LQEnumerable;
 
+typedef BOOL (^LQEqualityComparer)(id x, id y);
+
 typedef id (^LQProjection)(id item);
 
 typedef void (^LQAction)(id item);
@@ -58,6 +60,9 @@ typedef id (^LQMinMaxBlock)(NSComparator comparer);
 
 typedef NSArray* (^LQMinMaxByBlock)(LQProjection keySelector, NSComparator comparer);
 
+typedef id<LQEnumerable> (^LQJoinBlock)(id<LQEnumerable> inner, LQProjection outerKeySelector, LQProjection innerKeySelector, LQZipper resultSelector);
+typedef id<LQEnumerable> (^LQJoinWithComparatorBlock)(id<LQEnumerable> inner, LQProjection outerKeySelector, LQProjection innerKeySelector, LQZipper resultSelector, LQEqualityComparer comparator);
+
 typedef id<LQEnumerable> (^LQZipBlock)(id<LQEnumerable> second, LQZipper returnSelector);
 
 typedef NSArray* (^LQArrayBlock)(void);
@@ -68,7 +73,7 @@ typedef NSSet* (^LQSetBlock)(void);
 
 /**
  Common interface for all collections that can be enumerated. It is a heart of the library.
- This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basicas LINQ to Objects
+ This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basics LINQ to Objects
  is a different approach to work with collections. In the old way you had to write forin loops in order to retrive data.
  In the LINQ you write declarative code that describes what you want to retrive from the collection. 
  
@@ -364,6 +369,72 @@ typedef NSSet* (^LQSetBlock)(void);
  @return An id<LQEnumerable> that contains merged elements of two input sequences.
  */
 @property (readonly, nonatomic) LQZipBlock zip;
+
+/**
+ Correlates the elements of two sequences based on matching keys. The default equality comparer is used to compare keys.
+ @param inner The sequence to join to the self sequence.
+ @param outerKeySelector A function to extract the join key from each element of the self sequence.
+ @param inerKeySelector A function to extract the join key from each element of the second sequence.
+ @param resultSelector A function to create a result element from two matching elements.
+ @return An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.
+ 
+ Example:
+    @interface Person
+    @property NSString* name;
+    +(id)makeWithName:(NSString*)name;
+    @end
+ 
+    @interface Pet
+    @property NSString* name;
+    @property Person* owner;
+    +(id)makeWithName:(NSString*)name andOwner:(Person*)owner;
+    @end
+    
+    Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
+    Person* terry = [Person makeWithName:@"Adams, Terry"];
+    Person charlotte = [Person makeWithName:@"Weiss, Charlotte"];
+ 
+    Pet* barley = [Pet  makeWithName:@"Barley" andOwner:terry];
+    Pet* boots = [Pet  makeWithName:@"Boots" andOwner:terry];
+    Pet* whiskers = [Pet  makeWithName:@"Whiskers" andOwner:charlotte];
+    Pet* daisy = [Pet  makeWithName:@"Daisy" andOwner:magnus];
+    
+    NSArray* people = @[ magnus, terry, charlotte ];
+    NSArray* pets = @[ barley, boots, whiskers, daisy ];
+ 
+    // Create a list of Person-Pet pairs where
+    // each element is a NSDictionary type that contains a
+    // Pet's name and the name of the Person that owns the Pet.
+    id<LQEnumerable> query =
+        people.Join(pets,
+            ^id(Person* person) { return person; },
+            ^id(Pet* pet) { return pet.owner; },
+            ^id(Person* person, Pet* pet) { return @{@"OwnerName": person.name, @"Pet": pet.name}; }
+        );
+ 
+    for(NSDictionary* obj in query) {
+        NSLog(@"%@ - %@", obj[@"OwnerName"], obj[@"Pet"]);
+    }
+    
+    This code produces the following output:
+
+    Hedlund, Magnus - Daisy
+    Adams, Terry - Barley
+    Adams, Terry - Boots
+    Weiss, Charlotte - Whiskers 
+ */
+@property (readonly, nonatomic) LQJoinBlock join;
+
+/**
+ Correlates the elements of two sequences based on matching keys. A specified NSComparator is used to compare keys.
+ @param inner The sequence to join to the self sequence.
+ @param outerKeySelector A function to extract the join key from each element of the self sequence.
+ @param inerKeySelector A function to extract the join key from each element of the second sequence.
+ @param resultSelector A function to create a result element from two matching elements.
+ @param comparator An LQEqualityComparer to compare keys.
+ @return An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.
+ */
+@property (readonly, nonatomic) LQJoinWithComparatorBlock joinWithComparator;
 
 /**
  Creates a NSArray from a id<LQEnumerable>.

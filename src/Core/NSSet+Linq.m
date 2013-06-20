@@ -196,6 +196,14 @@
     return self.linqEnumerator.zip;
 }
 
+- (LQJoinBlock) join {
+    return [self linqEnumerator].join;
+}
+
+- (LQJoinWithComparatorBlock) joinWithComparator {
+    return [self linqEnumerator].joinWithComparator;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSSet_Linq)

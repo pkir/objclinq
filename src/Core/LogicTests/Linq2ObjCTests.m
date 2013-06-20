@@ -1,6 +1,56 @@
 #import "Linq2ObjCTests.h"
 #import "objclinq.h"
 
+@interface Person : NSObject
+@property (retain, nonatomic) NSString* name;
++(id)makeWithName:(NSString*)name;
+@end
+
+@interface Pet : NSObject
+@property (retain, nonatomic) NSString* name;
+@property (retain, nonatomic) Person* owner;
++(id)makeWithName:(NSString*)name andOwner:(Person*)owner;
+@end
+
+@implementation Person
++(id)makeWithName:(NSString*)name {
+    Person* ret = [[Person alloc] init];
+    ret.name = name;
+    
+    return ret;
+}
+
+- (NSString*) description {
+    return [NSString stringWithFormat:@"<%@>: %@", self.class.description, self.name];
+}
+
+- (void) dealloc {
+    self.name = nil;
+    [super dealloc];
+}
+
+@end
+
+@implementation Pet
++(id)makeWithName:(NSString*)name andOwner:(Person*)owner {
+    Pet* ret = [[Pet alloc] init];
+    ret.name = name;
+    ret.owner = owner;
+    
+    return ret;
+}
+
+- (NSString*) description {
+    return [NSString stringWithFormat:@"<%@>: name = %@, owner = %@", self.class.description, self.name, self.owner];
+}
+
+- (void) dealloc {
+    self.name = nil;
+    self.owner = nil;
+    [super dealloc];
+}
+@end
+
 @implementation Linq2ObjCTests
 
 - (void)testToArray
@@ -349,5 +399,38 @@
 - (void)testDictionary {
     NSDictionary* test = @{@1 : @1};
     STAssertEquals(test.count, test.ofClass([LQKeyValuePair class]).length(), nil);
+}
+
+- (void)testJoin {
+    Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
+    Person* terry = [Person makeWithName:@"Adams, Terry"];
+    Person* charlotte = [Person makeWithName:@"Weiss, Charlotte"];
+
+    Pet* barley = [Pet  makeWithName:@"Barley" andOwner:terry];
+    Pet* boots = [Pet  makeWithName:@"Boots" andOwner:terry];
+    Pet* whiskers = [Pet  makeWithName:@"Whiskers" andOwner:charlotte];
+    Pet* daisy = [Pet  makeWithName:@"Daisy" andOwner:magnus];
+
+    NSArray* people = @[ magnus, terry, charlotte ];
+    NSArray* pets = @[ barley, boots, whiskers, daisy ];
+
+    // Create a list of Person-Pet pairs where
+    // each element is a NSDictionary type that contains a
+    // Pet's name and the name of the Person that owns the Pet.
+    id<LQEnumerable> query = people
+        .join(pets,
+              ^id(Person* person) { return person; },
+              ^id(Pet* pet) { return pet.owner; },
+              ^id(Person* person, Pet* pet) { return @{@"OwnerName": person.name, @"Pet": pet.name}; })
+        .toArray();
+
+    NSArray* expected = @[
+        @{@"OwnerName": @"Hedlund, Magnus", @"Pet": @"Daisy"},
+        @{@"OwnerName": @"Adams, Terry", @"Pet": @"Barley"},
+        @{@"OwnerName": @"Adams, Terry", @"Pet": @"Boots"},
+        @{@"OwnerName": @"Weiss, Charlotte", @"Pet": @"Whiskers"}
+    ];
+    
+    STAssertEqualObjects(expected, query, nil);
 }
 @end

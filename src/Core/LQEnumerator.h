@@ -5,6 +5,7 @@ extern LQProjection kLQIdentity;
 extern LQPredicate kLQYesPredicate;
 extern LQPredicate kLQNoPredicate;
 extern NSComparator kLQDefaultComparator;
+extern LQEqualityComparer kLQDefaultEqualityComparer;
 
 @interface LQEnumerator : NSEnumerator {
     NSEnumerator* _src;

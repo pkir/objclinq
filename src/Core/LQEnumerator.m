@@ -18,6 +18,10 @@ LQPredicate kLQNoPredicate = ^(id item) {
     return NO;
 };
 
+LQEqualityComparer kLQDefaultEqualityComparer = ^BOOL(id x, id y) {
+    return [x isEqual:y];
+};
+
 @implementation LQEnumerator
 
 - (id)initWithFunction:(NSEnumerator*)src nextObjectBlock:(id(^)(NSEnumerator*))nextObject {
@@ -730,6 +734,60 @@ LQPredicate kLQNoPredicate = ^(id item) {
         }
         
         return (NSDictionary*)result;
+    };
+    
+    return [Block_copy(block) autorelease];
+}
+
+- (LQJoinBlock) join {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQJoinBlock block = ^(id<LQEnumerable> inner, LQProjection outerKeySelector, LQProjection innerKeySelector, LQZipper resultSelector) {
+        return weakSelf.joinWithComparator(inner, outerKeySelector, innerKeySelector, resultSelector, kLQDefaultEqualityComparer);
+    };
+    
+    return [Block_copy(block) autorelease];
+}
+
+- (LQJoinWithComparatorBlock) joinWithComparator {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQJoinWithComparatorBlock block =
+        ^(id<LQEnumerable> inner, LQProjection outerKeySelector, LQProjection innerKeySelector, LQZipper resultSelector, LQEqualityComparer comparator)
+    {
+        __block NSEnumerator* innerIt = nil;
+        __block id itemFirst = nil;
+        
+        return [LQEnumerator enumeratorWithFunction:weakSelf
+                                    nextObjectBlock:^id(NSEnumerator* src)
+        {
+            id itemSecond = nil;
+            while (true) {
+                if (!itemFirst) {
+                    itemFirst = [src nextObject];
+                }
+                
+                if (!itemFirst) {
+                    break;
+                }
+                
+                if (!innerIt) {
+                    innerIt = [LQEnumerableEnumerator enumeratorWithEnumerable:inner];
+                }
+                
+                while ((itemSecond = [innerIt nextObject])) {
+                    id outerKey = outerKeySelector(itemFirst);
+                    id innerKey = innerKeySelector(itemSecond);
+                    if (comparator(outerKey, innerKey)) {
+                        id res = resultSelector(itemFirst, itemSecond);
+                        return res;
+                    }
+                }
+                
+                innerIt = nil;
+                itemFirst = nil;
+            }
+            
+            return nil;
+        }];
     };
     
     return [Block_copy(block) autorelease];
