@@ -67,7 +67,18 @@ typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjectio
 typedef NSSet* (^LQSetBlock)(void);
 
 /**
- Common interface for all collections that can be enumerated
+ Common interface for all collections that can be enumerated. It is a heart of the library.
+ This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basicas LINQ to Objects
+ is a different approach to work with collections. In the old way you had to write forin loops in order to retrive data.
+ In the LINQ you write declarative code that describes what you want to retrive from the collection. 
+ 
+ In addition, LINQ queries offer three main advantages over traditional foreach loops:
+ 
+    1. They are more concise and readable, especially when filtering multiple conditions.
+ 
+    2. They provide powerful filtering, ordering, and grouping capabilities with a minimum of application code.
+ 
+    3. They can be ported to other data sources (XML, SQL, JSON) with little or no modification.
  */
 @protocol LQEnumerable <NSFastEnumeration>
 
