@@ -1426,7 +1426,8 @@ The <a href="#//api/name/first">first</a> element in the sequence that passes th
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.</p>
 
-<p>Example:</p>
+<p>Example:
+<code></p>
 
 <pre><code>@interface Person
 @property NSString* name;
@@ -1464,13 +1465,16 @@ id&lt;LQEnumerable&gt; query =
 for(NSDictionary* obj in query) {
     NSLog(@"%@ - %@", obj[@"OwnerName"], obj[@"Pet"]);
 }
+</code></pre>
 
-This code produces the following output:
+<p><code></p>
+
+<pre><code>This code produces the following output:
 
 Hedlund, Magnus - Daisy
 Adams, Terry - Barley
 Adams, Terry - Boots
-Weiss, Charlotte - Whiskers 
+Weiss, Charlotte - Whiskers
 </code></pre>
 	</div>
 	

@@ -1260,6 +1260,7 @@ The first element in the sequence that passes the test in the specified predicat
 			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that has elements that are obtained by performing an inner join on two sequences.
 
 Example:
+&lt;code&gt;
     @interface Person
     @property NSString* name;
     +(id)makeWithName:(NSString*)name;
@@ -1296,13 +1297,13 @@ Example:
     for(NSDictionary* obj in query) {
         NSLog(@&quot;%@ - %@&quot;, obj[@&quot;OwnerName&quot;], obj[@&quot;Pet&quot;]);
     }
-    
+&lt;code&gt;
     This code produces the following output:
 
     Hedlund, Magnus - Daisy
     Adams, Terry - Barley
     Adams, Terry - Boots
-    Weiss, Charlotte - Whiskers </Abstract></ReturnValue>
+    Weiss, Charlotte - Whiskers</Abstract></ReturnValue>
 			<Anchor>//api/name/join</Anchor>
 		</Token>
 		
@@ -1330,6 +1331,7 @@ Example:
 			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that has elements that are obtained by performing an inner join on two sequences.
 
 Example:
+&lt;code&gt;
     @interface Person
     @property NSString* name;
     +(id)makeWithName:(NSString*)name;
@@ -1366,13 +1368,13 @@ Example:
     for(NSDictionary* obj in query) {
         NSLog(@&quot;%@ - %@&quot;, obj[@&quot;OwnerName&quot;], obj[@&quot;Pet&quot;]);
     }
-    
+&lt;code&gt;
     This code produces the following output:
 
     Hedlund, Magnus - Daisy
     Adams, Terry - Barley
     Adams, Terry - Boots
-    Weiss, Charlotte - Whiskers </Abstract></ReturnValue>
+    Weiss, Charlotte - Whiskers</Abstract></ReturnValue>
 			<Anchor>//api/name/join</Anchor>
 		</Token>
 		

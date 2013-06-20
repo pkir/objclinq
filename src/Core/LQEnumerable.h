@@ -392,7 +392,7 @@ typedef NSSet* (^LQSetBlock)(void);
     
     Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
     Person* terry = [Person makeWithName:@"Adams, Terry"];
-    Person charlotte = [Person makeWithName:@"Weiss, Charlotte"];
+    Person* charlotte = [Person makeWithName:@"Weiss, Charlotte"];
  
     Pet* barley = [Pet  makeWithName:@"Barley" andOwner:terry];
     Pet* boots = [Pet  makeWithName:@"Boots" andOwner:terry];
@@ -416,12 +416,13 @@ typedef NSSet* (^LQSetBlock)(void);
         NSLog(@"%@ - %@", obj[@"OwnerName"], obj[@"Pet"]);
     }
     
+    
     This code produces the following output:
 
     Hedlund, Magnus - Daisy
     Adams, Terry - Barley
     Adams, Terry - Boots
-    Weiss, Charlotte - Whiskers 
+    Weiss, Charlotte - Whiskers
  */
 @property (readonly, nonatomic) LQJoinBlock join;
 
