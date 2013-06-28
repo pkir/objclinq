@@ -26,8 +26,8 @@
 @end
 
 @interface LQKeyValueEnumerator() {
-    NSEnumerator* keyEnumerator_;
-    NSDictionary* dict_;
+    NSEnumerator* _keyEnumerator;
+    NSDictionary* _dict;
 }
 
 @end
@@ -37,25 +37,25 @@
 - (id)initWithDictionary:(NSDictionary*)dict {
     self = [super init];
     if (self) {
-        keyEnumerator_ = [[dict keyEnumerator] retain];
-        dict_ = dict;
+        _keyEnumerator = [[dict keyEnumerator] retain];
+        _dict = dict;
     }
     
     return self;
 }
 
 - (id) nextObject {
-    id key = keyEnumerator_.nextObject;
+    id key = _keyEnumerator.nextObject;
     if (key) {
-        return [LQKeyValuePair makeWithKey:key andValue:dict_[key]];
+        return [LQKeyValuePair makeWithKey:key andValue:_dict[key]];
     }
     
     return nil;
 }
 
 - (void) dealloc {
-    [keyEnumerator_ release];
-    dict_ = nil;
+    [_keyEnumerator release];
+    _dict = nil;
     [super dealloc];
 }
 
