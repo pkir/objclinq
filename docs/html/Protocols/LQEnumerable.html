@@ -122,6 +122,8 @@
 	
 	<option value="//api/name/toDictionary">&nbsp;&nbsp;&nbsp;&nbsp;toDictionary</option>
 	
+	<option value="//api/name/toLookup">&nbsp;&nbsp;&nbsp;&nbsp;toLookup</option>
+	
 	<option value="//api/name/toSet">&nbsp;&nbsp;&nbsp;&nbsp;toSet</option>
 	
 	<option value="//api/name/unions">&nbsp;&nbsp;&nbsp;&nbsp;unions</option>
@@ -239,6 +241,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toArray">toArray</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toDictionary">toDictionary</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toLookup">toLookup</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toSet">toSet</a></span></li>
 	
@@ -609,6 +613,13 @@ In the LINQ you write declarative code that describes what you want to retrive f
 	<span class="tooltip">
 		<code><a href="#//api/name/joinWithComparator">&nbsp;&nbsp;joinWithComparator</a></code>
 		<span class="tooltip"><p>Correlates the elements of two sequences based on matching keys. A specified NSComparator is used to compare keys.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/toLookup">&nbsp;&nbsp;toLookup</a></code>
+		<span class="tooltip"><p>Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. Key values are compared by using a specified comparer, and the elements of each group are projected by using a specified function.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -1426,8 +1437,7 @@ The <a href="#//api/name/first">first</a> element in the sequence that passes th
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.</p>
 
-<p>Example:
-<code></p>
+<p>Example:</p>
 
 <pre><code>@interface Person
 @property NSString* name;
@@ -1442,7 +1452,7 @@ The <a href="#//api/name/first">first</a> element in the sequence that passes th
 
 Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
 Person* terry = [Person makeWithName:@"Adams, Terry"];
-Person charlotte = [Person makeWithName:@"Weiss, Charlotte"];
+Person* charlotte = [Person makeWithName:@"Weiss, Charlotte"];
 
 Pet* barley = [Pet  makeWithName:@"Barley" andOwner:terry];
 Pet* boots = [Pet  makeWithName:@"Boots" andOwner:terry];
@@ -1465,11 +1475,9 @@ id&lt;LQEnumerable&gt; query =
 for(NSDictionary* obj in query) {
     NSLog(@"%@ - %@", obj[@"OwnerName"], obj[@"Pet"]);
 }
-</code></pre>
 
-<p><code></p>
 
-<pre><code>This code produces the following output:
+This code produces the following output:
 
 Hedlund, Magnus - Daisy
 Adams, Terry - Barley
@@ -2899,6 +2907,57 @@ Weiss, Charlotte - Whiskers
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/toLookup" title="toLookup"></a>
+	<h3 class="subsubtitle method-title">toLookup</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. Key values are compared by using a specified comparer, and the elements of each group are projected by using a specified function.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) LQLookupBlock toLookup</code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keySelector</em></dt>
+			<dd><p>A function to extract the key from each element of the sequence.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A NSDictionary that maps key to id<LQEnumerable> of elements.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LQEnumerable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/toSet" title="toSet"></a>
 	<h3 class="subsubtitle method-title">toSet</h3>
 	
@@ -3120,7 +3179,7 @@ Weiss, Charlotte - Whiskers
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 linqobjc. All rights reserved. (Last updated: 2013-06-19)</span><br />
+						<p><span class="copyright">&copy; 2013 linqobjc. All rights reserved. (Last updated: 2013-07-17)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.6 (build 789)</a>.</span></p>
 						

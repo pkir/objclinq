@@ -71,6 +71,8 @@ typedef NSDictionary* (^LQDictionaryBlock)(LQProjection keySelector, LQProjectio
 
 typedef NSSet* (^LQSetBlock)(void);
 
+typedef NSDictionary* (^LQLookupBlock)(LQProjection keySelector);
+
 /**
  Common interface for all collections that can be enumerated. It is a heart of the library.
  This analog IEnumerable in .NET and represents LINQ to Objects part of .NET. In basics LINQ to Objects
@@ -436,6 +438,13 @@ typedef NSSet* (^LQSetBlock)(void);
  @return An id<LQEnumerable> that has elements that are obtained by performing an inner join on two sequences.
  */
 @property (readonly, nonatomic) LQJoinWithComparatorBlock joinWithComparator;
+
+/**
+ Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. Key values are compared by using a specified comparer, and the elements of each group are projected by using a specified function.
+ @param keySelector A function to extract the key from each element of the sequence.
+ @return A NSDictionary that maps key to id<LQEnumerable> of elements.
+ */
+@property (readonly, nonatomic) LQLookupBlock toLookup;
 
 /**
  Creates a NSArray from a id<LQEnumerable>.

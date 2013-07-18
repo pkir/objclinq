@@ -401,6 +401,16 @@
     STAssertEquals(test.count, test.ofClass([LQKeyValuePair class]).length(), nil);
 }
 
+- (void)testLookup {
+    NSArray* items = @[@"ABC", @"ADE", @"BCV", @"BDF", @"sDb"];
+    NSDictionary* lookup = items.toLookup(^(NSString* item) { return [item substringToIndex:1];});
+    
+    STAssertEquals((NSUInteger)3, lookup.count, nil);
+    STAssertEqualObjects((@[@"ABC", @"ADE"]), lookup[@"A"], nil);
+    STAssertEqualObjects((@[@"BCV", @"BDF"]), lookup[@"B"], nil);
+    STAssertEqualObjects((@[@"sDb"]), lookup[@"s"], nil);
+}
+
 - (void)testJoin {
     Person* magnus = [Person makeWithName:@"Hedlund, Magnus"];
     Person* terry = [Person makeWithName:@"Adams, Terry"];

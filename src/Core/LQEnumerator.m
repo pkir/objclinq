@@ -793,4 +793,25 @@ LQEqualityComparer kLQDefaultEqualityComparer = ^BOOL(id x, id y) {
     return [Block_copy(block) autorelease];
 }
 
+- (LQLookupBlock) toLookup {
+    WeakRefAttribute NSEnumerator* weakSelf = self;
+    LQLookupBlock block = ^(LQProjection keySelector) {
+        NSMutableDictionary* result = [NSMutableDictionary dictionary];
+        for (id item in weakSelf) {
+            id key = keySelector(item);
+            
+            NSMutableArray* items = result[key];
+            if (!items) {
+                items = [NSMutableArray array];
+                result[key] = items;
+            }
+            
+            [items addObject:item];
+        }
+        
+        return (NSDictionary*)result;
+    };
+    
+    return [Block_copy(block) autorelease];
+}
 @end

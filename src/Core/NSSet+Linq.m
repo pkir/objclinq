@@ -204,6 +204,10 @@
     return [self linqEnumerator].joinWithComparator;
 }
 
+- (LQLookupBlock) toLookup {
+    return [self linqEnumerator].toLookup;
+}
+
 @end
 
 CATEGORY_LINK_FIX_IMPL(NSSet_Linq)

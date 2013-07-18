@@ -1260,7 +1260,6 @@ The first element in the sequence that passes the test in the specified predicat
 			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that has elements that are obtained by performing an inner join on two sequences.
 
 Example:
-&lt;code&gt;
     @interface Person
     @property NSString* name;
     +(id)makeWithName:(NSString*)name;
@@ -1274,7 +1273,7 @@ Example:
     
     Person* magnus = [Person makeWithName:@&quot;Hedlund, Magnus&quot;];
     Person* terry = [Person makeWithName:@&quot;Adams, Terry&quot;];
-    Person charlotte = [Person makeWithName:@&quot;Weiss, Charlotte&quot;];
+    Person* charlotte = [Person makeWithName:@&quot;Weiss, Charlotte&quot;];
 
     Pet* barley = [Pet  makeWithName:@&quot;Barley&quot; andOwner:terry];
     Pet* boots = [Pet  makeWithName:@&quot;Boots&quot; andOwner:terry];
@@ -1297,7 +1296,8 @@ Example:
     for(NSDictionary* obj in query) {
         NSLog(@&quot;%@ - %@&quot;, obj[@&quot;OwnerName&quot;], obj[@&quot;Pet&quot;]);
     }
-&lt;code&gt;
+    
+    
     This code produces the following output:
 
     Hedlund, Magnus - Daisy
@@ -1331,7 +1331,6 @@ Example:
 			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that has elements that are obtained by performing an inner join on two sequences.
 
 Example:
-&lt;code&gt;
     @interface Person
     @property NSString* name;
     +(id)makeWithName:(NSString*)name;
@@ -1345,7 +1344,7 @@ Example:
     
     Person* magnus = [Person makeWithName:@&quot;Hedlund, Magnus&quot;];
     Person* terry = [Person makeWithName:@&quot;Adams, Terry&quot;];
-    Person charlotte = [Person makeWithName:@&quot;Weiss, Charlotte&quot;];
+    Person* charlotte = [Person makeWithName:@&quot;Weiss, Charlotte&quot;];
 
     Pet* barley = [Pet  makeWithName:@&quot;Barley&quot; andOwner:terry];
     Pet* boots = [Pet  makeWithName:@&quot;Boots&quot; andOwner:terry];
@@ -1368,7 +1367,8 @@ Example:
     for(NSDictionary* obj in query) {
         NSLog(@&quot;%@ - %@&quot;, obj[@&quot;OwnerName&quot;], obj[@&quot;Pet&quot;]);
     }
-&lt;code&gt;
+    
+    
     This code produces the following output:
 
     Hedlund, Magnus - Daisy
@@ -1432,6 +1432,38 @@ Example:
 			</Parameters>
 			<ReturnValue><Abstract type="html">An id&lt;LQEnumerable&gt; that has elements that are obtained by performing an inner join on two sequences.</Abstract></ReturnValue>
 			<Anchor>//api/name/joinWithComparator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/LQEnumerable/setToLookup:</TokenIdentifier>
+			<Abstract type="html">Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. Key values are compared by using a specified comparer, and the elements of each group are projected by using a specified function.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQLookupBlock toLookup</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">A function to extract the key from each element of the sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSDictionary that maps key to id&lt;LQEnumerable&gt; of elements.</Abstract></ReturnValue>
+			<Anchor>//api/name/toLookup</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/LQEnumerable/toLookup</TokenIdentifier>
+			<Abstract type="html">Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. Key values are compared by using a specified comparer, and the elements of each group are projected by using a specified function.</Abstract>
+			<DeclaredIn>LQEnumerable.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) LQLookupBlock toLookup</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keySelector</Name>
+					<Abstract type="html">A function to extract the key from each element of the sequence.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSDictionary that maps key to id&lt;LQEnumerable&gt; of elements.</Abstract></ReturnValue>
+			<Anchor>//api/name/toLookup</Anchor>
 		</Token>
 		
 		<Token>
